@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header" class="show-hd">
+        <div class="spacer"></div>
+        <div id="m-header-nav" class="bg-fff c-000000 overflow-hide">
+            <h1>
+                <span>我的</span>
+                <div data-href="./message.html" data-needlogin="true">
+                    <i class="fa fa-envelope-o message"><span class="weui-badge weui-badge_dot msgbadge" style="position:absolute;top:-5px;right:-10px;"></span></i>
+                </div>
+            </h1>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <div class="app-header app-main f-cb bg-fafafa">
+        <div class="list-block -arrow page-block">
+            <a href="" class="item avatar">
+                <i class="fa fa-angle-right fa-fw"></i>
+                <div class="avatar-box avatar-s">
+                    <img id="headImg" alt="" src=<%= require('../../image/personal_pic.png')%>>
+                </div>
+                <div class="avatar-phone">
+                    <span id="user_phone">未登录</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="list-block -arrow page-block">
+            <a href="javascript:;" data-href="../help/index.html" class="item"><i class="fa fa-angle-right fa-fw"></i>常见问题</a>
+            <div class="line"></div>
+            <a href="javascript:;" data-href="../about/security.html" class="item"><i class="fa fa-angle-right fa-fw"></i>安全保障</a>
+        </div>
+
+        <div class="list-block -arrow page-block">
+            <a href="javascript:;" class="item"><i class="fa fa-angle-right fa-fw"></i>联系客服</a>
+            <div class="line"></div>
+            <a href="../about/event.html" class="item">关于我们<i class="fa fa-angle-right fa-fw"></i></a>
+        </div>
+
+
+        <div class="logout">
+            <a id="logout" class="btn">退出登录</a>
+        </div>
+
+        <%= require('html-loader!../../layout/menu.html')%>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

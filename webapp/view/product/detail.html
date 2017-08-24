@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+    <%= require('html-loader!../../layout/loading.html')%>
+        <!-- header -->
+        <header id="header">
+            <div class="spacer"></div>
+            <div id="m-header-nav" class="overflow-hide bg-338fff c-ffffff">
+                <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="his"></a>
+                <h1></h1>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <div class="app-header app-main pb20 f-cb">
+            <div class="salary-base">
+                <div class="salary-base-rate">
+                    <div class="percent" data-incomeRate='0'>0.00<sub>%</sub></div>
+                    <div class="salary-base-rate_title">预期年化收益率</div>
+                </div>
+            </div>
+            <div class="com-progress-mod bg-338fff" id="J_progressBar" data-progress="0">
+                <div class="progress-bar">
+                    <span class="progress-on"></span>
+                    <!--说明: 设计进度为progress-on的宽度值 -->
+                </div>
+            </div>
+            <div class="salary-base-props bg-338fff">
+                <dl class="props-item">
+                    <dt>剩余份额</dt>
+                    <dd>--</dd>
+                </dl>
+                <dl class="props-item">
+                    <dt>产品期限</dt>
+                    <dd>--</dd>
+                </dl>
+                <dl class="props-item">
+                    <dt>已成功投资</dt>
+                    <dd>--</dd>
+                </dl>
+            </div>
+
+            <div class="page-block">
+                <div class="item">
+                    购买
+                    <input type="text" autocomplete="off" placeholder="--">
+                    <span class="item_content tag">最大金额</span>
+                </div>
+                <div class="line"></div>
+                <a href="" class="item">
+                    <span class="c-999999">预期到期收益 <em class="c-333333">0.00元</em></span>
+                    <span class="item_content tag">收益计算</span>
+                </a>
+            </div>
+
+            <div class="list-block page-block">
+                <span class="item">收益方式<em class="f-fr">--</em></span>
+            </div>
+            <div class="line"></div>
+
+            <div class="project-desc page-block bg-white">
+                <div class="project-desc_title">购买规则</div>
+                <div class="project-desc_con pr20">--</div>
+            </div>
+
+            <div class="list-block -arrow page-block mb10">
+                <a href="" class="item">
+                    投资记录
+                    <span class="c-338fff">(0)</span>
+                    <i class="fa fa-angle-right fa-fw"></i>
+                </a>
+                <div class="line"></div>
+                <a href="" class="item"><i class="fa fa-angle-right fa-fw"></i>项目描述</a>
+                <div class="line"></div>
+                <a href="javascript:;" class="item"><i class="fa fa-angle-right fa-fw"></i>资金保障</a>
+                <div class="line"></div>
+                <a href="javascript:;" class="item"><i class="fa fa-angle-right fa-fw"></i>购买协议</a>
+            </div>
+
+            <div class="m-btnBar">
+                <div class="btns">
+                    <a class="btn btn-normal F-buyBtn">立即抢购</a>
+                </div>
+            </div>
+        </div>
+        <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

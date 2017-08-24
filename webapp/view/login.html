@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../layout/head.html')%>
+</head>
+
+<body class="bg-fff">
+
+    <!-- header -->
+    <header id="header">
+        <div class="spacer"></div>
+        <div id="m-header-nav" class="bg-338fff c-ffffff overflow-hide ">
+            <a class="goback arrow-left" href="javascript:;" data-href="his"></a>
+            <h1>登录</h1>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <div class="app-header app-main f-cb bg-fff">
+        <div class="logo-box pt20">
+            <div class="mo-input-box bb-e6e6e6">
+                <input type="tel" class="quick-del-input" id="phone" autocomplete="off" placeholder="请输入手机号码">
+                <span class="quick-del"><i></i></span>
+            </div>
+            <div class="mo-input-box bb-e6e6e6">
+                <input id="password" type="password" autocomplete="off" placeholder="请输入登录密码">
+                <span class="quick-del"><i></i></span>
+            </div>
+            <div class="mo-input-box bb-e6e6e6 f-hide">
+                <input type="tel" id="txtCode" autocomplete="off" placeholder="请输入图形验证码">
+                <div class="captcha_wrap bl-e6e6e6" id="btnCode">
+                    <img class="captcha_img" src="http://deposit.fangjinnet.com/api/Captcha">
+                </div>
+            </div>
+            <div class="login_error mt10 c-fd6040">
+                <p class="error f-hide"></p>
+            </div>
+            
+            <a id="loginbtn" class="btn btn-normal mt50">
+                <i class="fa fa-spinner fa-spin f-hide"></i>
+                <span>立即登录</span>
+            </a>
+
+            <div class="f-cb pt20">
+                <a href="./logon.html" class="f-fl c-ff6600 f13px">快速注册</a>
+                <a href="./reset.html" class="f-fr c-338fff f13px">忘记密码</a>
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!../layout/footer.html')%>
+</body>
+
+</html>

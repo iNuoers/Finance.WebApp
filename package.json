@@ -1,0 +1,31 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "房微官网项目",
+  "main": "app.js",
+  "scripts": {
+    "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --colors --progress --watch --display-error-details --port 3002 --hot --host 192.168.1.53",
+    "dist": "set WEBPACK_ENV=online && webpack -p"
+  },
+  "keywords": [
+    "房金网",
+    "微官网"
+  ],
+  "author": "mr.ben (66623978@qq.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.15.0",
+    "url-loader": "^0.5.9",
+    "html-loader": "^0.5.0",
+    "css-loader": "^0.28.4",
+    "file-loader": "^0.11.2",
+    "style-loader": "^0.18.2",
+    "webpack-dev-server": "^1.16.5",
+    "html-webpack-plugin": "^2.29.0",
+    "extract-text-webpack-plugin": "^1.0.1"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "weui": "^1.1.2"
+  }
+}

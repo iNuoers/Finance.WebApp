@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+    <%= require('html-loader!../../layout/nav.html')%>
+    <%= require('html-loader!../../layout/loading.html')%>
+    <div class="app-main bg-f1f1f1">
+        <div class="wallet-wrapper">
+            <div class="wallet-top pt20">
+                <div class="wallet-total ml20">总资产（元）<span>123014.26</span></div>
+                <div class="wallet-vote ml50">昨日收益（元）<span>354.32</span></div>
+                <div class="wallet-total ml20 wallet-normal">在投金额（元）<span>12300.00</span></div>
+                <div class="wallet-vote ml50 wallet-normal">累计收益（元）<span>53451.27</span></div>
+            </div>
+            <div class="wallet-c">
+                <div class="wallet-container mb15">
+                    <div class="f-fl ml15  wallet-account-balance f16px">账户余额：<span>1254.36</span>元</div>
+                    <div class="f-fr mr15 wallet-account-recharge f16px"><a href="">立即充值</a></div>
+                </div>
+                <div class="wallet-container">
+                    <div class="f-fl ml15 wallet_bill">我的投资</div>
+                    <div class="f-fr mr15"><img width="80%" height="80%" src=<%=require( "../../image/wallet_icon.png")%>></div>
+                </div>
+                <div class="wallet-container2">
+                    <div class="f-fl ml15">活期：126300.00元</div>
+                    <div class="f-fr mr15">定期：236500.00元</div>
+                </div>
+                <div class="wallet-container">
+                    <div class="f-fl ml15 wallet_invest">我的卡劵</div>
+                    <div class="f-fr mr15"><img width="80%" height="80%" src=<%=require( "../../image/wallet_icon.png")%>></div>
+                </div>
+                <div class="wallet-container2">
+                    <div class="f-fl ml15">现金券：4张</div>
+                    <div class="f-fr mr15">加息券：4张</div>
+                </div>
+                <div class="wallet-container">
+                    <div class="f-fl ml15 wallet_stock">我的账单</div>
+                    <div class="f-fr mr15"><img width="80%" height="80%" src=<%=require( "../../image/wallet_icon.png")%>></div>
+                </div>
+                <div class="wallet-container2">
+                    <div class="f-fl ml15">本月充值：126300.00元</div>
+                    <div class="f-fr mr15">本月提现：236500.00元</div>
+                </div>
+            </div>
+        </div>
+        <%= require('html-loader!../../layout/menu.html')%>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

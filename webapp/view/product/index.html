@@ -1,0 +1,102 @@
+<!--
+
+https://m.16pu.com/tlist
+产品进度
+https://m.jinlianchu.cn/index/project/project_list.html
+
+https://weixin.100lending.com/#/product/productList 头部切换样式
+
+  -->
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+
+    <%= require('html-loader!../../layout/loading.html')%>
+    <div class="app-main bg-999999">
+
+        <div class="m-product-menu bg-fff f-cb">
+            <div class="m-menu-item" data-target="current">
+                <div class="f-fr current active">
+                    <a href="javascript:;">活期理财</a>
+                </div>
+            </div>
+            <div class="m-menu-item" data-target="invest">
+                <div class="invest">
+                    <a href="javascript:;">定期理财</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 项目列表 S -->
+        <div class="tab-tabs">
+            <div class="m-prolist mb60 current">
+                <ul class="prolist mt15">
+                    <!-- <li class="prol-item prol-orange">
+                        <a href="" class="prol-item-inner">
+                            <div class="c-333333 f18px">
+                                <span class="prol-title">春龙天天赚</span>
+                            </div>
+                            <div class="prol-bd">
+                                <ul class="prol-cols f-cb">
+                                    <li class="pro-col">
+                                        <div class="proc-bd">
+                                            <span class="hot">3%</span>
+                                        </div>
+                                        <div class="proc-hd">预期年化收益率</div>
+                                    </li>
+                                    <li class="pro-col">
+                                        <div class="proc-bd"><span class="hot">27天</span></div>
+                                        <div class="proc-hd">投资期限</div>
+                                    </li>
+                                </ul>
+                                <ul class="prol-cols pt10 f-cb">
+                                    <li class="pro-col">
+                                        <div class="proc-bd">
+                                            <i class="iconfont icon-safe fcblue"></i>
+                                            <span class="f12px c-999">第三方担保</span>
+                                        </div>
+                                    </li>
+                                    <li class="pro-col">
+                                        <div class="proc-bd">
+                                            <i class="iconfont icon-type fcblue"></i>
+                                            <span class="f12px c-999">到期还本付息</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="item_charts">
+                                    <span>
+                                        2%
+                                    </span>
+                                </div>
+                                <div class="prol-tr">
+                                    <span class="prol-state full">
+                                        抢光了
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <div class="prol-space mt10 mb10">
+                        <span>只展示最近10个已售罄产品</span>
+                    </div> -->
+                </ul>
+            </div>
+
+            <div class="m-prolist mb60 invest f-hide">
+                <ul class="prolist mt15"></ul>
+            </div>
+        </div>
+
+        <div class="block-simple-tip">理财非存款，投资需谨慎</div>
+        <%= require('html-loader!../../layout/menu.html')%>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

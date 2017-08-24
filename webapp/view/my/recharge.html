@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+<body>
+    <div class="app-main bg-f7f7f7">
+        <div class="recharge-b"></div>
+        <div class="text-center recharge-container mb15">充值</div>
+        <div class="recharge-container">
+            <div class="recharge-card f-fl">银行卡号&nbsp;&nbsp;<span>6229 4526************4562</span></div>
+            <div class="card-img f-fr f-cb"><img width="80%" height="80%" src=<%= require("../../image/recharge-card.png")%>></div>
+        </div>
+        <div class="recharge-limit c-999 ml10">该卡充值限额：<span>单笔5万元，单日50万元</span></div>
+        <div class="recharge-container recharge-amount pl10">金额&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" placeholder="充值金额100元起"></div>
+        <div class="recharge-otherBank pl10 mt15"><a href="">点击查看各大银行充值限额</a></div>
+        <div class="recharge-btn mt50">确定</div>
+    </div>
+<%= require('html-loader!../../layout/footer.html')%>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!--https://weixin.100lending.com/#/help/index  热门问题 小点样式  -->
+
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <div class="spacer"></div>
+        <div id="m-header-nav" class="bg-fff c-000000 overflow-hide">
+            <h1>常见问题</h1>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <div class="app-main f-cb bg-fafafa">
+        <section class="help_wrap">
+            <header>
+                <div class="search-banner">
+                    <a class="search-access" href="http://q.url.cn/s/R5V04Em?_type=wpa" target="_blank">
+                        <img src=<%= require('../../image/help_top.jpg') %>>
+                    </a>
+                </div>
+
+                <div class="m-search f-cb">
+                    <input type="text" id="SearchText" name="SearchText" placeholder="点击输入你疑问的关键词">
+                </div>
+            </header>
+
+            <article class="type-box mt10 mb10 bg-fff">
+                <div class="pt10">
+                    <div class="title">
+                        <h2>问题分类</h2>
+                    </div>
+                </div>
+                <div class="type-content">
+                    <ul class="type-ul"></ul>
+                </div>
+            </article>
+            <article>
+                <div class="hot-box mt10 bg-fff">
+                    <div class="hot-cells-hd">热门问题</div>
+                    <div class="hot-cells hot-cells-access"></div>
+                </div>
+            </article>
+            <footer>
+                <a href="tel:4001676880">
+                    <img src=<%= require('../../image/help_footer.jpg') %>>
+                </a>
+            </footer>
+        </section>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

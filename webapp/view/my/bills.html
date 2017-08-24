@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+<body>
+    <div class="app-main bg-f7f7f7">
+        <div class="fiex-box">
+            <div class="bills-b"></div>
+            <div class="text-center bills-container bills-bm">账单</div>
+            <div class="bills-r">筛选</div>
+        </div>
+        <div class="bills-screening">
+            <ul>
+                <li class="bills-screening-active">全部</li>
+                <li>充值提现</li>
+                <li>收益明细</li>
+                <li>活期产品</li>
+                <li>定期产品</li>
+                <li>活动奖励</li>
+            </ul>
+        </div>
+        <div class="bills-zhezhao"></div>
+        <div class="bills-box">
+            <div class="bills-box-top pl15">本月累计收益<span class="f-fr mr40">130.51</span></div>
+            <div class="bills-list mb10">
+                <ul>
+                    <li class="bills-bm">
+                        <div class="list-fl f-fl">
+                            <div class="list-title-top mt15 w9">获得返现<span class="f-fr"><img width="70%" height="70%" src=<%= require("../../image/bills_bao.png")%>> </span></div>
+                            <div class="list-title-bottom">2015-08-03来自"返现劵奖励"</div>
+                        </div>
+                        <div class="list-fr f-fr c-FF424A">150000.00</div>
+                    </li>
+                    <li class="bills-bm">
+                        <div class="list-fl f-fl">
+                            <div class="list-title-top f-cb mt15 w9">获得返现<span class="f-fr"><img width="70%" height="70%" src=<%= require("../../image/bills_bao.png")%>> </span></div>
+                            <div class="list-title-bottom">2015-08-03来自"返现劵奖励"</div>
+                        </div>
+                        <div class="list-fr f-fr c-FF424A">150000.00</div>
+                    </li>
+                    <li class="bills-bm">
+                        <div class="list-fl f-fl">
+                            <div class="list-title-top f-cb mt15">购买-房金月宝90期成功</div>
+                            <div class="list-title-bottom">2015-08-03来自"返现劵奖励"</div>
+                        </div>
+                        <div class="list-fr f-fr c-FF424A">150000.00</div>
+                    </li>
+                    <li class="bills-bm">
+                        <div class="list-fl f-fl">
+                            <div class="list-title-top f-cb mt15">购买-房金月宝80期失败</div>
+                            <div class="list-title-bottom">2015-08-03&nbsp;&nbsp;&nbsp;加息<span class="c-0087DF">+1.38%</span></div>
+                        </div>
+                        <div class="list-fr f-fr c-FF424A">150000.00</div>
+                    </li>
+                    <li class="bills-bm">
+                        <div class="list-fl f-fl">
+                            <div class="list-title-top f-cb mt15">购买-房年宝21期成功</div>
+                            <div class="list-title-bottom">2015-08-03来自"返现劵奖励"</div>
+                        </div>
+                        <div class="list-fr f-fr c-FF424A">150000.00</div>
+                    </li>
+                    <li class="bills-bm">
+                        <div class="list-fl f-fl">
+                            <div class="list-title-top f-cb mt15">提现-失败</div>
+                            <div class="list-title-bottom">2015-08-03</div>
+                        </div>
+                        <div class="list-fr f-fr c-0EC80D">2600.00</div>
+                    </li>
+                    <li class="bills-bm">
+                        <div class="list-fl f-fl">
+                            <div class="list-title-top f-cb mt15">提现-成功</div>
+                            <div class="list-title-bottom">2015-08-06</div>
+                        </div>
+                        <div class="list-fr f-fr c-0EC80D">65200.00</div>
+                    </li>
+                    <li class="bills-bm">
+                        <div class="list-fl f-fl">
+                            <div class="list-title-top f-cb mt15 w9">获得返现<span class="f-fr"><img width="70%" height="70%" src=<%= require("../../image/bills_bao.png")%>> </span></div>
+                            <div class="list-title-bottom">2015-08-03来自"返现劵奖励"</div>
+                        </div>
+                        <div class="list-fr f-fr c-FF424A">150000.00</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+</html>

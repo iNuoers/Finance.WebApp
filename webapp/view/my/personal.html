@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>个人中心</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+<body>
+    <div class="app-main bg-f7f7f7">
+        <div class="personal-b"></div>
+        <div class="text-center personal-container mb15 borers-b">个人中心</div>
+        <div class="personal-container mb15" style="height: 10rem">
+            <div class="personal-pic personal-item borers-b">
+                <div class="personal-pic-t f-fl">头像</div>
+                <div class="personal-pic-img f-fr"><img width="50%" height="50%" src=<%= require("../../image/personal_pic.png")%>><span class="mt25"></span> </div>
+            </div>
+            <div class="personal-item">我的地址<span class="mt13"></span></div>
+        </div>
+        <div class="personal-container" style="height: 8rem">
+            <div class="personal-item">
+                <div class="f-fl">账户安全</div>
+                <span class="mt13"></span>
+                <div class="f-fr personal-item-right">账户安全等级：<span>低</span></div>
+
+            </div>
+            <div class="f-cb"></div>
+            <div class="personal-item borers-t">
+                <div class="f-fl">存管账户</div>
+                <span class="mt13"></span>
+                <div class="f-fr personal-item-right"><span>未开通</span></div>
+            </div>
+        </div>
+        <div class="personal-button">安全退出</div>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+</html>
