@@ -11,8 +11,9 @@
                 background-color: #fff;
                 font-size: 16px;
                 background: url(<%=require('../../image/protocol_bg.jpg')%>) top center repeat-y;
-                background-size: 100% auto;                
+                background-size: 100% auto;
                 overflow: hidden;
+                min-height:400px;
             }
 
             .newsDetail-con {
@@ -34,10 +35,19 @@
 </head>
 
 <body>
+    <!-- header -->
+    <header id="header">
+        <div id="m-header-nav" class="overflow-hide bg-338fff c-ffffff">
+            <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="his"></a>
+            <h1>资金保障</h1>
+        </div>
+    </header>
+    <!-- header end -->
 
-    <div class="app-main f-cb bg-fff">
+    <div class="app-header app-main f-cb bg-fff">
         <div class="newsDetail">
-            <div class="newsDetail-con ml15 mr15">
+            <!-- 活期产品 -->
+            <div class="newsDetail-con ml15 mr15 current f-hide">
                 <h3 class="mb20">增信措施</h3>
                 <h3>可靠的项目渠道</h3>
                 <p>产品资金主要投资于一线城市地产优质项目，项目渠道可靠，房金网专业风控团队对项目实行跟踪管理，并对收益情况进行数据统计分析，多重风控审核保障资金安全。</p>
@@ -49,8 +59,17 @@
                 <p>律师已查明：抵押物为抵押人合法所有，且处于抵押人有效占有之下，抵押人对抵押物享有处分权，有权在抵押物上设定抵押。借款人与出借人签订的《房产抵押借款合同》合法有效，具有法律效力。根据《中华人民共和国合同法》、《中华人民共和国物权法》等相关法律法规的规定，对于已经合法设立的抵押权，借款人未履行还款义务时，出借人有权根据合同约定要求借款人承担逾期还款责任，并有权根据合同约定以抵押物折价或者以拍卖、变卖等方式处置抵押物，或请求法院强制执行抵押物。</p>
                 <h3>全额托底承诺</h3>
             </div>
+
+            <!-- 定期产品 -->
+            <div class="invest newsDetail-con ml15 mr15 f-hide">
+                <h3>1、融资公司提供抵押担保</h3>
+                <p>（1）融资方公司资产抵押<br>（2）项目公司法人签署无限连带责任保证函<br>（3）上海市长宁区房地产权证抵押</p>
+                <h3>2、房金网多重风控措施</h3>
+                <p>（1）设立风险储备制度， 降低用户投资风险<br>（2）产品发布后，风控团队对项目实行定期跟踪监管<br>（3）提前垫付，债权回购<br>（4）上海银行资金存管，严格分离平台自由资金与用户资金，资金流向更清晰透明</p>
+            </div>
         </div>
     </div>
+    <%= require('html-loader!../../layout/footer.html')%>
 </body>
 
 </html>

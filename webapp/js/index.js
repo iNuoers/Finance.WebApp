@@ -15,6 +15,16 @@ fjw.webapp.home = {
         this.listenEvent();
     },
     listenEvent: function () {
+
+        $('.entrance-panel').delegate('.item', 'click', function () {
+            var idx = $('.item').index($(this));
+            switch (idx) {
+                case 1:
+                    $(this).data('href', '').data('neelogin', true);
+                    break;
+            }
+        });
+
         $(".primary-nav_inner a").removeClass("-current").siblings(".-home").addClass("-current");
     },
     renderData: function () {
@@ -71,7 +81,7 @@ fjw.webapp.home = {
             var tpl = '<%if(homeHot.length>0) {%>' +
                 '    <%for(i = 0; i < homeHot.length; i ++) {%>' +
                 '        <% var data = homeHot[i]; %>' +
-                '        <a class="item" href="javascript:void(0);" data-id=<%=data.id%> data-href="<%=data.linkUrl%>">' +
+                '        <a class="item" href="javascript:void(0);">' +
                 '           <span class="e-icon"><img src="<%=data.imgUrl%>" alt="<%=data.title%>"></span>' +
                 '           <strong><%=data.title%></strong>' +
                 '        </a>' +
@@ -80,6 +90,24 @@ fjw.webapp.home = {
 
             var html = template(tpl, data);
             $('.entrance-panel').html(html);
+
+            $('.entrance-panel .item').each(function (idx) {
+                switch (idx + 1) {
+                    case 1:
+                        $(this).attr('data-href', './product/detail.html?id=3');
+                        break;
+                    case 2:
+                        $(this).attr('data-needlogin', 'true');
+                        $(this).attr('data-href', './recommend.html');
+                        break;
+                    case 3:
+                        $(this).attr('data-href', './activity.html');
+                        break;
+                    case 4:
+                        $(this).attr('data-href', './about/security.html');
+                        break;
+                }
+            });
         }
     },
     renderProduct: function (data) {

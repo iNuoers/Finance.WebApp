@@ -95,11 +95,7 @@ fjw.webapp.login = {
                 _f.storage.setItem('F.avator', user.member.headPhoto, { path: '/' });
 
                 _f.storage.setItem('f_ui_cache', res);
-
-                window.user.isLogin = true;
-                window.user.token = user.token;
-                window.user.phone = user.member.phone;
-
+                
                 //success redirect
                 window.location.href = _f.Tools.getUrlParam('redirect') || '/dist/view/my/index.html';
 

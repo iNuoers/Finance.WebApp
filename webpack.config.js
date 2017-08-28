@@ -35,7 +35,8 @@ const config = {
         'product/detail'        : ['./webapp/js/product_detail.js'],
         'product/record'        : ['./webapp/js/product_record.js'],
         'product/capital'       : ['./webapp/js/product_capital.js'],
-        'product/protocol'      : ['./webapp/js/product_protocol.js'],
+        'product/protocol_dq'   : ['./webapp/js/product_protocol.js'],
+        'product/protocol_hq'   : ['./webapp/js/product_protocol.js'],
         'product/info'          : ['./webapp/js/product_info.js'],
         'product/calculator'    : ['./webapp/js/product_calculator.js'],
 
@@ -126,7 +127,8 @@ const config = {
         new HtmlWebpackPlugin(getHtmlConfig('product/detail')),
         new HtmlWebpackPlugin(getHtmlConfig('product/capital')),
         new HtmlWebpackPlugin(getHtmlConfig('product/info')),
-        new HtmlWebpackPlugin(getHtmlConfig('product/protocol')),
+        new HtmlWebpackPlugin(getHtmlConfig('product/protocol_hq')),
+        new HtmlWebpackPlugin(getHtmlConfig('product/protocol_dq')),
         new HtmlWebpackPlugin(getHtmlConfig('product/record')),
         new HtmlWebpackPlugin(getHtmlConfig('product/calculator')),
 
@@ -160,9 +162,9 @@ const config = {
         // 独立通用模块到 js/base.js
         new webpack.optimize.CommonsChunkPlugin({
             // 将公共模块提取，生成名为`common`的chunk
-            name:'base' // 把依赖移动到主文件
-            //children:  true, // 寻找所有子模块的共同依赖
-            //minChunks: 2, // 设置一个依赖被引用超过多少次就提取出来
+            name:'base', // 把依赖移动到主文件
+            // children:  true, // 寻找所有子模块的共同依赖
+            // minChunks: 0, // 设置一个依赖被引用超过多少次就提取出来
         })
     ]
 };

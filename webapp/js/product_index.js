@@ -128,7 +128,7 @@ fjw.webapp.prol = {
                 '                      </ul>' +
                 '                      <%if(data.CountDown>0){%>' +
                 '                          <ul class="prol-cols time pt10 f-cb">' +
-                '                              <li class="pro-col">' +
+                '                              <li class="pro-col" style="width:100%;">' +
                 '                                  <div class="proc-bd">' +
                 '                                      <i class="fa fa-clock-o c-338fff"></i>' +
                 '                                      <span class="f12px c-999 timeset" data-conutdown="<%= data.CountDown %>"></span>' +

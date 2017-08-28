@@ -6,11 +6,6 @@
 */
 'use strict';
 
-require('node_modules/font-awesome/css/font-awesome.min.css');
-require('node_modules/weui/dist/style/weui.min.css');
-require('../../css/base.css');
-require('../../css/core.css');
-
 // 关于跳转 看这个 http://www.huaguo.cn/m/js/v2/g_event_api.js
 
 var F = {
@@ -46,7 +41,10 @@ var F = {
     },
 
     cache: {
+        isBuy: 0,
+        balance: 0,
         isLogin: false,
+        isAuthen: false,
         glb_user_phone: '',
         glb_user_token: '',
         glb_user_avator: ''

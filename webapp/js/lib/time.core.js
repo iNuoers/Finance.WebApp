@@ -9,10 +9,10 @@ var countdown = function (ele, text, callback) {
             str = "";
 
         if (time > 0) {
-            var sec = zero(time % 60);
-            var min = Math.floor((time / 60)) > 0 ? zero(Math.floor((time / 60)) % 60) + ':' : "";
-            var hour = Math.floor((time / 3600)) > 0 ? Math.floor((time / 3600)) % 24 + ':' : "";
-            var day = Math.floor((time / 86400)) > 0 ? Math.floor((time / 86400)) % 30 + ':' : "";
+            var sec = zero(time % 60) + '秒';
+            var min = Math.floor((time / 60)) > 0 ? zero(Math.floor((time / 60)) % 60) + '分' : "";
+            var hour = Math.floor((time / 3600)) > 0 ? Math.floor((time / 3600)) % 24 + '时' : "";
+            var day = Math.floor((time / 86400)) > 0 ? Math.floor((time / 86400)) % 30 + '天' : "";
 
             str = day + hour + min + sec;
         }

@@ -341,7 +341,7 @@
 #m-header-nav .logo { display: inline-block; width: 7.28571429rem; height: 1.78571429rem; background: url(); -webkit-background-size: 100% 100%; background-size: 100%; margin: .85714286rem 0 0 1.42857143rem; }
 [data-net=lowbandwidth] #m-header-nav .logo { background-image: url(""); }
 #m-header-nav .arrow-left { font-size: 1.2rem; padding: 0 1rem 0 2rem; }
-#m-header-nav .arrow-left:before { position: absolute; left: 1rem; top: 1.2rem; content: ''; width: .8rem; height: .8rem; border: 2px solid #FFF; border-width: 0 0 2px 2px; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+#m-header-nav .arrow-left:before { position: absolute; left: 1rem; top: 1.5rem; content: ''; width: .8rem; height: .8rem; border: 2px solid #FFF; border-width: 0 0 2px 2px; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
 #m-header-menu-title { position: absolute; top: 0; left: 25%; width: 50%; z-index: 203; height: 4rem; line-height: 4rem; color: #FFF; text-align: center; font-size: 1.21428571rem; }
 #m-header-menu-title .ctn { display: inline-block; max-width: 80%; vertical-align: middle; margin-right: .71428571rem; }
 #m-header-menu-title .arrow { position: relative; top: -2px; display: inline-block; border: 1px solid #FFF; border-width: 0 1px 1px 0; width: .71428571rem; height: .71428571rem; -webkit-transform: rotateZ(45deg); transform: rotateZ(45deg); vertical-align: middle; -webkit-transition: all .2s ease-in-out; transition: all .2s ease-in-out; }

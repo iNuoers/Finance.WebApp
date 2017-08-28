@@ -24,7 +24,7 @@
 %>
 <div class="salary-base">
     <div class="salary-base-rate">
-        <div class="percent"><%= IncomeRate.toFixed(2) %><sub>%</sub></div>
+        <div class="percent rate"><%= IncomeRate.toFixed(2) %><sub>%</sub></div>
         <div class="salary-base-rate_title">预期年化收益率</div>
     </div>
 </div>
@@ -38,15 +38,20 @@
 <div class="salary-base-props bg-338fff">
     <dl class="props-item">
         <dt>剩余份额</dt>
-        <dd><%= RemainingShares > 0 ? RemainingShares : 0 %></dd>
+        <dd><%= RemainingShares %></dd>
+        <input type="hidden" value="<%= TotalShares %>" id="maxBuyPrice">
+        <input type="hidden" id="startBuyPrice" value="<%= StartBuyPrice %>">
+        <input type="hidden" id="remainingShares" value="<%= RemainingShares %>">
     </dl>
     <dl class="props-item">
         <dt>产品期限</dt>
         <dd><%= TimeLimit %></dd>
     </dl>
     <dl class="props-item">
-        <dt>已成功投资</dt>
-        <dd><%= BuyCountText %></dd>
+        <div data-href="./record.html?pid=<%= ProductTypeParentId %>&tid=<%= ProductTypeId %>&id=<%= Id %>">
+            <dt>已成功投资</dt>
+            <dd><%= BuyCountText %></dd>
+        </div>
     </dl>
 </div>
 <%if(IsPlusInCome==1&&IsCash==1){%>
@@ -61,14 +66,14 @@
 <div class="page-block">
     <div class="item">
         购买
-        <input type="number" maxlength="12" autocomplete="off" placeholder="最低购买金额<%= StartBuyPrice %>元">
-        <span class="item_content tag">最大金额</span>
+        <input type="tel" class="amountInput" maxlength="12" autocomplete="off" placeholder="最低购买金额<%= StartBuyPrice %>元">
+        <span class="item_content tag max-money">最大金额</span>
     </div>
     <div class="line"></div>
-    <a href="" class="item">
+    <div class="item">
         <span class="c-999999">预期到期收益 <em class="c-333333">0.00元</em></span>
-        <span class="item_content tag">收益计算</span>
-    </a>
+        <span class="item_content tag calculator">收益计算</span>
+    </div>
 </div>
 
 <div class="list-block page-block">
@@ -109,12 +114,28 @@
     <div class="line"></div>
     <a href="javascript:;" data-href="./capital.html?pid=<%= ProductTypeParentId %>&tid=<%= ProductTypeId %>&id=<%= Id %>" class="item"><i class="fa fa-angle-right fa-fw"></i>资金保障</a>
     <div class="line"></div>
-    <a href="javascript:;" data-href="./protocol.html?pid=<%= ProductTypeParentId %>&tid=<%= ProductTypeId %>&id=<%= Id %>" class="item"><i class="fa fa-angle-right fa-fw"></i>购买协议</a>
+    <a href="javascript:;" data-href="./protocol_<%= ProductTypeParentId==1 ? "hq" : "dq" %>.html?pid=<%= ProductTypeId %>&tid=0&id=<%= Id %>" class="item"><i class="fa fa-angle-right fa-fw"></i>购买协议</a>
 </div>
 <div class="m-service c-338fff">
     <a class="service-btn">咨询客服</a>
 </div>
 <div class="block-simple-tip">理财非存款，投资需谨慎</div>
+
 <div class="m-btnBar">
-    <span class="btn btn-normal F-buyBtn">立即抢购</span>
+    <span class="btn btn-normal F-buyBtn">立即投资</span>
+</div>
+
+<div class="mask">
+    <article class="pay">
+        <header>收益计算器<div class="close"></div></header>
+        <section class="list calculator">
+            <div id="price"><input type="tel" placeholder="请输入投资金额" maxlength="7" value="10000"></div>
+        </section>
+        <section class="profit">
+            <div class="productProfit">本产品预期收益(元):<span class="">32.99</span></div>
+            <div class="bankProfit">投资期限:<span class="">30天</span></div>
+            <div class="bankProfit">该产品投资金额(元):<span class="">10-50000</span></div>
+        </section>
+        <section class="declaration line-33">预计收益计算仅供参考,以实际收益为准</section>
+    </article>
 </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-cn">
 
 <head>
@@ -10,7 +10,6 @@
     <%= require('html-loader!../../layout/loading.html')%>
         <!-- header -->
         <header id="header">
-            <div class="spacer"></div>
             <div id="m-header-nav" class="overflow-hide bg-338fff c-ffffff">
                 <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="his"></a>
                 <h1></h1>
@@ -18,7 +17,7 @@
         </header>
         <!-- header end -->
 
-        <div class="app-header app-main pb20 f-cb">
+        <div class="app-header app-main pb20 f-cb loadeffects-tran-page loadeffects-show loadeffects-beIn">
             <div class="salary-base">
                 <div class="salary-base-rate">
                     <div class="percent" data-incomeRate='0'>0.00<sub>%</sub></div>
@@ -53,10 +52,10 @@
                     <span class="item_content tag">最大金额</span>
                 </div>
                 <div class="line"></div>
-                <a href="" class="item">
+                <div class="item">
                     <span class="c-999999">预期到期收益 <em class="c-333333">0.00元</em></span>
-                    <span class="item_content tag">收益计算</span>
-                </a>
+                    <span class="item_content tag calculator">收益计算</span>
+                </div>
             </div>
 
             <div class="list-block page-block">

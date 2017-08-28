@@ -1,3 +1,13 @@
+'use strict'
+
+require('node_modules/font-awesome/css/font-awesome.min.css');
+require('node_modules/weui/dist/style/weui.min.css');
+require('../../plugins/layer/need/layer.css')
+require('../../css/base.css');
+require('../../css/core.css');
+
+require('../../plugins/layer/layer.js')
+
 var attachFastClick = require('../../plugins/fastclick.min.js')
 // require('../../plugins/vconsole.min.js')
 // require('./statistics.js')
@@ -8,6 +18,9 @@ window.user = {
     token: '',
     phone: '',
     avator: '',
+    balance: 0,
+    isBuy: 0,
+    isAuthen: 0,
     isLogin: false
 };
 window.agent = window.navigator.userAgent.toLowerCase();
@@ -26,17 +39,26 @@ var core = {
             var user = JSON.parse(_f.storage.getItem('f_ui_cache'));
 
             _f.cache.isLogin = true;
-            _f.cache.glb_user_phone = user.member.phone;
-            _f.cache.glb_user_avator = user.member.headPhoto;
+            _f.cache.isBuy = user.member.isBuy;
             _f.cache.glb_user_token = user.token;
+            _f.cache.balance = user.member.balance;
+            _f.cache.glb_user_phone = user.member.phone;
+            _f.cache.isAuthen = user.member.realNameAuthen;
+            _f.cache.glb_user_avator = user.member.headPhoto;
 
             window.user = {
+                isBuy: _f.cache.isBuy,
+                balance: _f.cache.balance,
+                isLogin: _f.cache.isLogin,
+                isAuthen: _f.cache.isAuthen,
                 token: _f.cache.glb_user_token,
                 phone: _f.cache.glb_user_phone,
-                avator: _f.cache.glb_user_avator,
-                isLogin: _f.cache.isLogin
+                avator: _f.cache.glb_user_avator
             };
         } else {
+            _f.cache.isBuy = 0;
+            _f.cache.balance = 0;
+            _f.cache.isAuthen = 0;
             _f.cache.isLogin = false;
             _f.cache.glb_user_token = '';
             _f.cache.glb_user_phone = '';
@@ -81,12 +103,6 @@ var core = {
         });
         $(window).on('resize orientationchange', function () {
             top = win.screenTop();
-        });
-        $(document).on('focus', 'input', function () {
-            header.hide();
-        });
-        $(document).on('blur', 'input', function () {
-            header.show();
         });
     },
     initDownBar: function () {
@@ -142,7 +158,7 @@ var core = {
     doLogin: function (url) {
         var _this = this;
 
-        if (window.user.phone != "") {
+        if (window.user.isLogin) {
             // 已经登录 点击直接进入页面
             window.location.href = url;
             return;
