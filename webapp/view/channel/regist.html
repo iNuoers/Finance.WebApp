@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="zh-cn">
 
+<head>
+    <title>
+        邀请注册 注册有礼
+    </title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+    <section class="invite-logon" style="background-image: url(<%=require("../../image/invite_1.png")%>);background-size:100%  100%;background-repeat:no-repeat;">
+
+        <div class="invite-form">
+            <ul>
+                <li class="invi-message"> <input type="tel" id="code" autocomplete="off" placeholder="输入短信验证码"><i class="code">获取验证码</i></li>
+                <li class="invi-password"> <input type="password" id="password" autocomplete="off" placeholder="请设置您的登陆密码"></li>
+                <li class="invi-btn"><a href="javascript:void(0)" class="btn_login">登记领取</a></li>
+            </ul>
+        </div>
+        <div class="logon-alert">
+            <div class="l-alert">
+                <p>168迎新大礼包</p>
+                <p>最高6%加息卷</p>
+            </div>
+            <div class="a-text">
+                <h4>恭喜您</h4>
+                <span>奖励已经存入您的房金网账户</span>
+            </div>
+            <div class="a-btn">
+                <a href="#"> 查看奖励</a></p>
+            </div>
+        </div>
+    </section>
+    <%= require('html-loader!../../layout/footer.html')%>
 </body>
+
 </html>

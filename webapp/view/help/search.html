@@ -1,1 +1,34 @@
 <!-- http://mtrip.ch.com/site/search -->
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <title>常见问题</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+<body>
+    <div class="app-main">
+        <section class="search">
+            <ul class="search-content">
+            <li> <span class="icon-search"></span><input type="text" id="search" name="" placeholder ="输入你疑问的关键词"></li>
+            <span class="icon-empty fa fa-times-circle"></span>
+            </ul>
+        </section>
+        <section class="search-message">
+                <p>热门问题</p>
+                <a href="#">充值</a>
+                <a href="#">赎回</a>
+                <a href="#">余额</a>
+                <a href="#">实名</a>
+                <a href="#">手续费</a>
+                <a href="#">购买</a>
+        </section>
+        <section class="s-information">
+                <ul>
+                <li><p>热门问题<span class="fa fa-angle-right"></span></p></li>
+                <li><p>线上充值<span class="fa fa-angle-right"></span></p></li>
+                </ul>
+        </section>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+</html>

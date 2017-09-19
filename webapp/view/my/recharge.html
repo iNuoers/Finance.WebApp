@@ -5,16 +5,36 @@
     <%= require('html-loader!../../layout/head.html')%>
 </head>
 <body>
+    <%= require('html-loader!../../layout/loading.html')%>
     <div class="app-main bg-f7f7f7">
-        <div class="recharge-b"></div>
-        <div class="text-center recharge-container mb15">充值</div>
+        <div class="recharge-b" data-href="his"></div>
+        <div class="text-center recharge-top mb15">充值</div>
         <div class="recharge-container">
-            <div class="recharge-card f-fl">银行卡号&nbsp;&nbsp;<span>6229 4526************4562</span></div>
-            <div class="card-img f-fr f-cb"><img width="80%" height="80%" src=<%= require("../../image/recharge-card.png")%>></div>
+            <div class="recharge-bank">
+                <div class="bank-num f-fl">
+                    <i class="fa fa-bank fa-fw"></i>
+                    银 行 卡
+                </div>
+                <div class="bank-bg f-fl">
+                </div>
+                <div class="bankNum">
+
+                </div>
+                <div class="bank-cah">
+                    <div id="singlePrice">单笔:<span></span></div>
+                    <div id="dayPrice">单日:<span></span></div>
+                </div>
+            </div>
+            <div class="recharge-carch">
+                <div class="recharge-money">
+                    <div class="money-num f-fl">
+                        <i class="fa fa-money fa-fw"></i>
+                        充值金额
+                    </div>
+                    <input type="number" placeholder="请输入您要充值的金额" id="money-input">
+                </div>
+            </div>
         </div>
-        <div class="recharge-limit c-999 ml10">该卡充值限额：<span>单笔5万元，单日50万元</span></div>
-        <div class="recharge-container recharge-amount pl10">金额&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" placeholder="充值金额100元起"></div>
-        <div class="recharge-otherBank pl10 mt15"><a href="">点击查看各大银行充值限额</a></div>
         <div class="recharge-btn mt50">确定</div>
     </div>
 <%= require('html-loader!../../layout/footer.html')%>

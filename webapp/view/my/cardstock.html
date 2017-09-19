@@ -6,9 +6,12 @@
     <%= require('html-loader!../../layout/head.html')%>
 </head>
 <body>
-    <div class="app-main bg-f2f2f2">
+    <%= require('html-loader!../../layout/loading.html')%>
+    <header id="header" class="show-hd">
         <div class="m-product-menu bg-fff f-cb">
-            <div class="cardstock-b"></div>
+            <div id="m-header-nav">
+                <div class="cardstock-b" data-href="his"><a class="arrow-left"></a></div>
+            </div>
             <div class="m-menu-item" data-target="current">
                 <div class="f-fr current active">
                     <a href="javascript:;">现金劵</a>
@@ -20,83 +23,67 @@
                 </div>
             </div>
         </div>
+    </header>
+
+    <div class="coupon-box"> 
+        <div class="mint-loadmore" ref="loadmore">
+            <div class="mint-loadmore-content" style="transform: translate3d(0px, 0px, 0px);">
+                <div>
+                    <dl class="coupon-sig ">
+                        <dt>
+                            <h3>现金券</h3>
+                            <span>¥<b>500</b></span>
+                        </dt>
+                        <dd>
+                            <span>金额要求：投资金额≥50,000元</span>
+                            <span>期限要求：期限≥180天的定期项目</span>
+                            <span>有效期至：2017-10-05 23:59:59</span>
+                            <span>现金券来源：奖励</span>
+                            <i></i>
+                        </dd>
+                    </dl>
+                </div>
+                <div>
+                        <dl class="coupon-sig ">
+                            <dt>
+                                <h3>现金券</h3>
+                                <span>¥<b>500</b></span>
+                            </dt>
+                            <dd>
+                                <span>金额要求：投资金额≥50,000元</span>
+                                <span>期限要求：期限≥180天的定期项目</span>
+                                <span>有效期至：2017-10-05 23:59:59</span>
+                                <span>现金券来源：奖励</span>
+                                <i></i>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                            <dl class="coupon-sig ">
+                                <dt>
+                                    <h3>现金券</h3>
+                                    <span>¥<b>500</b></span>
+                                </dt>
+                                <dd>
+                                    <span>金额要求：投资金额≥50,000元</span>
+                                    <span>期限要求：期限≥180天的定期项目</span>
+                                    <span>有效期至：2017-10-05 23:59:59</span>
+                                    <span>现金券来源：奖励</span>
+                                    <i></i>
+                                </dd>
+                            </dl>
+                        </div>
+            </div>
+        </div>  
+    </div>
+
+    <div class="app-main bg-f2f2f2">
         <div class="cardstock-list f-cb">
-            <ul>
-                <li>
-                    <div class="list-l">
-                       <div class="list-j">现金劵</div>
-                       <div class="list-b">1.5%</div>
-                       <div class="list-t">1天后到期</div>
-                    </div>
-                    <div class="list-r">立即使用</div>
-                </li>
-                <li>
-                    <div class="list-l">
-                        <div class="list-j">现金劵</div>
-                        <div class="list-b">1.5%</div>
-                        <div class="list-t">2天后到期</div>
-                    </div>
-                    <div class="list-r">立即使用</div>
-                </li>
-                <li>
-                    <div class="list-l">
-                        <div class="list-j">现金劵</div>
-                        <div class="list-b">1.5%</div>
-                    </div>
-                    <div class="list-r">立即使用</div>
-                </li>
-                <li>
-                    <div class="list-l">
-                        <div class="list-j">现金劵</div>
-                        <div class="list-b">1.5%</div>
-                    </div>
-                    <div class="list-r">立即使用</div>
-                </li>
-                <li>
-                    <div class="list-l">
-                        <div class="list-j">现金劵</div>
-                        <div class="list-b">1.5%</div>
-                    </div>
-                    <div class="list-r">立即使用</div>
-                </li>
-                <li>
-                    <div class="list-l">
-                        <div class="list-j">现金劵</div>
-                        <div class="list-b">1.5%</div>
-                    </div>
-                    <div class="list-r">立即使用</div>
-                </li>
-                <li>
-                    <div class="list-l">
-                        <div class="list-j">现金劵</div>
-                        <div class="list-b">1.5%</div>
-                    </div>
-                    <div class="list-r">立即使用</div>
-                </li>
-                <li>
-                    <div class="list-l">
-                        <div class="list-j">现金劵</div>
-                        <div class="list-b">1.5%</div>
-                    </div>
-                    <div class="list-r">立即使用</div>
-                </li>
-                <li>
-                    <div class="list-l">
-                        <div class="list-j">现金劵</div>
-                        <div class="list-b">1.5%</div>
-                    </div>
-                    <div class="list-r">立即使用</div>
-                </li>
-                <li>
-                    <div class="list-l">
-                        <div class="list-j">现金劵</div>
-                        <div class="list-b">1.5%</div>
-                    </div>
-                    <div class="list-r">立即使用</div>
-                </li>
+            <ul id="cardList">
+
             </ul>
         </div>
-        <div class="cardstock-btn mb15">查看历史加息劵</div>
+        <div class="cardstock-btn pb30">查看历史加息劵</div>
     </div>
     <%= require('html-loader!../../layout/footer.html')%>
 </body>

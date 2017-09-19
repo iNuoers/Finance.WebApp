@@ -14,7 +14,7 @@ const getHtmlConfig = function (name,title) {
         title       : title,
         inject      : true,
         hash        : true,
-        chunks      : ['base', name],
+        chunks      : ['f.vendor', name],
         minify      : {
             // 压缩html
             removeComments: true,       //移除HTML中的注释
@@ -25,44 +25,65 @@ const getHtmlConfig = function (name,title) {
 
 // webpack config
 const config = {
+    cache: true,
+    // 生成sourcemap,便于开发调试
+    devtool: "#source-map",
     // 入口文件
     entry: {
-        'base'                  : ['./webapp/js/lib/app.js','./webapp/js/lib/core.js','./webapp/js/lib/wx_api.js'],
+        'f.vendor'              : ['./webapp/js/app.js','./webapp/js/lib/f.utils.js','./webapp/js/lib/f.data.js','./webapp/js/lib/f.core.js','./webapp/js/lib/wx_api.js'],
 
-        'index'                 : ['./webapp/js/index.js'],
+        'index'                 : ['./webapp/js/module/page/index.js'],
 
-        'product/index'         : ['./webapp/js/product_index.js'],
-        'product/detail'        : ['./webapp/js/product_detail.js'],
-        'product/record'        : ['./webapp/js/product_record.js'],
-        'product/capital'       : ['./webapp/js/product_capital.js'],
-        'product/protocol_dq'   : ['./webapp/js/product_protocol.js'],
-        'product/protocol_hq'   : ['./webapp/js/product_protocol.js'],
-        'product/info'          : ['./webapp/js/product_info.js'],
-        'product/calculator'    : ['./webapp/js/product_calculator.js'],
+        'product/index'         : ['./webapp/js/module/product/product_index.js'],
+        'product/detail'        : ['./webapp/js/module/product/product_detail.js'],
+        'product/record'        : ['./webapp/js/module/product/product_record.js'],
+        'product/capital'       : ['./webapp/js/module/product/product_capital.js'],
+        'product/protocol_dq'   : ['./webapp/js/module/product/product_protocol.js'],
+        'product/protocol_hq'   : ['./webapp/js/module/product/product_protocol.js'],
+        'product/info'          : ['./webapp/js/module/product/product_info.js'],
+        'product/calculator'    : ['./webapp/js/module/product/product_calculator.js'],
 
-        'activity'              : ['./webapp/js/activity.js'],
+        'page/activity'         : ['./webapp/js/module/page/activity.js'],
+        'page/bank_list'        : ['./webapp/js/module/page/bank_list.js'],
+        'page/download'         : ['./webapp/js/module/page/download.js'],
+        'page/notice_detail'    : ['./webapp/js/module/page/notice_detail.js'],
 
-        'my/index'              : ['./webapp/js/my_index.js'],
-        'my/wallet'             : ['./webapp/js/my_wallet.js'],
-        'my/personal'           : ['./webapp/js/my_personal'],
-        'my/mine'               : ['./webapp/js/my_mine'],
-        'my/recharge'           : ['./webapp/js/my_recharge.js'],
-        'my/bills'              : ['./webapp/js/my_bills.js'],
-        'my/billsmood'          : ['./webapp/js/my_billsmood.js'],
-        'my/cardstock'          : ['./webapp/js/my_cardstock.js'],
-        'my/carddetails'        : ['./webapp/js/my_carddetails.js'],
+        'my/index'              : ['./webapp/js/module/my/my_index.js'],
+        'my/wallet'             : ['./webapp/js/module/my/my_wallet.js'],
+        'my/personal'           : ['./webapp/js/module/my/my_personal'],
+        'my/mine'               : ['./webapp/js/module/my/my_mine'],
+        'my/recharge'           : ['./webapp/js/module/my/my_recharge.js'],
+        'my/bills'              : ['./webapp/js/module/my/my_bills.js'],
+        'my/billsmood'          : ['./webapp/js/module/my/my_billsmood.js'],
+        'my/cardstock'          : ['./webapp/js/module/my/my_cardstock.js'],
+        'my/carddetails'        : ['./webapp/js/module/my/my_carddetails.js'],
+        'my/othercard'          : ['./webapp/js/module/my/my_othercard.js'],
+        'my/message'            : ['./webapp/js/module/my/my_message.js'],
+        'my/bindcard'           : ['./webapp/js/module/my/my_bindcard.js'],
+        'my/address'            : ['./webapp/js/module/my/my_address.js'],
 
-        'help/index'            : ['./webapp/js/help_index.js'],
-        'help/type'             : ['./webapp/js/help_type.js'],
-        'help/search'           : ['./webapp/js/help_search.js'],
-        'help/detail'           : ['./webapp/js/help_detail.js'],
+        'help/index'            : ['./webapp/js/module/help/help_index.js'],
+        'help/type'             : ['./webapp/js/module/help/help_type.js'],
+        'help/search'           : ['./webapp/js/module/help/help_search.js'],
+        'help/detail'           : ['./webapp/js/module/help/help_detail.js'],
 
-        'about/index'           : ['./webapp/js/about_index.js'],
-        'about/security'        : ['./webapp/js/about_security.js'],
-        'about/event'           : ['./webapp/js/about_index.js'],
+        'about/index'           : ['./webapp/js/module/about/about_index.js'],
+        'about/security'        : ['./webapp/js/module/about/about_security.js'],
+        'about/event'           : ['./webapp/js/module/about/about_index.js'],
+        'about/honour'          : ['./webapp/js/module/about/about_index.js'],
 
-        'login'                 : ['./webapp/js/login.js'],
-        'logon'                 : ['./webapp/js/logon.js']
+        'channel/invite'        : ['./webapp/js/module/channel/invite.js'],
+        'channel/regist'        : ['./webapp/js/module/channel/regist.js'],
+
+        'login'                 : ['./webapp/js/module/user/login.js'],
+        'logon'                 : ['./webapp/js/module/user/logon.js'],
+
+        'user/forget-pwd-next'  : ['./webapp/js/module/user/forget-pwd.js'],
+        'user/forget-pwd'       : ['./webapp/js/module/user/forget-pwd.js'],
+        'user/pwd-manager'      : ['./webapp/js/module/user/pwd-manager.js'],
+        'user/recommend'        : ['./webapp/js/module/user/recommend.js'],
+        'user/reset-login-pwd'  : ['./webapp/js/module/user/reset-pwd.js'],
+        'user/reset-trade-pwd'  : ['./webapp/js/module/user/reset-pwd.js'],
     },
     output: {
         path        : __dirname + '/dist/',
@@ -112,7 +133,10 @@ const config = {
 
         // 模块别名定义，方便后续直接引用别名，无须多写长长的地址
         alias:{
-            node_modules:__dirname + '/node_modules'
+            node_modules    : __dirname + '/node_modules',
+            plugins         : __dirname + '/webapp/plugins',
+            css_path        : __dirname + '/webapp/css',
+            js_path         : __dirname + '/webapp/js',
         }
     },
     plugins: [
@@ -132,7 +156,10 @@ const config = {
         new HtmlWebpackPlugin(getHtmlConfig('product/record')),
         new HtmlWebpackPlugin(getHtmlConfig('product/calculator')),
 
-        new HtmlWebpackPlugin(getHtmlConfig('activity')),
+        new HtmlWebpackPlugin(getHtmlConfig('page/activity')),
+        new HtmlWebpackPlugin(getHtmlConfig('page/download')),
+        new HtmlWebpackPlugin(getHtmlConfig('page/bank_list')),
+        new HtmlWebpackPlugin(getHtmlConfig('page/notice_detail')),
 
         new HtmlWebpackPlugin(getHtmlConfig('my/index')),
         new HtmlWebpackPlugin(getHtmlConfig('my/wallet')),
@@ -143,6 +170,10 @@ const config = {
         new HtmlWebpackPlugin(getHtmlConfig('my/billsmood')),
         new HtmlWebpackPlugin(getHtmlConfig('my/cardstock')),
         new HtmlWebpackPlugin(getHtmlConfig('my/carddetails')),
+        new HtmlWebpackPlugin(getHtmlConfig('my/othercard')),
+        new HtmlWebpackPlugin(getHtmlConfig('my/message')),
+        new HtmlWebpackPlugin(getHtmlConfig('my/bindcard')),
+        new HtmlWebpackPlugin(getHtmlConfig('my/address')),
 
         new HtmlWebpackPlugin(getHtmlConfig('help/index')),
         new HtmlWebpackPlugin(getHtmlConfig('help/type')),
@@ -156,15 +187,26 @@ const config = {
         new HtmlWebpackPlugin(getHtmlConfig('about/honour')),
         new HtmlWebpackPlugin(getHtmlConfig('about/aboutus')),
 
+
+        new HtmlWebpackPlugin(getHtmlConfig('channel/invite')),
+        new HtmlWebpackPlugin(getHtmlConfig('channel/regist')),
+
         new HtmlWebpackPlugin(getHtmlConfig('login')),
         new HtmlWebpackPlugin(getHtmlConfig('logon')),
+
+        new HtmlWebpackPlugin(getHtmlConfig('user/forget-pwd-next')),
+        new HtmlWebpackPlugin(getHtmlConfig('user/forget-pwd')),
+        new HtmlWebpackPlugin(getHtmlConfig('user/pwd-manager')),
+        new HtmlWebpackPlugin(getHtmlConfig('user/recommend')),
+        new HtmlWebpackPlugin(getHtmlConfig('user/reset-login-pwd')),
+        new HtmlWebpackPlugin(getHtmlConfig('user/reset-trade-pwd')),
 
         // 独立通用模块到 js/base.js
         new webpack.optimize.CommonsChunkPlugin({
             // 将公共模块提取，生成名为`common`的chunk
-            name:'base', // 把依赖移动到主文件
-            // children:  true, // 寻找所有子模块的共同依赖
-            // minChunks: 0, // 设置一个依赖被引用超过多少次就提取出来
+            name:'f.vendor' // 把依赖移动到主文件
+            //children:  true, // 寻找所有子模块的共同依赖
+            //minChunks: 2, // 设置一个依赖被引用超过多少次就提取出来
         })
     ]
 };

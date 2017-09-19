@@ -23,7 +23,7 @@
 
     <div class="app-header app-main f-cb bg-fafafa">
         <div class="list-block -arrow page-block">
-            <a href="" class="item avatar">
+            <a href="javascript:;" data-href='personal.html' data-needlogin='true' class="item avatar">
                 <i class="fa fa-angle-right fa-fw"></i>
                 <div class="avatar-box avatar-s">
                     <img id="headImg" alt="" src=<%= require('../../image/personal_pic.png')%>>
@@ -43,12 +43,7 @@
         <div class="list-block -arrow page-block">
             <a href="javascript:;" class="item"><i class="fa fa-angle-right fa-fw"></i>联系客服</a>
             <div class="line"></div>
-            <a href="../about/event.html" class="item">关于我们<i class="fa fa-angle-right fa-fw"></i></a>
-        </div>
-
-
-        <div class="logout">
-            <a id="logout" class="btn">退出登录</a>
+            <a href="../about/index.html" class="item">关于我们<i class="fa fa-angle-right fa-fw"></i></a>
         </div>
 
         <%= require('html-loader!../../layout/menu.html')%>

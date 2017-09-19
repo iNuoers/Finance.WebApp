@@ -1,7 +1,0 @@
-.timeLine-box{background-color:#fff;padding-left:10px;padding-right:10px}
-.time-line{margin-top:20px}
-.time-line li{position:relative;padding-left:30px;min-height:45px;line-height:20px;padding-bottom:15px}
-.time-line li strong{display:block;padding-bottom:5px;line-height:1;color:#5b89ff;font-size:12px}
-.time-line li:after{content:'';position:absolute;width:1px;height:100%;background-color:#5b89ff;left:10px;top:10px;z-index:0}
-.time-line li:before{content:'';position:absolute;width:10px;height:10px;background:#5b89ff;border-radius: 50%;top:2px;left:5px;z-index:1}
-.time-line li:last-child:after{display:none}

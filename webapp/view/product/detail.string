@@ -56,10 +56,16 @@
 </div>
 <%if(IsPlusInCome==1&&IsCash==1){%>
 <div class="page-block">
-    <a href="" class="item">
+    <a class="item other-card">
         使用卡券
-        <span class="item_content">暂无可用卡券</span>
+        <span class="item_content item-card">您有可用卡券</span>
+        <i class="fa fa-angle-right fa-fw"></i>
     </a>
+    <div class="itemList">
+        <ul>
+
+        </ul>
+    </div>
 </div>
 <%}%>
 

@@ -18,7 +18,7 @@
     </header>
     <!-- header end -->
 
-    <div class="app-main f-cb">
+    <div class="app-header app-main f-cb">
         <section class="help_wrap">
             <header>
                 <div class="search-banner">
@@ -31,26 +31,31 @@
 
         <div class="wrapper wrapper-help-detail">
             <div class="qa-box">
-                <div class="hd">
-                    <p>“理财计划”的投资产品特点</p>
+                <div class="qa-tit hd">
+                    <p>--</p>
                 </div>
-                <div class="bd">
-
-                </div>
+                <div class="qa-cont bd">--</div>
                 
                 <div class="m-reply f-cb">
                     <div class="reply-item">
-                        <a href="javascript:;" class="btn-rate" id="J_solved"><i class="icon-good"></i> <span>有帮助</span></a>
-
+                        <a href="javascript:;" class="btn-rate" id="J_solved">
+                            <i class="fa fa-smile-o"></i><span>有帮助</span>
+                        </a>
                         <!-- 点击后态
-                <a class="btn-rate"><i class="icon-goodfill"></i> <span>已解决</span></a>
-                -->
+                        <a class="btn-rate">
+                            <i class="icon-goodfill"></i><span>已解决</span>
+                        </a>
+                        -->
                     </div>
                     <div class="reply-item">
-                        <a href="javascript:;" class="btn-rate" id="J_unsolved"><i class="icon-bad"></i> <span>无帮助</span></a>
+                        <a href="javascript:;" class="btn-rate" id="J_unsolved">
+                            <i class="fa fa-frown-o"></i><span>无帮助</span>
+                        </a>
                         <!-- 点击后态
-                <a class="btn-rate"><i class="icon-badfill"></i> <span>未解决</span></a>
-                -->
+                        <a class="btn-rate">
+                            <i class="icon-badfill"></i><span>未解决</span>
+                        </a>
+                        -->
                     </div>
                 </div>
             </div>
@@ -62,6 +67,12 @@
             </div>
             <!--相关问题 E-->
         </div>
+        <section class="often-qustion">
+            <ul class="question-item"></ul>
+        </section>
+        <section class="detail-footer">
+            <img src=<%= require('../../image/detail-phone.jpg') %>>
+        </section>
     </div>
     <%= require('html-loader!../../layout/footer.html')%>
 </body>

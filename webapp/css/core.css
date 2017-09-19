@@ -28,6 +28,13 @@
 .br-e6e6e6:after { content: ""; position: absolute; top: 0; bottom: 0; right: 0; border-right: 1px solid #e6e6e6; transform: scaleX(.5); transform-origin: 0 0; }
 .br-fff:after { content: ""; position: absolute; top: 0; bottom: 0; right: 0; border-right: 1px solid #fff; transform: scaleX(.5); transform-origin: 0 0; }
 .br-e6e6e6-before:before { content: ""; position: absolute; top: 0; bottom: 0; right: 0; border-right: 1px solid #e6e6e6; transform: scaleX(.5); transform-origin: 0 0; }
+.bdr-r,.bdr-top{position:relative}
+.bdr-all,.bdr-bottom{position:relative}
+.bdr-r:before{border-right:1px solid #dfdfdf;height:100%;top:0;transform:scaleX(.5);-webkit-transform:scaleX(.5);width:1px}
+.bdr-r:before,.bdr-top:after{content:'';position:absolute;right:0}
+.bdr-top:after{border-bottom:1px solid #dfdfdf;height:1px;top:-1px;transform:scaleY(.5);-webkit-transform:scaleY(.5);width:100%}
+.bdr-bottom:before{border-top:1px solid #dfdfdf;bottom:-1px;content:'';height:1px;position:absolute;right:0;transform:scaleY(.5);-webkit-transform:scaleY(.5);width:100%}
+.bdr-all:before{border:1px solid #cecece;border-radius:8px;content:'';display:block;height:200%;left:0;position:absolute;top:-1px;transform:scale(.5,.5);transform-origin:top left;width:200%}
 
 /*边距*/
 .ml7 { margin-left: 7px !important; }
@@ -95,6 +102,7 @@
 .pt25 { padding-top: 25px !important; }
 .pt30 { padding-top: 30px !important; }
 .pt40 { padding-top: 40px !important; }
+.pt50 { padding-top: 50px !important; }
 .pb4 { padding-bottom: 4px !important; }
 .pb5 { padding-bottom: 5px !important; }
 .pb6 { padding-bottom: 6px !important; }
@@ -109,6 +117,7 @@
 .pb25 { padding-bottom: 25px !important; }
 .pb30 { padding-bottom: 30px !important; }
 .pb40 { padding-bottom: 40px !important; }
+.pb50 { padding-bottom: 50px !important; }
 .pb60 { padding-bottom: 60px !important; }
 .pb80 { padding-bottom: 80px !important; }
 .pl5 { padding-left: 5px !important; }
@@ -420,3 +429,9 @@
 
 .m-service{position: relative;text-align:center;font-size:14px;}
 .m-service .service-btn {display: block;width: 30%;height: 36px;line-height: 36px;text-align: center;background: #fff;border-radius: 5rem;margin: 25px auto 0;-webkit-transition:-webkit-box-shadow ease-in-out .3s;transition:box-shadow ease-in-out .3s;-webkit-box-shadow:0 0 5px #dedede;box-shadow:0 0 5px #dedede}
+
+.m-more{padding:12px 0;text-align:center;font-size:14px;color:#5c8ae5;}
+
+.m-btnBar {position: fixed;display:flex;left: 0;bottom: 0;z-index: 300;width: 100%;height:50px;}
+.m-btnBar .btns{width:100%;height:50px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:absolute;bottom:0;left:0}
+.m-btnBar .btn{position:relative;height:50px;line-height:50px;display:block;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;font-size:16px;font-weight:bold}

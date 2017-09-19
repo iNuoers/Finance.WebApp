@@ -1,11 +1,12 @@
 'use strict';
 
-var _f = require('../lib/app.js');
+var _util = require('js_path/lib/f.utils.js')
+var _api = require('js_path/lib/f.data.js')
 
 var _product = {
     getList: function (param, success, error, before, complete) {
-        _f.request({
-            url: _f.config.serverHost,
+        _util.ajax.request({
+            url: _api.host,
             data: param,
             method: 'POST',
             success: success,
@@ -15,8 +16,8 @@ var _product = {
         });
     },
     getDetail: function (param, success, error, before, complete) {
-        _f.request({
-            url: _f.config.serverHost,
+        _util.ajax.request({
+            url: _api.host,
             data: param,
             method: 'POST',
             success: success,
@@ -26,8 +27,8 @@ var _product = {
         });
     },
     getBuyRecord: function (param, success, error, before, complete) {
-        _f.request({
-            url: _f.config.serverHost,
+        _util.ajax.request({
+            url: _api.host,
             data: param,
             method: 'POST',
             success: success,
