@@ -1,0 +1,21 @@
+.other-header{width:100%;line-height:4rem;text-align:center;background:#FFF;font-size:1.2rem;position:fixed;z-index:10000}
+.goBack{width:4rem;height:4rem;display:block;position:absolute}
+.other-header .goBack:before{position:absolute;left:40%;top:28%;width:1rem;height:1rem;content:"";border:2px solid #999;border-width:0 0 2px 2px;transform:rotate(45deg)}
+.other-item{display:none}
+.other-item .item-title{width:90%;padding:20px 0 10px 0;margin:0 auto;color:#666}
+.other-item .item-title i{float:right;transform:rotate(90deg)}
+.other-item .item-list{background:#FFF}
+.other-item .item-list ul{width:90%;margin:0 auto}
+.other-item .item-list ul li{padding:12px 0;color:#666;font-size:1rem;border-bottom:solid 1px #e6e6e6;line-height:inherit}
+.item-list .listValue{color:#02b9ee;font-size:1.2rem;margin-left:5px}
+.item-list .listPrice{position:absolute;left:30%}
+.item-list .listTime{float:right}
+.app-main .other-btn{width:100%;padding:15px 0;background:#0195FF;text-align:center;color:#FFF;font-size:1.2rem;position:fixed;bottom:0}
+.move90{-webkit-animation:move90 .5s linear;animation:move90 .5s linear;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards}
+.move0{-webkit-animation:move0 .5s linear;animation:move0 .5s linear;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards}
+@-webkit-keyframes move90{0%{-webkit-transform:rotate(0);transform:rotate(0)}
+to{-webkit-transform:rotate(90deg);transform:rotate(90deg)}
+}
+@keyframes move0{0%{-webkit-transform:rotate(90deg);transform:rotate(90deg)}
+to{-webkit-transform:rotate(0);transform:rotate(0)}
+}

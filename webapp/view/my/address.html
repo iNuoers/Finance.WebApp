@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <div id="m-header-nav" class="bg-fff bg-338fff c-ffffff">
+            <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="his"></a>
+            <h1>收货地址</h1>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <div class="app-header app-main bg-fafafa">
+        <div class="comm-cells comm-cells-form">
+            <div class="input-box">
+                <span class="label fn-color-black">收货人姓名:</span>
+                <input type="text" maxlength="19" placeholder="收货人姓名" class="input-num">
+            </div>
+            <div class="input-box">
+                <span class="label fn-color-black">收货地址:</span>
+                <input type="text" maxlength="19" placeholder="街道编号／名称，楼宇名称" class="input-num">
+            </div>
+            <div class="input-box">
+                <span class="label fn-color-black">联系电话:</span>
+                <input type="text" maxlength="19" placeholder="联系电话" class="input-num">
+            </div>
+            <div class="input-box">
+                <span class="label fn-color-black">邮政编码:</span>
+                <input type="text" maxlength="19" placeholder="所在地区编码" class="input-num">
+            </div>
+        </div>
+        <div class="m-btnBar">
+            <div class="btns">
+                <a class="btn btn-normal F-buyBtn">立即保存</a>
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

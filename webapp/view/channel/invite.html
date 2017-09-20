@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+    <div class="app-main bg-fff">
+        <section class="invite">
+            <form action="" method="post">
+                <ul>
+                    <li class="invi-active" style="background-image: url(<%=require("../../image/invite_168.png")%>);background-size:100%  100%;background-repeat:no-repeat;">168元迎新大礼包</li>
+                    <li class="invi-friend"><p>您的好友<span class="in-span"></span>邀请您</p><p>加入房金网领取大礼包</p></li>
+                    <li class="invi-phone"><input type="tel" id="phone" autocomplete="off"  placeholder="输入手机号领取大礼包"></li>
+                    <li class="invi-btn"><a class="btn_login">登记领取</a></li>
+                </ul>
+            </form>
+        </section>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%> 
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+.tips{padding:0 15px}
+.tips p{line-height:18px;color:#999;font-size:13px;text-align:justify}
+.inputBox{position:relative}
+.inputBox .inpName{width:25%;padding-left:15px;height:45px;line-height:45px;font-size:15px}
+.inputBox .inp{width:70%}
+.inputBox .inp input{height:45px;font-size:15px;width:100%}
+.inputBox .supportBank{display:block;height:43px;line-height:43px;width:88px;color:#338fff;font-size:15px;position:absolute;top:1px;right:0;background:#fff;z-index:2;text-align:center}
+.webkit-box{display:-webkit-box}

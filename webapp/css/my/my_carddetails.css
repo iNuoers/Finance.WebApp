@@ -1,0 +1,18 @@
+.carddetails-b{width: 3rem;position: absolute;left: 15px;top:0;}
+#m-header-nav .arrow-left:before{border:2px solid #999999;border-width: 0 0 2px 2px;}
+.carddetails-container{width: 100%;height: 4rem;background-color: #FFF;line-height: 4rem;color: #333333;font-size: 1.4rem;border-bottom: solid 1px #E6E6E6;}
+/* carddetails-center */
+.carddetails-center{width: 90%;height: auto;border-radius: 5px;background-color: #FFFFFF;margin: 0 auto;border: solid 1px #f5f5f5;}
+
+.carddetails-center .carddetails-title{width: 95%;height: 3rem;border-bottom: dashed 1px #E6E6E6;line-height: 3rem;color: #999999;font-size: 1rem;}
+.carddetails-center .carddetails-matter{width: 100%;height: 10rem;border-bottom: dashed 1px #E6E6E6;margin: 0 auto;text-align: center;}
+
+.carddetails-matter .matter-t{color: #666;}
+.carddetails-matter .matter-t span{display: inline-block;width: 2rem;height: 1.2rem;position: relative;left: 5px;top: -1px;}
+.carddetails-matter .matter-n{color: #0195ff;font-size: 2.4rem;}
+.carddetails-matter .matter-str{color: #999999;font-size: 1rem;}
+/* carddetails-other */
+.carddetails-other{width: 100%;margin-bottom: 100px;}
+.carddetails-other .other-title{color: #999999;font-size: 1rem;}
+.carddetails-other .other-list li{width: 92%;height: 2.6rem;border-bottom: solid 1px #E6E6E6;line-height: 2.6rem;}
+.carddetails-other .other-list li i{float: right;line-height: inherit;}

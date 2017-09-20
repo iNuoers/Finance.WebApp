@@ -1,0 +1,82 @@
+/* cardstock-head */
+.cardstock-b{width: 3rem;position: absolute;left: 15px;top:0;z-index: 10000;}
+#m-header-nav .arrow-left:before{border:2px solid #999999;border-width: 0 0 2px 2px;}
+
+.m-product-menu{}
+.m-product-menu .m-menu-item{position:relative;width:50%;float:left;height:2.5rem;line-height:2.5rem;padding:10px 0;text-align:center;color:#338fff;font-size:1.21rem;}
+.m-product-menu .m-menu-item>div{width:50%;border: solid 1px #338fff;}
+.m-product-menu .m-menu-item .current{border-radius: 3px 0 0 3px;border-right: none;}
+.m-product-menu .m-menu-item .invest{border-radius: 0 3px 3px 0;border-left: none;}
+.m-product-menu .m-menu-item .active{background-color:#338fff;color: #fff}
+/* cardstock-list */
+.cardstock-list{width: 100%;height: auto; margin: 0 auto;margin-top: 50px;overflow: hidden;}
+.cardstock-list ul li{width: 45%;margin-left: 3%;margin-top:20px;height:5.5rem;background: url("../../image/cardstockList.png") left top no-repeat;float: left;background-size: 100%;}
+.cardstock-list .list-l{width: 80%;height: 100%;float: left;text-align: center;}
+.cardstock-list .list-r{width: 20%;height: 100%;float: left;text-align: center;color: #FFFFFF;padding-top: 14%}
+
+.cardstock-list .list-l div{height:1.4rem; }
+
+.cardstock-list .nothing-card{width:100%;margin-top: 30px;text-align: center;color: #555;}
+
+.list-j{color: #999;font-size: 1rem;margin-top: 10px;}
+.list-b{color: #0195ff;font-size: 1.6rem}
+.list-t{color: #ff884c;font-size: 0.8rem;margin-top: 10px;}
+
+.cardstock-btn{text-decoration: underline;text-align: center;margin-top: 50px;color: #0195ff;}
+
+
+.coupon-sig {
+    background: #fff;
+    border-radius: .3rem;
+    border: 1px solid #ededed;
+    margin: .5rem .7rem;
+    height: auto;
+    overflow: hidden;
+}
+.coupon-sig dt {
+    width: 7.14rem;
+    float: left;
+    background: #ff5951 ;
+    height: 7.14rem;
+    background-size: .285rem 7.14rem;
+    color: #fff;
+    text-align: center;
+}
+.coupon-sig dt h3 {
+    font-size: .857rem;
+    margin: .714rem 0 0 .714rem;
+    text-align: left;
+}
+.coupon-sig dt span {
+    margin: .95rem auto;
+    font-size: 1rem;
+    height: 2.285rem;
+    line-height: 2.285rem;
+    vertical-align: text-top;
+    display: inline-block;
+}
+.coupon-sig dt span b {
+    font-size: 2.285rem;
+    height: 2.285rem;
+    line-height: 2.285rem;
+}
+.coupon-sig dd {
+    width: calc(100% - 8.54rem);
+    float: left;
+    padding: .4rem 0 0 1rem;
+    position: relative;
+}
+.coupon-sig dd span {
+    display: block;
+    font-size: .857rem;
+    line-height: 1.6rem;
+}
+.coupon-sig i {
+    display: none;
+    width: 4.035rem;
+    height: 3.642rem;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 1.75rem;
+}

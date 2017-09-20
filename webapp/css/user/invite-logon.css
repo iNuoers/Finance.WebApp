@@ -1,0 +1,15 @@
+
+.invite-logon {width: 100%;height:100%;position: relative;}
+.invite-logon .invite-form{position: absolute;width: 100%;height: 50%;bottom:2.2rem}
+.invite-logon ul{ margin: auto;width: 64%;}
+.invite-logon input{width: 100%;padding: 13px 16px;box-sizing: border-box; margin-top: 1.3rem;border-radius: 10px;}
+.invite-logon input::-webkit-input-placeholder { font-size: 1.1rem;font-weight: bold; text-align: center;color: #ccc}
+.invite-logon input:-moz-placeholder { font-size: 1.1rem;font-weight: bold; text-align: center;color: #ccc }
+.invite-logon input::-moz-placeholder{ font-size: 1.1rem;font-weight: bold; text-align: center;color: #ccc }
+.invite-logon input:-ms-input-placeholder{ font-size: 1.1rem;font-weight: bold; text-align: center;color: #ccc }
+.invite-logon .invi-btn {width: 100%;text-align: center;height: 3.5rem;margin-top: 10%;background-color: #ffdd33;    box-shadow: 0 1px 1px 1px #e8b427;border-radius: 10px}
+.invite-logon .invi-btn a{display: inline-block; padding: 1.3rem 0;font-size: 1.3rem;font-weight: bold;color: #fe5001}
+input:-webkit-autofill {
+-webkit-box-shadow: 0 0 0px 1000px white inset;
+border: 1px solid #CCC!important;
+}

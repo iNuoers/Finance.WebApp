@@ -1,0 +1,19 @@
+.recommend .activity-text{position: relative;padding:2rem 4rem 4rem;font-size: 12px;line-height: 1.5}
+.recommend .activity-text span{position: absolute;font-size: 1.5rem;color: #ccc}
+.recommend .activity-text span.fa-quote-left{left: 1.5rem}
+.recommend .activity-text span.fa-quote-right{right: 1.5rem}
+.recommend .activity-text p{margin: 0}
+.recommend .activity-text p:nth-child(3),.recommend .activity-text p:nth-child(4){margin-top: 2rem;}
+.recommend .title {text-align: center;margin: 0rem 2rem 2.5rem 2rem;overflow: hidden;color: #888}
+.recommend .title span{position: relative;text-align: center;padding:0 2rem;line-height: 1.2}
+.recommend .title span:before,.recommend .title span:after{content: '';position: absolute;width: 100%;height: 1px;background-color: #ccc; top: 50%;transform: translateY(-10%);}
+.recommend .title span:before{right: 100%}
+.recommend .title span:after{left: 100%}
+.recommend .share-btn{text-align: center;padding: 0;margin-bottom: 2rem}
+.recommend .share-btn a{display: inline-block;width: 11rem;padding: 1.2rem 1.1rem;border-radius: 3px;font-size: 1.3rem;background-color: #4DB4FF;color: #fff;letter-spacing: 2px}
+.recommend .share-btn a:nth-child(1){margin-right: 0.5rem;}
+
+@media only screen and (max-width:320px) {
+.recommend .share-btn a{display: inline-block;width: 11rem;padding: 1.2rem 1.1rem;border-radius: 3px;font-size: 1.3rem;background-color: #4DB4FF;color: #fff;letter-spacing: 2px}
+.recommend .share-btn a:nth-child(1){margin: 0;margin-bottom: 2rem}
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header" class="show-hd">
+        <div id="m-header-nav" class="bg-fff bg-338fff c-ffffff">
+            <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="./index.html"></a>
+            <h1><span>实名绑卡</span></h1>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <div class="app-header app-main f-cb bg-fafafa">
+        <div class="tips">
+            <p>上海银行为房金网提供资金存管服务，为保障资金安全，请绑定本人持有的银行卡，资金充值和提现必须使用同一张银行卡。（目前，中国境内公民只支持使用身份证进行开户）</p>
+        </div>
+
+        <div class="bg-fff">
+            <div class="inputBox webkit-box bt-e6e6e6">
+                <div class="inpName">真实姓名</div>
+                <div class="inp">
+                    <input type="text" placeholder="请输入姓名" id="txtRealName">
+                </div>
+            </div>
+            <div class="inputBox webkit-box bb-e6e6e6 bt-e6e6e6">
+                <div class="inpName">证件类型</div>
+                <div class="inp">
+                    <input type="text" placeholder="请输入证件号码" value="身份证" readonly id="txtCardType">
+                </div>
+            </div>
+            <div class="inputBox webkit-box bb-e6e6e6">
+                <div class="inpName">证件号码</div>
+                <div class="inp">
+                    <input type="text" placeholder="请输入证件号码" id="txtIdentity">
+                </div>
+            </div>
+        </div>
+        <div class="f12px c-fd6040 pl10 pr10 pt10 line-h16">请确认您的姓名和证件信息真实有效，开通存管账户之后无法修改。</div>
+        <div class="bg-fff mt10">
+            <div class="inputBox webkit-box bb-e6e6e6 bt-e6e6e6">
+                <div class="inpName">银行卡号</div>
+                <div class="inp">
+                    <input type="text" placeholder="请输入银行卡号码" id="txt_bankCard">
+                </div>
+                <a href="../bank_list.html" class="supportBank f12px">支持银行</a>
+            </div>
+            <div class="inputBox webkit-box bb-e6e6e6">
+                <div class="inpName">预留手机</div>
+                <div class="inp">
+                    <input type="tel" placeholder="请输入银行预留手机号" id="txtTelNo" value="">
+                </div>
+            </div>
+        </div>
+        <div class="m-btnBar">
+            <div class="btns">
+                <a class="btn btn-normal F-buyBtn">立即保存</a>
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

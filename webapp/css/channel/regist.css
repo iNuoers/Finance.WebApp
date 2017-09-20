@@ -1,0 +1,24 @@
+.invite-logon {width: 100%;height:100%;position: relative;}
+.invite-logon .invite-form{position: absolute;width: 100%;height: 50%;bottom:2.2rem}
+.invite-logon ul{ margin: auto;width: 64%;}
+.invite-logon ul .invi-message,.invite-logon .invi-code{position: relative;}
+.invite-logon input{width: 100%;padding: 13px 16px;box-sizing: border-box; margin-top: 1.3rem;border-radius:3px;}
+.invite-logon input::-webkit-input-placeholder { font-size: 1.1rem;font-weight: bold; text-align: left;color: #ccc}
+.invite-logon input:-moz-placeholder { font-size: 1.1rem;font-weight: bold; text-align: left;color: #ccc }
+.invite-logon input::-moz-placeholder{ font-size: 1.1rem;font-weight: bold; text-align: left;color: #ccc }
+.invite-logon input:-ms-input-placeholder{ font-size: 1.1rem;font-weight: bold; text-align: left;color: #ccc }
+.invite-logon .invi-password input::-webkit-input-placeholder { font-size: 1.1rem;font-weight: bold; text-align: left;color: #ccc}
+.logon-alert {display: none ;position: absolute;z-index: 1;height: 100%;width: 100%;background-image:url(../../image/invite_prize.png);background-size:100%  100%;background-repeat:no-repeat;}
+
+.invite-logon .invi-btn ,.logon-alert .a-btn{width: 100%;text-align: center;height: 3.5rem;margin-top: 10%;background-color: #ffdd33;box-shadow: 0 1px 1px 1px #e8b427;border-radius:3px}
+.invite-logon .invi-btn a,.logon-alert .a-btn a{display: inline-block; padding: 1.3rem 0;font-size: 1.3rem;font-weight: bold;color: #fe5001}
+.invite-logon .invi-message input,.invite-logon .invi-code input{padding-right: 7.6rem}
+.invite-logon .invi-message i,.invite-logon .invi-code i{position: absolute;top: 54%;right: 1.5rem;color: #ff884c}
+/*奖励弹窗*/
+.l-alert{position: absolute;text-align: center;width: 100% ;top: 34%}
+.l-alert p:nth-child(1){color: #cb890a; font-size: 1.7rem;margin-bottom: 0;}
+.l-alert p:nth-child(2){color: #cb890a; font-size: 1.6rem;margin-top: 0.7rem}
+.logon-alert .a-text{position: absolute;width: 100%;text-align: center;top: 56.4%}
+.logon-alert h4{color: #fff; font-size: 1.7rem; margin-bottom: 0.6rem}
+.logon-alert  span{color: #fff}
+.logon-alert .a-btn{width: 15rem;margin: auto;    position: absolute;bottom: 26.7%;left: 50%;transform: translateX(-50%);}

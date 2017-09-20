@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+    <%= require('html-loader!../../layout/loading.html')%>
+    <div class="app-main bg-f1f1f1">
+        <div class="m-message-menu bg-fff f-cb">
+            <div class="m-menu-item" data-target="message">
+                <div class="f-fr message active">
+                    <a href="javascript:;">消息</a>
+                </div>
+            </div>
+            <div class="m-menu-item" data-target="notice">
+                <div class="notice">
+                    <a href="javascript:;">公告</a>
+                </div>
+            </div>
+        </div>
+        <div class="tab-tabs">
+            <div class="message-main message">
+                <div class="message-list mt10 bg-fff">
+                    <ul></ul>
+                </div>
+            </div>
+            <div class="notice-main notice f-hide">
+                <div class="notice-list mt10 bg-fff"></div>
+                <div class="m-more f-hide" id="notice-more">点击查看更多</div>
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

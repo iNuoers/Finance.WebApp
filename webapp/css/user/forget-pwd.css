@@ -1,0 +1,47 @@
+.forgetpwd{padding: 1rem 2rem;}
+.forget-item{position: relative;margin-top: 3rem;}
+.forget-item input{width: 100%;padding: 0.6rem 1.2rem;font-size: 1.2rem;background-color: transparent;border: 1px solid #50B8FF;border-top: none;text-align: left;box-sizing: border-box;}
+.forget-item .input-item{position: relative;}
+.forget-item .input-item:before,.forget-item .input-item:after{content:"";position: absolute;width: 5px;height:100%;top: -0.6rem;right: -2px;background-color: #FAFAFA; }
+.forget-item .input-item:before{left: -1px;}
+.forget-item span{ position:absolute;display: none;left: 1.2rem;}
+.forgetpwd .active{color:#50B8FF;-webkit-animation: fadeInUp 0.3s forwards;animation:fadeInUp 0.3s forwards;}
+.forgetpwd .sure-btn{display: block;margin-top: 5rem;color: #fff;background: #338fff;border-radius: 3px;border-color: #338fff; box-sizing: border-box;font-size: 1.4rem;line-height: 3.4rem;text-align: center;}
+.f-code .f-input{padding-right: 9rem}
+.f-imagecode .input-item{width: 60%;display: inline-block;}
+.f-imagecode img{width: 36%;margin-left: 4%;margin-top: 0}
+.input-item .getCode{position: absolute;right: 2rem;top: 50%;transform: translateY(-50%);color: #2086D1}
+input:focus::-webkit-input-placeholder { color:transparent; }
+/* Mozilla Firefox 4 to 18 */
+input:focus:-moz-placeholder { color:transparent; }
+
+/* Mozilla Firefox 19+ */
+input:focus::-moz-placeholder { color:transparent; }
+
+/* Internet Explorer 10+ */
+input:focus:-ms-input-placeholder { color:transparent; }
+
+.forget-item .hide{ position: absolute;color: #999;right: 2rem;top: 50%;transform: translateY(-50%);}
+
+@-webkit-keyframes fadeInUp {
+	0% {
+  		opacity: 0;
+      top:30px;
+	}
+	100% {
+  		opacity: 1;
+      top: 0
+	}
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      top:30px;
+  }
+  100% {
+      opacity: 1;
+      top: -1rem;
+  }
+
+}

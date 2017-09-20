@@ -1,0 +1,4 @@
+.pwd-manager {width: 100%;}
+.pwd-manager > a {position: relative;width: 100%;display: block;margin-top: 20px;font-size: 1.2rem;box-sizing: border-box;padding: 10px 5.33%;padding-top: 13px;line-height: 30px;background-color: #fff;}
+.pwd-manager span{top: 50%;transform: translateY(-50%);position: absolute;right: 1.2rem;color: #999;font-size: 1rem}
+.pwd-manager span > i{margin-left: 16px;font-size: 1.5rem;}

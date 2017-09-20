@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>忘记密码</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <div id="m-header-nav" class="bg-fff">
+            <a id="F_back" class="goback arrow-left " href="javascript:;" data-href="his"></a>
+            <h1>忘记密码</h1>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <div class="app-main app-header bg-fff">
+        <div class="forgetpwd">
+            <!-- 手机号码 -->
+            <div class="forget-item f-phone">
+                <div class="input-item">
+                    <input type="text" name="" id="phone" class="f-input" value="" placeholder="请输入您的手机号">
+                </div>
+                <span>手机号码</span>
+            </div>
+            <!-- 短信验证码 -->
+            <div class="forget-item f-code">
+                <div class="input-item">
+                    <input type="text" name="" id="code" class="f-input" value="" placeholder="请输入短信验证码">
+                    <i class="getCode">获取验证码</i>
+                </div>
+                <span>短信验证码</span>
+
+            </div>
+            <!-- 图片验证码 -->
+            <div class="forget-item f-imagecode">
+                <div class="input-item">
+                    <input type="text" name="" id="phone" class="f-input" value="" placeholder="请输入右侧图形验证码">
+                </div>
+                <img alt="" src=<%=require( '../../image/code.png')%>>
+
+                <span>图片验证码</span>
+            </div>
+            <a href="#" class="sure-btn"> 下一步</a>
+        </div>
+
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

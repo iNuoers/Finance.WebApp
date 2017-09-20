@@ -1,0 +1,43 @@
+/* wallet-top */
+.wallet-top{width: 100%;height: 12rem;background-color: #318eff;color: #cceaff;font-size: 1rem;}
+.wallet-top span{color: #ffffff;font-size: 2rem;display: block;margin-top: 10px;}
+.wallet-top .wallet-total{width: 40%;height:50%;float: left;}
+.wallet-top .wallet-vote{width: 35%;height: 50%;float: left;}
+.wallet-top .wallet-normal span{color: #cceaff;font-size: 1.4rem;}
+/* wallet-container */
+.wallet-container{width: 100%;height: 4rem;background-color: #FFF;line-height: 4rem;color: #666666;font-size: 1.2rem;}
+.wallet-container i{margin-right: 2px;}
+.wallet-container .wallet_bill{background: url("../../image/wallet_bill.png") left 15px no-repeat;background-size:20%;text-indent: 25px;}
+.wallet-container .wallet_invest{background: url("../../image/wallet_invest.png") left 17px no-repeat;background-size:22%;text-indent: 25px;}
+.wallet-container .wallet_stock{background: url("../../image/wallet_stock.png") left 14px no-repeat;background-size:22%;text-indent: 25px;}
+.wallet-container span,.wallet-container a {color:#ff884c;}
+/* wallet-container2 */
+.wallet-container2{width: 100%;height: 4rem;line-height: 4rem;color: #ababab;font-size: 1rem;}
+
+.wallet-container span,.wallet-container2 span{margin-right: 2px;}
+
+.col-head{color:#333;font-size:15px;font-weight:700;padding:15px}
+.mymanage{background:#fff}
+.financial-list{margin-left:15px;padding-top:20px;padding-bottom:20px;padding-right:15px}
+.financial-item{align-items:center;-webkit-align-items:center;display:flex;display:-webkit-flex;justify-content:start;-webkit-justify-content:start}
+.financial-item,.financial-item-sub,.financial-item-sub .item-sub-left{overflow:hidden;position:relative}
+.financial-sub-box{margin-top:20px}
+.financial-list{border:0}
+.financial-item .f-fl{align-items:center;-webkit-align-items:center;display:flex;display:-webkit-flex;height:50px;width:37.5%}
+.financial-item .f-fl,.financial-item .f-fl .left-item-icon,.financial-item .f-fl .left-item-title,.financial-item .f-fr{float:left}
+.financial-item .f-fr{width:60%}
+.financial-item-sub .item-sub-left{color:#999;float:left;font-size:12px;width:37.5%}
+.financial-item-sub .item-sub-right{float:left;overflow:hidden;width:60%}
+.financial-sub-box .top{margin-top:12px}
+.financial-item .f-fl .left-item-icon{height:16px;margin-right:12px;margin-top:2px;width:16px}
+.financial-item .f-fl .left-item-title{color:#666;font-size:14px}
+.financial-item .f-fr .right-item{float:left;width:47%}
+.financial-item-sub .item-sub-left .title{margin-left:28px}
+.financial-item-sub .item-sub-right .asset{color:#333;font-size:14px;text-align:left}
+.financial-item-sub .item-sub-right .item{float:left;width:50%}
+.financial-item-sub .item-sub-right .profit{color:#ed4e39;font-size:13px}
+.financial-item .f-fr .right-item .title{color:#999;font-size:13px}
+.financial-item .f-fr .right-item .asset{align-items:center;-webkit-align-items:center;color:#333;display:flex;display:-webkit-flex;font-size:14px;font-weight:700;margin-top:12px}
+.financial-item .f-fr .right-item .profit{color:#ea4335;float:left;font-size:14px}
+.financial-item .f-fr .right-item .inner{position:relative}
+.financial-item .f-fr .right-item .question{background-image:url(https://p4.nicaifu.com/cms/201708/c0835170cd69610af38479e0f05801bf.jpg);background-size:12px 12px;height:12px;position:absolute;right:-15px;top:-6px;width:12px}

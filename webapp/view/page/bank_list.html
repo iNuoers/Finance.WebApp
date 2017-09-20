@@ -1,0 +1,36 @@
+<!-- https://weixin.100lending.com/#/payment/bankQuota -->
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <div id="m-header-nav" class="bg-fff bg-338fff c-ffffff">
+            <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="./index.html"></a>
+            <h1>支持银行列表</h1>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <div class="app-header app-main bg-fafafa">
+        <div class="tips">
+            <p>支持银行及限额（仅支持储蓄卡、暂不支持信用卡），下表仅供参考，具体金额请以银行公告为准。</p>
+        </div>
+        <div class="pb15">
+            <div class="banklist pl15 bg-fff">
+                <ul></ul>
+            </div>
+            <div class="pl15 pr15 pt15">
+                <div class="btn btn-normal" onclick="javascript:history.go(-1);">继续认证银行卡</div>
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

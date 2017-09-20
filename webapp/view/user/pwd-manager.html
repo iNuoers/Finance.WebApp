@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>密码管理</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <div id="m-header-nav" class="bg-fff">
+            <a id="F_back" class="goback arrow-left " href="javascript:;" data-href="his"></a>
+            <h1>密码管理</h1>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <div class="app-main bg-f2f2f2 app-header">
+        <div class="pwd-manager">
+            <a href="javascript:;" data-href='./reset-login-pwd.html' data-needlogin='true' class="pwd-login">登录密码 <span>已设置<i class="fa fa-angle-right"></i></span></a>
+            <a href="javascript:;" data-href='./reset-trade-pwd.html' data-needlogin='true' class="pwd-transact">交易密码 <span>已设置<i class="fa fa-angle-right"></i></span></a>
+        </div>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

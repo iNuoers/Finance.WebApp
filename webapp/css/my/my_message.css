@@ -1,0 +1,18 @@
+.m-message-menu .m-menu-item{position:relative;width:50%;float:left;height:2.5rem;line-height:2.5rem;padding:10px 0;text-align:center;color:#777;font-size:1.21rem}
+.m-message-menu .m-menu-item>div{width:50%;border:solid 1px #338fff}
+.m-message-menu .m-menu-item .current{border-radius:3px 0 0 3px;border-right:none}
+.m-message-menu .m-menu-item .invest{border-radius:0 3px 3px 0;border-left:none}
+.m-message-menu .m-menu-item .active{background-color:#338fff;color:#fff}
+.message-list{padding:15px 15px 5px;overflow:hidden}
+.message-list ul li{position:relative;font-size:0;margin-bottom:20px;padding-left:60px;min-height:68px}
+.message-item-text,.message-item-user{display:inline-block;vertical-align:top;font-size:14px}
+.message-item-user{position:absolute;left:3px}
+.message-item-user img{width:40px;height:40px;border-radius:100%}
+.message-item-user cite{position:absolute;left:60px;top:-2px;width:500px;line-height:24px;font-size:12px;white-space:nowrap;color:#999;text-align:left;font-style:normal}
+.message-item-user cite i{padding-left:15px;font-style:normal}
+.message-item-text{position:relative;line-height:22px;margin-top:25px;padding:10px 15px;background-color:#eee;border-radius:3px;color:#333;word-break:break-all;max-width:462px\9}
+.message-item-text:after{content:'';position:absolute;left:-10px;top:15px;width:0;height:0;border-style:solid dashed dashed;border-color:#eee transparent transparent;overflow:hidden;border-width:10px}
+.message-item-text a{color:#33DF83}
+.message-item-text img{max-width:100%;vertical-align:middle}
+.message-item-mine .message-item-text .layui-layim-file,.message-item-text .layui-layim-file{display:block;text-align:center}
+p{-webkit-margin-before:0;-webkit-margin-after:0;line-height:24px}

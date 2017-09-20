@@ -1,0 +1,25 @@
+<div id="m-header-nav">
+    <div class="carddetails-b" data-href="his">
+        <a class="arrow-left"></a>
+    </div>
+</div>
+<div class="text-center carddetails-container mb15"><%= list.CouponType==1 ? "现金劵" : "加息劵" %></div>
+<div class="carddetails-center">
+     <div class="carddetails-title pl15">来自：<%= list.Title%></div>
+     <div class="carddetails-matter">
+         <div class="matter-t mt20"><%= list.CouponType==1 ? "现金劵" : "加息劵" %><span><img width="100%" height="100%" src="<%= list.CouponType==1 ? url1 : url2%>"></span></div>
+         <div class="matter-n mt5"><%= (list.CouponType == 1) ? parseInt(list.CouponValue)+"元" : parseFloat(list.CouponValue).toFixed(1)+"%" %></div>
+         <div class="matter-str">
+              <p>使用条件：投资金额<%= list.MinBuyPrice%>元可用</p>
+              <p>可用时间：<%= list.UseStartTime.split("T")[0] %>至可用<%= list.UseEndTime.split("T")[0] %></p>
+         </div>
+     </div>
+    <div class="carddetails-other mt15 ml15">
+         <div class="other-title">适用产品:</div>
+         <div class="other-list mt10">
+            <ul>
+
+            </ul>
+         </div>
+    </div>
+</div>
