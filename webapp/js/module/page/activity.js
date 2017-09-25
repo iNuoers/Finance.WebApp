@@ -16,7 +16,7 @@ var _t = require('plugins/template/template.js')
 
 fjw.webapp.activity = {
     param: {
-        page: 1,
+        page: 0,
         size: 15
     },
     init: function () {
@@ -40,8 +40,8 @@ fjw.webapp.activity = {
                 that.getList(me);
             },
             loadDownFn: function (me) {
-                that.getList(me);
                 that.param.page++;
+                that.getList(me);
             }
         });
     },

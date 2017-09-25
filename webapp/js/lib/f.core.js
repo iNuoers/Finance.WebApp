@@ -144,7 +144,9 @@ var core = {
 
 $(function () {
     // 用于普通页面的跨框架脚本攻击(CFS)防御
-    if (top.location != self.location) top.location.href = self.location;
+    if(window.top.location !==window.location ){
+        top.location.href=self.location.href;
+    }
 
     core.init();
 

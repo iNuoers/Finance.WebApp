@@ -44,7 +44,7 @@ fjw.webapp.otherCard = {
             method: 'POST',
             success: this.getProductCouponList.bind(that)
         };
-        _util.request(param);
+        _util.ajax.request(param);
 
         //添加事件
         that.listenEvent();

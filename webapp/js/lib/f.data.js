@@ -64,7 +64,9 @@ var api = {
         bankList: "GetBankTypeList",
 
         login: 'Login',
-        regist: 'Register'
+        regist: 'Register',
+
+        modifyAddr: 'ModifyAddr'
 
     }
 }

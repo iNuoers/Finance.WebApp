@@ -18,7 +18,7 @@
 
     <div class="app-header app-main f-cb bg-fafafa">
         <div class="tips">
-            <p>上海银行为房金网提供资金存管服务，为保障资金安全，请绑定本人持有的银行卡，资金充值和提现必须使用同一张银行卡。（目前，中国境内公民只支持使用身份证进行开户）</p>
+            <p>为保障资金安全，请绑定本人持有的银行卡，资金充值和提现必须使用同一张银行卡。</p>
         </div>
 
         <div class="bg-fff">
@@ -26,34 +26,52 @@
                 <div class="inpName">真实姓名</div>
                 <div class="inp">
                     <input type="text" placeholder="请输入姓名" id="txtRealName">
-                </div>
-            </div>
-            <div class="inputBox webkit-box bb-e6e6e6 bt-e6e6e6">
-                <div class="inpName">证件类型</div>
-                <div class="inp">
-                    <input type="text" placeholder="请输入证件号码" value="身份证" readonly id="txtCardType">
+                    <span class="quick-del"><i></i></span>
                 </div>
             </div>
             <div class="inputBox webkit-box bb-e6e6e6">
                 <div class="inpName">证件号码</div>
                 <div class="inp">
-                    <input type="text" placeholder="请输入证件号码" id="txtIdentity">
+                    <input type="text" placeholder="请输入身份证号码" id="txtIdentity">
+                    <span class="quick-del"><i></i></span>
                 </div>
             </div>
         </div>
-        <div class="f12px c-fd6040 pl10 pr10 pt10 line-h16">请确认您的姓名和证件信息真实有效，开通存管账户之后无法修改。</div>
+        <div class="f12px c-fd6040 pl10 pr10 pt10 line-h16">请确认您的姓名和证件信息真实有效，实名认证后无法修改。</div>
         <div class="bg-fff mt10">
             <div class="inputBox webkit-box bb-e6e6e6 bt-e6e6e6">
                 <div class="inpName">银行卡号</div>
                 <div class="inp">
                     <input type="text" placeholder="请输入银行卡号码" id="txt_bankCard">
+                    <span class="quick-del"><i></i></span>
                 </div>
-                <a href="../bank_list.html" class="supportBank f12px">支持银行</a>
+                <a href="../page/bank_list.html" class="supportBank f12px">支持银行</a>
+            </div>
+            <div class="inputBox webkit-box bb-e6e6e6">
+                <div class="inpName">所属银行</div>
+                <div class="inp selectDiv">
+                    <select class="f15px" id="txtCardType"  >
+                        <option></option>
+                        <option value="1">身份证</option>
+                        <option value="2" >港澳通行证</option>
+                        <option value="4" >护照</option>
+                        <option value="3" >外国人永久居住证</option>
+                    </select>
+                </div>
+                <i class="fa fa-angle-right fa-fw"></i>
             </div>
             <div class="inputBox webkit-box bb-e6e6e6">
                 <div class="inpName">预留手机</div>
                 <div class="inp">
                     <input type="tel" placeholder="请输入银行预留手机号" id="txtTelNo" value="">
+                    <span class="quick-del"><i></i></span>
+                </div>
+            </div>
+            <div class="inputBox webkit-box bb-e6e6e6">
+                <div class="inpName">开户支行</div>
+                <div class="inp">
+                    <input type="tel" placeholder="银行卡开户支行(非必填)" id="txtTelNo" value="">
+                    <span class="quick-del"><i></i></span>
                 </div>
             </div>
         </div>

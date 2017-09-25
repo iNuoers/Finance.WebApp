@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+<body>
+    <%= require('html-loader!../../layout/loading.html')%>
+    <div class="app-main">
+        <div class="p-mian">
+            <div class="p-mian-title">该项目还款由于资金在途，到期后次日到账</div>
+            <div class="p-mian-id"><span id="val"></span></div>
+            <div class="p-mian-item">
+                <ul class="p-item-returned">
+                   <li>预期年转化率<span id="rate"></span></li>
+                   <li>项目期限<span id="limit"></span></li>
+                   <li>回款方式<span id="way"></span></li>
+                </ul>
+            </div>
+            <div class="p-mian-id">当前项目剩余可投<span class="surpluss"></span>元</div>
+            <div class="p-mian-item">
+                <ul class="p-item-balance">
+                    <li class="border-b"><i class="fa fa-cny"></i><input id="balanceInput" type="tel" placeholder="100元起投"><span class="surplusBtn">余额全部买入</span></li>
+                    <li>余额<span class="mySurpluss"></span><span class="myRecharge">充值</span> </li>
+                </ul>
+            </div>
+            <div class="p-mian-item mt15">
+                <div class="kajuan">选择卡劵<span><i class="juanVal"></i><i class="fa fa-angle-right fa-fw"></i></span></div>
+                <div class="itemList">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="p-mian-item mt15 passWord">交易密码：<input id="passWord" type="password" value="" autocomplete="off"/></div>
+            <div class="p-mian-btn">提交</div>
+            <div class="p-mian-tishi">点击提交即视为您同意<a href="">《房金网投资相关协议》</a></div>
+        </div>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+</html>

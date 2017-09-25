@@ -1,0 +1,101 @@
+.p-mian{
+    width: 100%;
+    background: #F9F9F9;
+    height: auto;
+    margin: 0 auto;
+    color: #999;
+}
+.p-mian .p-mian-title{
+    background: #F5EDD7;
+    color: #666;
+    padding: 1rem 0 1rem 1rem;
+}
+.p-mian .p-mian-id{
+    padding: 1rem 0 1rem 1rem;
+}
+.p-mian .p-mian-id .surpluss{
+    color: #4C7CF9;
+}
+.p-mian .p-mian-item{
+    background: #FFF;
+    padding: 1rem;
+}
+.p-mian .p-mian-item .p-item-returned li{
+    padding: 0.5rem 0;
+}
+.p-mian .p-mian-item .p-item-returned li span{
+    float: right;
+    color: #333;
+}
+
+.p-mian .p-mian-item .p-item-balance li{
+    padding: 1rem 0;
+    color: #333;
+    font-size: 1.4rem;
+}
+.p-mian .p-mian-item .p-item-balance #balanceInput{
+    padding-left: 1rem;
+    font-size: 1.2rem;
+}
+.p-mian .p-mian-item .p-item-balance .surplusBtn{
+    float: right;
+    color: #4C7CF9;
+    font-size: 1rem;
+}
+.p-mian .p-mian-item .p-item-balance .mySurpluss{
+    margin-left: 15px;
+    font-size: 1.2rem;
+    color: #666;
+}
+.p-mian .p-mian-item .myRecharge{
+    float: right;
+    color: #4C7CF9;
+    font-size: 1rem;
+}
+.p-mian .p-mian-item .kajuan{
+    color: #666;
+}
+.p-mian .p-mian-item .kajuan span{
+    float: right;
+    color: #666;
+    font-size: 12px;
+}
+.p-mian .p-mian-btn{
+    width: 60%;
+    padding: 1rem 0;
+    background: #A3BDFF;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    color: #FFF;
+    text-align: center;
+}
+.p-mian .p-mian-tishi{
+    width: 94%;
+    padding: 1.5rem 0;
+    font-size: 0.8rem;
+    margin: 0 auto;
+}
+.p-mian .p-mian-tishi a{
+    color: #4C7CF9;
+    padding-left: 8px;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 1000px #FFFFFF inset;
+}
+input[type=text]:focus,input[type=password]:focus, textarea:focus {
+    -webkit-box-shadow: 0 0 0 1000px #FFFFFF  inset;
+}
+.p-mian .passWord{
+    color: #333;
+    font-size: 1.2rem;
+}
+.p-mian #passWord{
+    padding-left: 10px;
+}
+.itemList{width: 100%;height: auto;background: #FFF;}
+.itemList ul{width: 100%;margin: 0 auto;font-size: 0.9rem;}
+.itemList ul li{border-bottom: 1px solid #e5e5e5;padding: 8px 0;}
+.itemList ul li span{float: right;color: #0195ff;}
+.itemList ul li span i{color: #999;margin-left: 5px;}
+.border-b{border-bottom: 1px solid #e5e5e5;}

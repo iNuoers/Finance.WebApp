@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-    <title>忘记密码</title>
+    <title>房金网</title>
     <%= require('html-loader!../../layout/head.html')%>
 </head>
 
 <body>
     <!-- header -->
     <header id="header">
-        <div id="m-header-nav" class="bg-fff">
-            <a id="F_back" class="goback arrow-left " href="javascript:;" data-href="his"></a>
-            <h1>忘记密码</h1>
+        <div id="m-header-nav" class="bg-338fff c-ffffff overflow-hide">
+            <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="his"></a>
+            <h1>忘记密码 - 提交</h1>
         </div>
     </header>
     <!-- header end -->
@@ -36,7 +36,10 @@
                 <span>确认密码</span>
 
             </div>
-            <a href="#" class="sure-btn"> 下一步</a>
+            <a id="loginbtn" class="btn btn-normal mt50 disabled">
+                <i class="fa fa-spinner fa-spin f-hide"></i>
+                <span>提交</span>
+            </a>
         </div>
 
     </div>

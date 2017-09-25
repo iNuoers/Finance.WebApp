@@ -17,13 +17,17 @@
     <div class="app-main bg-fff app-header">
         <div class="personal">
             <ul class="per-portrait">
-                <li class="portrait-head">头像<div class="portrait"><img src=<%= require('../../image/personal_pic.png') %>></div> </li>
+                <li class="portrait-head">头像<div class="portrait"><img id="headImg" src=<%= require('../../image/personal_pic.png') %>></div> </li>
                 <li><a href="javascript:;" data-href='./address.html' data-needlogin='true'>我的地址</a><b class="fa fa-angle-right"></b></li>
             </ul>
             <ul class="per-bill">
-                <li>账户安全<span class="safe">账户安全等级：<i>低</i></span><b class="fa fa-angle-right"></b>
+                <li>
+                    <a href="javascript:;" data-href="../user/pwd-manager.html" data-needlogin="true">账户安全</a>
+                    <span class="safe"></span><b class="fa fa-angle-right"></b>
                 </li>
-                <li><a href="javascript:;" data-href='./bindcard.html' data-needlogin='true'>实名认证</a><span class="notOpen">未认证</span> <b class="fa fa-angle-right"></b>
+                <li>
+                    <a href="javascript:;" data-href='./bindcard.html' data-needlogin='true'>实名认证</a>
+                    <span class="authen"></span><b class="fa fa-angle-right"></b>
                 </li>
             </ul>
         </div>

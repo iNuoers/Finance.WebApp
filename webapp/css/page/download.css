@@ -5,7 +5,6 @@
 .download-swiper .swiper-pagination-bullet-active {background-color:#fff}
 .download-item {height:100%;width:100%;position:relative;-webkit-flex-shrink:0;-ms-flex:0 0 auto;-ms-flex-negative:0;flex-shrink:0;}
 .download-item img{display: block;margin: auto;}
-
 /*第一页*/
 .d-item-1 {background-image:url(../../image/download-1-bg.png);background-size:100%  100%;background-repeat:no-repeat;}
 .d-item-1 .d-logo{width: 100%;text-align: center;top: 13%}
@@ -15,7 +14,6 @@
 .d-item-1 .s-str-1,.d-item-1 .s-str-2  {display:block;width: 100%;text-align: center;color:#fff;font-weight:inherit;font-size:1.4rem;letter-spacing:2px;text-align:center;}
 .d-item-1 .s-str-1{top:35.2%}
 .d-item-1 .s-str-2{top: 40%}
-
 /*第二页*/
 .d-item-2 {background-image:url(../../image/download-2-bg.png);background-size:100%  100%;background-repeat:no-repeat;}
 .d-item-2 .d-stars {width:100%;height: 80%}
@@ -26,15 +24,10 @@
 .d-item-2 .d-content > img {width:44%;height: 100%}
 .d-item-2 .d-banner{width: 100%; margin-top:37%;}
 .d-item-2 .d-banner > img {width: 69%;}
-.d-item-2 .d-text{width: 100%;text-align: center;color: #fff;font-size: 1.2rem;bottom:16.2%}
-.d-item-2 .d-text > span {display: block;width: 100%;line-height: 1.3}
-.d-item-2 .d-text .text-s-1{font-size: 1.4rem;margin-bottom: 0.8rem}
-.d-item-2 .d-btn a{display: block;width:13.5rem;margin: auto;font-size: 1.4rem;;letter-spacing: 1px;font-weight: bold;line-height: 1.8;color: #fff;padding: 3% 8% 2.1% 8%;background: rgba(255, 255, 255, 0.6); -webkit-box-shadow: 0 1px 1px 1px rgba(255, 255, 255, 0.4); box-shadow: 0 1px 1px 1px rgba(255, 255, 255, 0.4);border-radius: 3%}*/
-
 /*第三页*/
 .d-item-3 {background-image:url(../../image/download-3-bg.png);background-size:100%  100%;background-repeat:no-repeat;}
 .d-item-3 .d-alert{width:100%;top: 14%;}
-.d-item-3 .d-alert > img {;width: 60%;}
+.d-item-3 .d-alert > img {width: 60%;}
 .d-item-3 .d-icon{width: 100%;top: 31.2%;height: 22%}
 .d-item-3 .d-icon > img {width: 32%;height: 100%;}
 .d-item-3 .d-phone-2{width: 100%;top: 54%;}
@@ -45,19 +38,15 @@
 .d-item-3 .d-light > img { width:80%;height: 100%}
 .d-item-3 .d-shadow{width: 100%;top: 37%;}
 .d-item-3 .d-shadow > img {width: 100%;}
-.d-item-3 .d-text-2{width: 100%;text-align: center;color: #fff;font-size: 1.2rem;bottom:16.2%}
-.d-item-3 .d-text-2 > span {display: block;width: 100%;line-height: 1.3}
-.d-item-3 .d-text-2 .text-s-1{font-size: 1.4rem;margin-bottom: 0.8rem}
-
 /*第四页*/
 .d-item-4 {background-image:url(../../image/download-4-bg.png);background-size:100%  100%;background-repeat:no-repeat;}
 .d-item-4 .d-stars-2{width: 100%;height:44%}
 .d-item-4 .d-stars-2 > img {width: 73%;height:100%}
 .d-item-4 .d-screen {width: 100%;top:30%}
 .d-item-4 .d-screen > img{width: 75%;}
-.d-item-4 .d-text-3{width: 100%;text-align: center;color: #fff;font-size: 1.2rem;bottom:16.2%}
-.d-item-4 .d-text-3 > span {display: block;width: 100%;line-height: 1.3}
-.d-item-4 .d-text-3 .text-s-1{font-size: 1.4rem;margin-bottom: 0.8rem}
+.d-item-2 .d-text,.d-item-3 .d-text-2,.d-item-4 .d-text-3{width: 100%;text-align: center;color: #fff;font-size: 1.2rem;bottom:16.2%}
+.d-item-2 .d-text > span,.d-item-3 .d-text-2 > span,.d-item-4 .d-text-3 > span {display: block;width: 100%;line-height: 1.3}
+.d-item-2 .d-text .text-s-1,.d-item-3 .d-text-2 .text-s-1,.d-item-4 .d-text-3 .text-s-1{font-size: 1.4rem;margin-bottom: 0.8rem}
 
 .d-item-1 .d-btn,.d-item-2 .d-btn,.d-item-3 .d-btn,.d-item-4 .d-btn{position: absolute;width: 100%;text-align:center;bottom:2rem;margin: auto;}
 .d-item-1 .d-btn a,.d-item-2 .d-btn a,.d-item-3 .d-btn a,.d-item-4 .d-btn a{display: block;width:13.5rem;margin: auto;font-size: 1.4rem;;letter-spacing: 1px;font-weight: bold;line-height: 1.8;color: #fff;padding: 3% 8% 2.1% 8%;background: rgba(255, 255, 255, 0.6); -webkit-box-shadow: 0 1px 1px 1px rgba(255, 255, 255, 0.4); box-shadow: 0 1px 1px 1px rgba(255, 255, 255, 0.4);border-radius: 3%}

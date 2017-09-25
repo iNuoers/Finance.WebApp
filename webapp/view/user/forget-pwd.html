@@ -9,8 +9,8 @@
 <body>
     <!-- header -->
     <header id="header">
-        <div id="m-header-nav" class="bg-fff">
-            <a id="F_back" class="goback arrow-left " href="javascript:;" data-href="his"></a>
+        <div id="m-header-nav" class="bg-338fff c-ffffff overflow-hide">
+            <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="his"></a>
             <h1>忘记密码</h1>
         </div>
     </header>
@@ -39,11 +39,14 @@
                 <div class="input-item">
                     <input type="text" name="" id="phone" class="f-input" value="" placeholder="请输入右侧图形验证码">
                 </div>
-                <img alt="" src=<%=require( '../../image/code.png')%>>
+                <img alt="" src=<%=require('../../image/code.png')%>>
 
                 <span>图片验证码</span>
             </div>
-            <a href="#" class="sure-btn"> 下一步</a>
+            <a id="loginbtn" class="btn btn-normal mt50 disabled">
+                <i class="fa fa-spinner fa-spin f-hide"></i>
+                <span>下一步</span>
+            </a>
         </div>
 
     </div>

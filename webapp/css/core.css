@@ -82,9 +82,11 @@
 .mb15 { margin-bottom: 15px !important; }
 .mb20 { margin-bottom: 20px !important; }
 .mb40 { margin-bottom: 40px !important; }
+.mb50 { margin-bottom: 50px !important; }
 .mb60 { margin-bottom: 60px !important; }
 
 .pd15 { padding: 15px; }
+.pd20 { padding: 20px; }
 .pt2 { padding-top: 2px !important; }
 .pt4 { padding-top: 4px !important; }
 .pt5 { padding-top: 5px !important; }

@@ -111,7 +111,7 @@ var Utils = {
                     typeof param.error === 'function' && param.error(err.statusText);
                 }
             });
-        },        
+        },
         ajaxSet: function () {
             var _this = this;
 
@@ -258,6 +258,18 @@ var Utils = {
             }
 
             return uuid.join('');
+        },
+        //倒计时
+        countDown: function (second) {
+            //console.log(s)
+            var date, hour, minute;
+            date = parseInt(second / 86400);
+            second %= 86400; //求天数之后的余数
+            hour = parseInt(second / 3600);
+            second %= 3600; //求小时之后的余数
+            minute = parseInt(second / 60);
+            second %= 60; //求分钟之后的余数，就是最后的秒数
+            return this.toDou(date) + '天' + this.toDou(hour) + '时' + this.toDou(minute) + '分' + this.toDou(second) + '秒';
         }
     },
     // 字段的验证，支持非空、手机、邮箱的判断

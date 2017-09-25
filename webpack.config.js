@@ -41,7 +41,7 @@ const config = {
         'product/protocol_dq'   : ['./webapp/js/module/product/product_protocol.js'],
         'product/protocol_hq'   : ['./webapp/js/module/product/product_protocol.js'],
         'product/info'          : ['./webapp/js/module/product/product_info.js'],
-        'product/calculator'    : ['./webapp/js/module/product/product_calculator.js'],
+        'product/confirm'       : ['./webapp/js/module/product/product_confirm.js'],
 
         'page/activity'         : ['./webapp/js/module/page/activity.js'],
         'page/bank_list'        : ['./webapp/js/module/page/bank_list.js'],
@@ -154,7 +154,7 @@ const config = {
         new HtmlWebpackPlugin(getHtmlConfig('product/protocol_hq')),
         new HtmlWebpackPlugin(getHtmlConfig('product/protocol_dq')),
         new HtmlWebpackPlugin(getHtmlConfig('product/record')),
-        new HtmlWebpackPlugin(getHtmlConfig('product/calculator')),
+        new HtmlWebpackPlugin(getHtmlConfig('product/confirm')),
 
         new HtmlWebpackPlugin(getHtmlConfig('page/activity')),
         new HtmlWebpackPlugin(getHtmlConfig('page/download')),

@@ -11,8 +11,7 @@
         strDate = "0" + strDate;
     }
     var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate;
-%>
-<% 
+
     var progress = (TotalShares - RemainingShares) / TotalShares * 100; 
     if(progress==0){ 
         progress = 0;
@@ -21,6 +20,17 @@
         progress = 1;
     } 
     progress = Math.floor(progress);
+
+    var btnCls = 'btn-normal', btnText = '立即投资';
+    if(IsBuy == 1 && ProductTypeId == 9){
+        btnCls = 'btn-default disabled';
+        btnText = NotBuyText;
+    }
+
+    if(RemainingShares <= 0 ){
+        btnCls = 'btn-default disabled';
+        btnText = '已售罄';
+    }
 %>
 <div class="salary-base">
     <div class="salary-base-rate">
@@ -54,19 +64,20 @@
         </div>
     </dl>
 </div>
-<%if(IsPlusInCome==1&&IsCash==1){%>
-<div class="page-block">
-    <a class="item other-card">
-        使用卡券
-        <span class="item_content item-card">您有可用卡券</span>
-        <i class="fa fa-angle-right fa-fw"></i>
-    </a>
-    <div class="itemList">
-        <ul>
 
-        </ul>
+<%if(IsPlusInCome == 1 && IsCash == 1){%>
+    <div class="page-block">
+        <a class="item other-card">
+            使用卡券
+            <span class="item_content item-card">您有可用卡券</span>
+            <i class="fa fa-angle-right fa-fw"></i>
+        </a>
+        <div class="itemList">
+            <ul>
+
+            </ul>
+        </div>
     </div>
-</div>
 <%}%>
 
 <div class="page-block">
@@ -77,7 +88,7 @@
     </div>
     <div class="line"></div>
     <div class="item">
-        <span class="c-999999">预期到期收益 <em class="c-333333">0.00元</em></span>
+        <span class="c-999999">预期到期收益 <em class="c-333333" id="expectedProfit">0.00元</em></span>
         <span class="item_content tag calculator">收益计算</span>
     </div>
 </div>
@@ -86,18 +97,19 @@
     <span class="item">收益方式<em class="f-fr"><%= IncomeDescript %></em></span>
 </div>
 <div class="line"></div>
-<%if(ProductTypeParentId==2){%>
-<div class="project-progress">
-    <ul class="project-progress_timeline">
-        <li><%= currentdate %><span>起息日</span></li>
-        <li><%= TimeLimit %><span>剩余收益天数</span></li>
-        <li><%= DueDateText %><span>到期日期</span></li>
-    </ul>
-</div>
-<%}else if(ProductTypeParentId==1){%>
-<div class="list-block page-block mt0">
-    <span class="item">开始计息<em class="f-fr"><%= currentdate%></em></span>
-</div>
+
+<%if(ProductTypeParentId == 2){%>
+    <div class="project-progress">
+        <ul class="project-progress_timeline">
+            <li><%= currentdate %><span>起息日</span></li>
+            <li><%= TimeLimit %><span>剩余收益天数</span></li>
+            <li><%= DueDateText %><span>到期日期</span></li>
+        </ul>
+    </div>
+<%}else if(ProductTypeParentId == 1){%>
+    <div class="list-block page-block mt0">
+        <span class="item">开始计息<em class="f-fr"><%= currentdate%></em></span>
+    </div>
 <%}%>
 
 <div class="project-desc page-block bg-white">
@@ -128,7 +140,16 @@
 <div class="block-simple-tip">理财非存款，投资需谨慎</div>
 
 <div class="m-btnBar">
-    <span class="btn btn-normal F-buyBtn">立即投资</span>
+    <a class="btn F-buyBtn <%= btnCls %>" style="opacity:1" title="<%= btnText %>" timer="<%= CountDown %>">
+        <%if(CountDown > 0){%>
+            距离产品发售剩余
+            <i class="product-timer">
+                <i class="hour">00</i>:<i class="minute">00</i>:<i class="second">00</i>
+            </i>
+        <%}else{%>
+            <%= btnText %>
+        <%}%>
+    </a>    
 </div>
 
 <div class="mask">

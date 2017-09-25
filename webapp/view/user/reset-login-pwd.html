@@ -8,19 +8,24 @@
 
 <body>
     <header id="header">
-        <div id="m-header-nav" class="bg-fff">
+        <div id="m-header-nav" class="bg-338fff c-ffffff overflow-hide">
             <a id="F_back" class="goback arrow-left " href="javascript:;" data-href="his"></a>
             <h1>修改登录密码</h1>
         </div>
     </header>
 
     <div class="app-main bg-fff app-header">
-        <div class="change-loginpwd">
-            <div class="old-pwd"><span>原密码</span><input type="passwprd" name="" value="" autocomplete="off" placeholder="请输入原密码" /> </div>
-            <div class="new-pwd"><span> 新密码</span> <input type="password" name="" value="" autocomplete="off" placeholder="6-16位字母和数字" /> </div>
-            <div class="confirm-pwd"><span>确认密码</span><input type="password" name="" value="" autocomplete="off" placeholder="请再次输入新密码" /> </div>
+        <div class="change-loginpwd pl20 pr20">
+            <div class="change-loginpwd">
+                <div class="old-pwd"><span>原密码</span><input type="passwprd" name="" value="" autocomplete="off" placeholder="请输入原密码" /> </div>
+                <div class="new-pwd"><span> 新密码</span> <input type="password" name="" value="" autocomplete="off" placeholder="6-16位字母和数字" /> </div>
+                <div class="confirm-pwd"><span>确认密码</span><input type="password" name="" value="" autocomplete="off" placeholder="请再次输入新密码" /> </div>
+            </div>
+            <a id="loginbtn" class="btn btn-normal mt50 disabled">
+                <i class="fa fa-spinner fa-spin f-hide"></i>
+                <span>确定</span>
+            </a>
         </div>
-        <a href="#" class="sure-btn"> 确定</a>
     </div>
     <%= require('html-loader!../../layout/footer.html')%>
 </body>
