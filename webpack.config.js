@@ -1,4 +1,4 @@
-const debug             = true;
+const debug             = false;
 const webpack           = require('webpack');
 const url               = debug ? 'http://192.168.1.53:8010' : 'https://www.fangjinnet.com';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -12,7 +12,7 @@ const getHtmlConfig = function (name,title) {
     return {
         template    : './webapp/view/' + name + '.html',
         filename    : 'view/' + name + '.html',
-        favicon     : './favicon.ico',
+        //favicon     : './favicon.ico',
         title       : title,
         inject      : true,
         hash        : true,
@@ -88,7 +88,7 @@ const config = {
     },
     output: {
         path        : __dirname + '/dist/',
-        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : 'http://192.168.1.53:3002/dist/',
+        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : 'http://m.fangjinnet.com/dist/',
         filename    : 'js/[name]-build.min.js',
         chunkFilename: 'js/[id].chunk.js'
     },

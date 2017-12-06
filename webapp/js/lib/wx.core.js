@@ -4,7 +4,7 @@
  * @Github：https://github.com/iNuoers/ 
  * @Create time: 2017-10-13 14:42:02 
  * @Last Modified by: mr.ben
- * @Last Modified time: 2017-12-05 17:58:13
+ * @Last Modified time: 2017-12-06 17:31:02
  */
 'use strict'
 window.user = {
@@ -19,7 +19,7 @@ window.user = {
 
 var FJW = FJW || {};
 var FJW = {};
-FJW.debug = true;
+FJW.debug = false;
 FJW.Namespace = function () {
     var e, t, n, r = arguments, i = null;
     for (e = 0; e < r.length; e++) {
@@ -33,7 +33,7 @@ FJW.Env = {
     protocol: function () {
         return location.protocol
     },
-    domain: FJW.debug ? 'http://192.168.1.53:3002' : 'https://www.fangjinnet.com',
+    domain: FJW.debug ? 'http://192.168.1.53:3002' : 'http://m.fangjinnet.com',
     apiHost: FJW.debug ? 'https://api.fangjinnet.com:1000/api' : 'https://api.fangjinnet.com:1000/api',
     wwwRoot: '/dist/view',
     bbsRoot: 'https://bbs.fangjinnet.com/',
