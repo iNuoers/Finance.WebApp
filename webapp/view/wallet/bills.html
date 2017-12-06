@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+<body>
+    <div class="ui-layout">
+        <div class="head">
+            <div class="lm-row lm-rrow lm-line">
+                <div id="bill-list">
+                    <div class="bill-items">
+                        <ul class="bill-item"></ul>
+                    </div>
+                </div>
+            </div>            
+            <ul class="item-c">
+                <li>本月累计收益(元)</li>
+                <li id="m-income">0.00</li>
+            </ul>
+        </div>
+    </div>
+    <div class="app-header app-main bg-f7f7f7" style="padding-top:75px">
+        <div id="all_page">
+            <ul class="tradingRecord-list" id="all_list"></ul>
+        </div>
+        <div class="bills-box">
+            <div class="bills-list mb10">
+                <ul>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+</html>

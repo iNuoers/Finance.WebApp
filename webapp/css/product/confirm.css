@@ -1,0 +1,68 @@
+.invest-wrapper{color:#999}
+.overview-box{position:relative;padding:0 15px;line-height:45px;font-size:13px;color:#999;background-color:#fff}
+.overview-box .tag-span{margin-left:8px}
+.overview-box .tag-span{border:2px solid #ff8210;color:#ff8210;-moz-transform-origin:0 0;-ms-transform-origin:0 0;-webkit-transform-origin:0 0;transform-origin:0 0;-moz-transform:scale(.5,.5) translate(0,-50%);-ms-transform:scale(.5,.5) translate(0,-50%);-webkit-transform:scale(.5,.5) translate(0,-50%);transform:scale(.5,.5) translate(0,-50%);position:absolute;top:50%}
+.overview-box .hl-tags{-moz-transform-origin:0 0;-ms-transform-origin:0 0;-webkit-transform-origin:0 0;transform-origin:0 0;-moz-transform:scale(.5,.5) translate(-50%,0);-ms-transform:scale(.5,.5) translate(-50%,0);-webkit-transform:scale(.5,.5) translate(-50%,0);transform:scale(.5,.5) translate(-50%,0);position:absolute;white-space:nowrap;left:50%;top:15px}
+.overview-box .tag-hl{font-style:normal;border:2px solid #ff8210;color:#ff8210}
+.overview-box .tag-hl+.tag-hl{margin-left:6px}
+.proinfo-box .comm-cell{padding:0 15px;min-height:30px}
+.proinfo-box .comm-cell:before{border:none}
+.proinfo-box .comm-cell-hd{font-size:14px}
+.remain-info-bar{position:relative;color:#999;font-size:13px}
+.remain-info-bar span{color:#5b89ff}
+
+.pay-box{background-color:#fff;overflow:hidden;margin-bottom:10px}
+.setvalue{position:relative;box-sizing:border-box;height:50px;padding:0 15px 15px 15px;position:relative}
+.setvalue:after{content:' ';display:block;border-bottom:1px solid #ededed;position:absolute;bottom:0;left:0;right:0;z-index:2;margin-left:15px}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5){
+    .setvalue:after{-webkit-transform:scaleY(.7);transform:scaleY(.7);-webkit-transform-origin:left bottom}
+}
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .setvalue:after{-webkit-transform:scaleY(.5);transform:scaleY(.5)}
+}
+.setvalue .link{position:absolute;bottom:0;right:15px;line-height:50px;font-size:14px;z-index:2}
+.setvalue .sb-rmb{width:14px;position:absolute;top:0;bottom:auto;height:100%;z-index:2;font-size:0}
+.setvalue .sb-rmb:before{width:14px;content:'¥';display:inline-block;font-size:22px;height:30px;line-height:30px;margin-top:14px;background-size:14px auto;vertical-align:middle;color:#555}
+.setvalue .input-txt{position:relative;display:inline-block;width:100%;height:40px;line-height:20px;margin-top:9px;box-sizing:border-box;border:0 none;padding:0 55px 0 20px;font-size:18px;z-index:0;color:#555}
+.setvalue .input-txt::-webkit-input-placeholder{line-height:25px;font-size:13px;color:#c8c8c8;padding-top:4px;font-weight:300}
+.setvalue .input-txt::-moz-placeholder{line-height:25px;font-size:13px;color:#c8c8c8;padding-top:4px;font-weight:300}
+
+.btm-btn-bar{width:100%;height:50px;padding-top:10px;position:fixed;left:0;bottom:0;z-index:200}
+.btm-btn-bar .btns{width:100%;height:50px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:absolute;bottom:0;left:0}
+.btm-btn-bar .btn{position:relative;height:50px;line-height:50px;display:block;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;opacity:1;border-radius:0;font-size:16px;font-weight:700}
+.btm-btn-bar .btn-with-info{box-sizing:border-box;font-weight:400;line-height:2;padding:10px}
+
+.open-mask{height:100%;overflow:hidden}
+.mask,.paymask{display:none;position:fixed;top:0;left:0;right:0;bottom:0;margin:auto;width:100%;height:100%;background-color:rgba(0,0,0,.6);z-index:500}
+.mask .list>*{display:block;-webkit-box-flex:1;text-align:center}
+.paymask .paykey-box,.mask .calc-box{display:none;position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;background-color:#fff}
+.paymask .paykey-box,.mask .calc-box{display:block;width:100%;max-width:750px;height:23rem;top:auto;z-index:310}
+.paymask .paykey-box{height:10rem;width:80%;top:0}
+.paymask .paykey-box .paykey-tit,.mask .calc-box .calc-tit{position:relative;line-height:1.5625rem;padding-top:1.875rem;text-align:center;font-size:1.125rem;color:#333}
+.paymask .paykey-box .paykey-tit .paykey-close,.mask .calc-box .calc-tit .close{position:absolute;top:1.5625rem;right:.4375rem;width:2.25rem;height:2.25rem;background:url(../../image/icon_close.png) no-repeat center center;background-size:1.125rem 1.125rem;cursor:pointer}
+.paymask .paykey-box .paykey-tit{line-height:1.5rem;padding-top:1.5rem;}
+.paymask .paykey-box .paykey-tit .paykey-close{top:1rem;}
+.mask .calc-box .calculator{margin:1.25rem 1.1rem .9375rem;display:-webkit-box}
+.mask .calc-box .calculator>*{position:relative;height:4rem}
+.mask .calc-box .calculator>* input{position:absolute;top:0;left:0;right:1.90625rem;width:100%;height:100%;line-height:100%;padding-left:.78125rem;background-color:#F1F3F6;font-size:1.0625rem}
+.mask .calc-box .calculator>* input::-webkit-input-placeholder{font-size:1.125rem}
+.mask .calc-box .calculator>* span{position:absolute;top:0;right:.78125rem;width:1.125rem;height:4rem;line-height:4rem;min-height:4rem;font-size:1.125rem}
+.mask .calc-box .calculator>* .clear{display:none;position:absolute;top:1.571875rem;right:2.53125rem;width:.9375rem;height:.9375rem;background:url(../../image/icon_close.png) no-repeat;background-size:contain}
+.mask .calc-box .profit{margin:0 1rem 2rem;line-height:2.40625rem;font-size:1rem;color:#333}
+.mask .calc-box .profit .bankProfit,.mask .calc-box .profit .productProfit{position:relative}
+.mask .calc-box .profit .bankProfit>span,.mask .calc-box .profit .productProfit>span{position:absolute;top:0;right:0;display:inline-block;line-height:1.5rem;font-size:1.0625rem;color:#999}
+.mask .calc-box .profit .productProfit{margin-bottom:.625rem}
+.mask .calc-box .profit .productProfit>span{color:#FF801A}
+.mask .calc-box .declaration{margin-bottom:.3125rem;text-align:center;color:#508CEE}
+
+/* 交易密码 */
+.sixDigitPassword{position:absolute;left:15.5%;width:177px;height:31px;font-size:12px;-webkit-box-sizing:content-box;box-sizing:content-box;-webkit-user-select:initial;outline:0;z-index:999;opacity:0;filter:alpha(opacity=0)}
+.sixDigitPassword-box{width:177px;margin:0 auto;margin-top:10px;cursor:text;background:#fff;outline:0;position:relative;padding:8px 0;height:31px;border:1px solid #e0e4ed;border-radius:2px}
+.sixDigitPassword-box i{float:left;display:block;padding:4px 0;height:15px;width:29px;border-left:1px solid #e0e4ed}
+.sixDigitPassword-box i:first-child{border-color:transparent}
+.sixDigitPassword-box .active{background:url(../../image/password-blink.gif) no-repeat center center}
+.sixDigitPassword-box b{display:block;margin:0 auto;width:7px;height:7px;overflow:hidden;visibility:hidden;background:url(../../image/password-dot.png) no-repeat}
+.sixDigitPassword-box span{position:absolute;display:block;top:-1px;height:31px;width:29px;visibility:hidden;border:1px solid rgba(20,105,235,.8);border-radius:2px;visibility:hidden;-webkit-box-shadow:inset 0 2px 2px rgba(0,0,0,.75),0 0 8px rgba(82,168,236,.6);box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(82,168,236,.6)}
+.six-password{position:relative;vertical-align:middle}
+.paykey-tips{margin:0 auto;width:177px;height:31px;font-size:12px;-webkit-box-sizing:content-box;box-sizing:content-box;-webkit-user-select:initial;outline:0;z-index:999}
+.pass-link{line-height:40px}

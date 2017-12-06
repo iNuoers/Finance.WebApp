@@ -10,7 +10,7 @@
     <!-- header -->
     <header id="header" class="show-hd">
         <div id="m-header-nav" class="bg-fff bg-338fff c-ffffff">
-            <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="./index.html"></a>
+            <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="his"></a>
             <h1><span>实名绑卡</span></h1>
         </div>
     </header>
@@ -22,17 +22,20 @@
         </div>
 
         <div class="bg-fff">
-            <div class="inputBox webkit-box bt-e6e6e6">
+            <div class="inputBox webkit-box bb-e6e6e6">
                 <div class="inpName">真实姓名</div>
-                <div class="inp">
-                    <input type="text" placeholder="请输入姓名" id="txtRealName">
+                <div class="inp" >
+                    <input type="text" placeholder="请输入姓名" id="txtRealName" value="">
+                      <p class="ruleName">请您输入号码</p>
+
                     <span class="quick-del"><i></i></span>
                 </div>
             </div>
             <div class="inputBox webkit-box bb-e6e6e6">
                 <div class="inpName">证件号码</div>
                 <div class="inp">
-                    <input type="text" placeholder="请输入身份证号码" id="txtIdentity">
+                    <input type="tel" placeholder="请输入身份证号码" id="txtIdentity" value="">
+                    <p class="ruleId"></p>
                     <span class="quick-del"><i></i></span>
                 </div>
             </div>
@@ -43,6 +46,7 @@
                 <div class="inpName">银行卡号</div>
                 <div class="inp">
                     <input type="text" placeholder="请输入银行卡号码" id="txt_bankCard">
+                    <p class="rulebank"></p>
                     <span class="quick-del"><i></i></span>
                 </div>
                 <a href="../page/bank_list.html" class="supportBank f12px">支持银行</a>
@@ -50,34 +54,33 @@
             <div class="inputBox webkit-box bb-e6e6e6">
                 <div class="inpName">所属银行</div>
                 <div class="inp selectDiv">
-                    <select class="f15px" id="txtCardType"  >
-                        <option></option>
-                        <option value="1">身份证</option>
-                        <option value="2" >港澳通行证</option>
-                        <option value="4" >护照</option>
-                        <option value="3" >外国人永久居住证</option>
-                    </select>
+                    <div class="f15px cardtype" id="txtCardType">
+                        <span></span>
+                         <ul class="bandname">
+                        </ul>
+                    </div>
                 </div>
-                <i class="fa fa-angle-right fa-fw"></i>
+                <i class="fa Listclose fa-angle-right fa-fw"></i>
             </div>
             <div class="inputBox webkit-box bb-e6e6e6">
                 <div class="inpName">预留手机</div>
                 <div class="inp">
                     <input type="tel" placeholder="请输入银行预留手机号" id="txtTelNo" value="">
+                    <p class="rulePhone"></p>
                     <span class="quick-del"><i></i></span>
                 </div>
             </div>
             <div class="inputBox webkit-box bb-e6e6e6">
                 <div class="inpName">开户支行</div>
                 <div class="inp">
-                    <input type="tel" placeholder="银行卡开户支行(非必填)" id="txtTelNo" value="">
+                    <input type="text" placeholder="银行卡开户支行(非必填)" id="bankBranch" value="">
                     <span class="quick-del"><i></i></span>
                 </div>
             </div>
         </div>
         <div class="m-btnBar">
             <div class="btns">
-                <a class="btn btn-normal F-buyBtn">立即保存</a>
+                <a class="btn btn-normal F-submit">立即绑定</a>
             </div>
         </div>
     </div>

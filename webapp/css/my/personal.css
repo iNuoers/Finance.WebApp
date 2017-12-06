@@ -1,0 +1,15 @@
+/* personal-container */
+.per-portrait li,.per-bill li{position: relative;padding: 1.5rem 0.8rem;padding-right: 2rem;margin: 0 0.8rem;font-size: 1.2rem;border-bottom:1px solid #ededed;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.per-portrait .portrait-head{line-height: 3.2}
+.per-portrait li a{padding:16px 200px 16px 0;}
+.per-portrait li .portrait{float: right;width: 3rem;height: 3rem;}
+#headImg{float: right;width: 3rem;height: 3rem;object-fit:cover;border-radius:100%}
+.per-portrait li span,.per-bill li span{float: right;font-size: 1rem}
+.per-bill li span.safe{color:#999}
+.per-portrait li b,.per-bill li b{position: absolute;top: 50%;right: 0.8rem;transform: translateY(-50%);font-size: 1.4rem;color: #a3a3a3}
+.per-bill li i{color:red}
+.per-bill li .open{color:#999}
+.per-bill li .notOpen{color:red}
+.logout{margin-top:8rem;padding-bottom:15px}
+.logout .btn{color:#ff5056;font-size:16px;font-weight:700}
+.fixed-bottom {position: fixed;bottom: 20px;width:100%;max-width:750px}

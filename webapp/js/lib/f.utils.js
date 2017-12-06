@@ -1,8 +1,8 @@
 /*
 * @Author: mr_肖先生（66623978）
 * @Date:   2017-09-12 13:35:42
-* @Last Modified by:   mr_肖先生（66623978）
-* @Last Modified time: 2017-09-12 13:35:42
+ * @Last Modified by: mr.ben
+ * @Last Modified time: 2017-11-02 13:53:14
 */
 'use strict';
 
@@ -11,19 +11,19 @@ var Utils = {
     // 本地缓存
     storage: {
         /**
-         * 
-         * @param {} key 
-         * @returns {} 
+         *
+         * @param {} key
+         * @returns {}
          */
         getItem: function (key) {
             //假如浏览器支持本地存储则从localStorage里getItem，否则乖乖用Cookie
             return window.localStorage ? localStorage.getItem(key) : cookie.get(key);
         },
         /**
-         * 
-         * @param {} key 
-         * @param {} val 
-         * @returns {} 
+         *
+         * @param {} key
+         * @param {} val
+         * @returns {}
          */
         setItem: function (key, val) {
             //假如浏览器支持本地存储则调用localStorage，否则乖乖用Cookie
@@ -34,9 +34,9 @@ var Utils = {
             }
         },
         /**
-         * 
-         * @param {} key 
-         * @returns {} 
+         *
+         * @param {} key
+         * @returns {}
          */
         delItem: function (key) {
             //假如浏览器支持本地存储则调用localStorage，否则乖乖用Cookie
@@ -47,8 +47,8 @@ var Utils = {
             }
         },
         /**
-         * 
-         * @returns {} 
+         *
+         * @returns {}
          */
         clearItem: function () {
             if (window.localStorage) {
@@ -133,7 +133,7 @@ var Utils = {
                         var data = JSON.parse(opt.data);
                         data.P = 4;
                         data.IE = false;
-                        data.T = Utils.storage.getItem($.base64.btoa('f.token'));
+                        data.T = Utils.storage.getItem('f.token');
                         opt.data = JSON.stringify(data);
                     }
                 }
@@ -291,6 +291,20 @@ var Utils = {
         if ('pswd' == type) {
             return /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$/.test(value);
         }
+        // 身份证15/18位号码验证
+        if('identity'==type){
+            return /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/.test(value)
+        }
+        //银行卡号验证
+        if('bankcard'==type){
+            return /^\d{16}|\d{19}$/.test(value)
+        }
+        //中文名判断
+        if('realname'==type){
+            return /^[\u4E00-\u9FA5]{1,6}$/.test(value)
+        }
+        
+        
     }
 }
 module.exports = Utils;

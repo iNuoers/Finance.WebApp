@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+<body>
+    <%= require('html-loader!../../layout/loading.html')%>
+    <!-- header -->
+    <header id="header">
+        <div id="m-header-nav" class="bg-338fff c-ffffff">
+            <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="his"></a>
+            <h1>充值</h1>
+        </div>
+    </header>
+    <!-- header end -->
+    <div class="app-header app-main bg-f7f7f7">
+        <style>
+        .l-container {
+            margin: 0 auto;
+            max-width: 750px;
+            transition: opacity .2s ease;
+        }
+        .l-flex {
+            display: box;
+            display:-webkit-box;
+            display:-webkit-flex;
+            display:flex;
+        }
+        .l-flex-vc { /*水平居中*/
+            -webkit-box-align:center;
+            -webkit-align-items:center;
+            align-items:center;
+        }
+        .l-flex-item {
+            -webkit-box-flex:1;
+            -webkit-flex-grow:1;
+            flex-grow:1;
+        }
+        .l-flex-vertical {
+            -webkit-box-orient:vertical;
+            -webkit-flex-direction:column;
+            flex-direction:column;
+        }
+        .l-flex-hc {
+            -webkit-box-pack:center;
+            -webkit-justify-content:center;
+            justify-content:center;
+        }
+        .module {
+            margin-bottom: 6px;
+            padding-left: 10px;
+            border-top: 1px solid #EDEEF1;
+            border-bottom: 1px solid #EDEEF1;
+            background-color: #fff;
+        }
+        .module > .card-info {
+            padding-bottom: 12px;
+        }
+        .module > .l-flex {
+            padding: 14px 0;
+            border-top: 1px solid #EDEEF1;
+        }
+        .module > .l-flex:first-child {
+            border-top: 0;
+        }
+        .module > .l-flex > .field {
+            width: 5em;
+            font-size:14px;
+            color: #5D646E;
+        }
+        .module > .l-flex > .bank-logo {
+            width: 25px;
+            min-width: 25px;
+            vertical-align: middle;
+        }
+        .module > .l-flex > .bank-logo img{
+            max-width:100%;
+            margin:0 auto;
+        }
+        .module > .l-flex > .value {
+            font-size:14px;
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+        .module > .l-flex > .value > strong {
+            color: #7884A0;
+        }
+        .btn-recharge-wrap {
+            padding-top: 25px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        .btn-recharge-wrap > .btn {
+            width: 69.33333333333334%;
+            height: 48px;
+            line-height: 46px;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+        }
+        .g-btn-major {
+            border: 1px solid #f25b4e;
+            background-color: #f25b4e;
+        }
+        .amount-input input {
+            display: block;
+            padding: 0;
+            height: 24px;
+            color: #F75F52;
+            border:none;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .amount-input input:focus {
+            outline:none;
+        }
+        .amount-input .unit {
+            padding-left: 5px;
+            color: #F75F52;
+        }
+        .no-border-top {
+            border-top: 0;
+        }
+        .bank-name {
+            color: #5D646E;
+        }
+        .bank-notice {
+            font-size: 12px;
+            color: #7884A0;
+        }
+        .recharge-rules {
+            padding: 0 10px 10px;
+            font-size: 12px;
+            line-height: 22px;
+            color: #7884A0;
+        }
+        .recharge-rules > h4 {
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: normal;
+            color: #5D646E;
+            text-align: center;
+        }
+        .recharge-rules > p {
+            margin: 8px 0;
+        }
+        .none-card {
+            padding-top: 14.666666666666667%;
+            padding-bottom: 35px;
+            text-align: center;
+        }
+        .none-card > .default-card {
+            margin: 0 auto;
+            width: 152px;
+        }
+        .none-card > .state-text {
+            padding: 24px 20px 0;
+        }
+        .none-card > .btn-wrap {
+            padding-top: 40px;
+        }
+        .none-card > .btn-wrap > .g-btn {
+            width: 69.33333333333334%;
+        }
+
+        /* withdraw */
+        .holiday {
+            padding-bottom: 20px;
+        }
+        .holiday > .btn-wrap {
+            padding: 0 5.333333333333334%;
+            padding-top: 7px;
+        }
+        .holiday > .btn-wrap > .g-btn {
+            width: 45.857988165680474%;
+        }
+        .unfinshed-dialog {
+            text-align: center;
+        }
+        .unfinshed-dialog > .img-wrap {
+            margin: 0 auto 10px;
+            width: 56px;
+        }
+        </style>
+        <div id="recharge" class="l-container g-vue-container" style="opacity: 1;">
+            <div class="module no-border-top">
+                <div class="l-flex">
+                    <div class="field">可用余额</div>
+                    <div class="l-flex-item value">
+                        <strong>0.<span>00</span></strong>元
+                    </div>
+                </div>
+            </div>
+            <div class="module">
+                <div class="l-flex card-info">
+                    <div class="bank-logo l-flex l-flex-vc">
+                        <img src="https://s1.lantouzi.com/img/common/newbanklogo/PCBC.png" alt="PCBC">
+                    </div>
+                    <div class="value l-flex-item l-flex l-flex-vertical l-flex-hc">
+                        <p class="bank-name">中国建设银行 尾号3930</p>
+                        <p class="bank-notice">建行限额：单笔50万，单日200万；大额充值请使用电脑版网银充值。</p>
+                    </div>
+                </div>
+                <div class="amount-input l-flex">
+                    <div class="field">充值金额</div>
+                    <div class="l-flex-item value l-flex">
+                        <input type="number" autocomplete="off" maxlength="8" placeholder="请输入充值金额" class="l-flex-item">
+                        <div class="unit">元</div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-recharge-wrap">
+                <button class="btn g-btn-major">立即充值</button>
+            </div>
+            <div class="recharge-rules">
+                <h4>温馨提示</h4>
+                <p>1.快捷支付限额：一般限额为单笔上限5万元，单日上限20万元，单月上限500万（推荐中行、广发、兴业等）。</p>
+                <p>2.懒投资仅可使用储蓄卡进行充值，严禁信用卡充值、套现等行为，一经发现将予以处罚，包括但不限于：限制收款、 冻结账户、永久停止服务，并会影响银行征信记录。</p>
+                <p>3.当日充值金额当日不可提现；正常投资回款（或零钱转出等）可随时提现；如充值后未投资，该部分金额每日仅可提现1万元。</p>
+            </div>
+        </div>
+        <div class="recharge-container">
+            <div class="recharge-bank">
+                <div class="bank-num f-fl">
+                    <i class="fa fa-bank fa-fw"></i>
+                    银 行 卡
+                </div>
+                <div class="bank-bg f-fl">
+                </div>
+                <div class="bankNum">
+
+                </div>
+                <div class="bank-cah">
+                    <div id="singlePrice">单笔:
+                        <span></span>
+                    </div>
+                    <div id="dayPrice">单日:
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="recharge-carch">
+                <div class="recharge-money">
+                    <div class="money-num f-fl">
+                        <i class="fa fa-money fa-fw"></i>
+                        充值金额
+                    </div>
+                    <input type="number" placeholder="请输入您要充值的金额" id="money-input">
+                </div>
+            </div>
+        </div>
+        <div class="recharge-btn mt50">确定</div>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

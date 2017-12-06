@@ -22,27 +22,27 @@
             <div class="wallet-cont">
                 <div class="wallet-container mb15">
                     <div class="f-fl ml15  wallet-account-balance f16px" id="accountBalance">账户余额：<span></span>元</div>
-                    <div class="f-fr mr15 wallet-account-recharge f16px"><a data-href="./recharge.html" data-needlogin="true">立即充值</a></div>
+                    <div class="f-fr mr15 wallet-account-recharge f16px"><a data-href="/my/recharge.html" data-needlogin="true">立即充值</a></div>
                 </div>
 
                 <div class="m-wallet bg-fff mb50">
                     <div class="col-head bdr-bottom">我的理财</div>                 
-                    <div class="financial-list bdr-bottom" data-url="https://m.nicaifu.com/user/huoqibao/current_summary">
-                        <div class="financial-item">
-                            <div class="f-fl">                           
-                                <img class="left-item-icon" src="https://p4.nicaifu.com/cms/201708/ea540e2238fff48a34aa500db6bf3ea8.jpg">
+                    <div class="financial-list bdr-bottom">
+                        <div class="financial-item" id="js-myInvest">
+                            <div class="f-fl">
+                                <img class="left-item-icon" src=<%=require('../../image/icon_invest.jpg')%>>
                                 <div class="left-item-title">我的投资</div>                        
                             </div>
                             <div class="f-fr">
                                 <div class="right-item">
                                     <div class="title">活期</div>
-                                    <div class="asset number-hide" data-value="--">--</div>
+                                    <div class="asset number-hide"  id="anyTimeShare" data-value="--">--</div>
                                 </div>
                                 <div class="right-item">
                                     <div class="title">定期</div>
                                     <div class="asset">
                                         <div class="inner">
-                                            <div class="profit  number-hide" data-value="--">--</div>
+                                            <div class="profit number-hide" id="fixedTimeShare" data-value="--">--</div>
                                         </div>
                                     </div>                                  
                                 </div>
@@ -50,22 +50,22 @@
                             <i class="fa fa-angle-right fa-fw f20px"></i>
                         </div>
                     </div>
-                    <div class="financial-list bdr-bottom" data-href="./cardstock.html">
+                    <div class="financial-list bdr-bottom" data-href="/my/cardstock.html">
                         <div class="financial-item">
                             <div class="f-fl">                           
-                                <img class="left-item-icon" src="https://p4.nicaifu.com/cms/201708/1d38c298dbfdf47e27eef53dc284aa62.jpg">
+                                <img class="left-item-icon" src=<%=require('../../image/icon_card.jpg')%>>
                                 <div class="left-item-title">我的卡券</div>                        
                             </div>
                             <div class="f-fr">
                                 <div class="right-item">
                                     <div class="title">现金券</div>
-                                    <div class="asset number-hide" data-value="--">--</div>
+                                    <div class="asset number-hide" id="cashCouponCount" data-value="--">--</div>
                                 </div>
                                 <div class="right-item">
                                     <div class="title">加息券</div>
                                     <div class="asset">
                                         <div class="inner">
-                                            <div class="profit  number-hide" data-value="--">--</div>
+                                            <div class="profit  number-hide" id="rateCounponCount" data-value="--">--</div>
                                         </div>
                                     </div>                                  
                                 </div>
@@ -73,22 +73,22 @@
                             <i class="fa fa-angle-right fa-fw f20px"></i>
                         </div>
                     </div>
-                    <div class="financial-list" data-href="./bills.html?id=0">
+                    <div class="financial-list" data-href="/my/bills.html?id=0">
                         <div class="financial-item">
                             <div class="f-fl">                           
-                                <img class="left-item-icon" src="https://p4.nicaifu.com/cms/201708/e5403ac512ca5dee1673ac98be0f8391.jpg">
+                                <img class="left-item-icon" src=<%=require('../../image/icon_bill.jpg')%>>
                                 <div class="left-item-title">我的账单</div>                        
                             </div>
                             <div class="f-fr">
                                 <div class="right-item">
                                     <div class="title">本月充值</div>
-                                    <div class="asset number-hide" data-value="--">--</div>
+                                    <div class="asset number-hide" id="rechargeAmount" data-value="--">--</div>
                                 </div>
                                 <div class="right-item">
                                     <div class="title">本月提现</div>
                                     <div class="asset">
                                         <div class="inner">
-                                            <div class="profit number-hide" data-value="--">--</div>
+                                            <div class="profit number-hide" id="withdrawAmount" data-value="--">--</div>
                                         </div>
                                     </div>                                  
                                 </div>

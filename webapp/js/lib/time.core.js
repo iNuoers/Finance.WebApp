@@ -1,3 +1,11 @@
+/*
+ * @Author: mr.ben (肖工)  
+ * @QQ：66623978 
+ * @Github：https://github.com/iNuoers/ 
+ * @Create time: 2017-11-02 15:46:53 
+ * @Last Modified by:   mr.ben 
+ * @Last Modified time: 2017-11-02 15:46:53 
+ */
 'use strict'
 
 var countdown = function (ele, text, callback) {

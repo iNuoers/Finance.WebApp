@@ -1,0 +1,120 @@
+<% 
+    var btnCls = 'btn-normal', btnText = '立即投资';
+    if(IsBuy == 1 && ProductTypeId == 9){
+        btnCls = 'btn-default btn-with-info disabled';
+        btnText = NotBuyText;
+    }else if(CountDown > 0){
+        btnCls = 'btn-default btn-with-info disabled';
+    }
+
+    if(RemainingShares <= 0 ){
+        btnCls = 'btn-default disabled';
+        btnText = '已售罄';
+    }
+%>
+<div class="overview-box">
+    <span class="comm-cell-ft">买入 <%= Title %></span>
+</div>
+<div class="proinfo-box">
+    <div class="comm-cells comm-cells-access mt10">
+        <div class="comm-cell">
+            <div class="comm-cell-hd comm-cell-primary">预期年转化率</div>
+            <span class="comm-cell-ft"><%= IncomeRate.toFixed(2) %></span>
+        </div>
+        <div class="comm-cell">
+            <div class="comm-cell-hd comm-cell-primary">项目期限</div>
+            <span class="comm-cell-ft"><%= TimeLimit %></span>
+        </div>
+        <div class="comm-cell">
+            <div class="comm-cell-hd comm-cell-primary">收益方式</div>
+            <span class="comm-cell-ft"><%= IncomeDescript %></span>
+        </div>
+    </div>
+</div>
+<div class="pd15 remain-info-bar">
+    当前项目剩余可投<span name="remainAmount"> <%= RemainingShares %> </span>元
+</div>
+<%if(IsPlusInCome == 1 || IsCash == 1){%>
+<div class="comm-cells comm-cells-access mb10">
+    <a class="comm-cell selected" href="javascript:;" id="couponSelector">
+        <div class="comm-cell-hd comm-cell-primary">
+            <p>选择卡券</p>
+        </div>
+        <div class="comm-cell-ft item-card pr5" id="couponInfo">您有可用卡券</div>
+        <i class="fa fa-angle-right comm-cell-ft"></i>
+    </a>
+    <div class="itemList"><ul></ul></div>
+</div>
+<%}%>
+<div class="pay-box">
+    <div class="setvalue">
+        <a href="javascript:;" id="all" class="link fr">最大金额</a>
+        <em class="sb-rmb">¥</em>
+        <input class="input-txt" type="number" id="investAmount" placeholder="请输入投资金额" value="">
+    </div>
+    <div id="paymentWayPlugin">
+        <div class="comm-cells">
+            <div href="javascript:;" class="comm-cell">
+                <div class="comm-cell-bd comm-cell-primary">
+                    <p>预期到期收益：<em class="sb-rmb" id="expectedProfit">¥0.00</em></p>
+                </div>
+                <a class="comm-cell-ft link calculator" href="javascript:;">收益计算</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 底部操作栏 S -->
+<div class="btm-btn-bar fixed-bottom">
+    <div class="btns" id="investBtnWrap">
+        <a class="btn <%= btnCls %> F-buyBtn" href="javascript:;" id="investBtn" title="<%= btnText %>" timer="<%= CountDown %>">
+            <strong><%= btnText %></strong>
+            <%if(CountDown > 0){%>
+                <span>距离产品发售剩余
+                    <i class="product-timer" data-conutdown="<%= CountDown %>">
+                        <i class="hour">00</i>:<i class="minute">00</i>:<i class="second">00</i>
+                    </i>
+                </span>
+            <%}%>
+        </a>
+    </div>
+</div>
+<!-- 底部操作栏 E -->
+
+<!-- 支付弹框 S -->
+<div class="paymask">
+    <article class="paykey-box">
+        <header class="paykey-tit">输入交易密码<div class="paykey-close"></div></header>
+        <div id="payPassword_container" data-busy="0">
+            <div class="six-password">
+                <div class="ipt-box">
+                    <input class="i-text sixDigitPassword" id="payPassword_rsainput" type="text" autocomplete="off" autocomplete="new-password" onfocus="this.type='password'" name="payPassword_rsainput" tabindex="" maxlength="6" minlength="6">
+                </div>
+                <div tabindex="0" class="sixDigitPassword-box">
+                    <i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i>
+                    <span id="key-wrap"></span>
+                </div>
+                <div class="paykey-tips">
+                    <a class="pass-link" href="javascript:;">忘记交易密码？</a>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+<!-- 支付弹框 S -->
+
+<!-- 收益计算器 S -->
+<div class="mask">
+    <article class="calc-box">
+        <header class="calc-tit">收益计算器<div class="close"></div></header>
+        <section class="list calculator">
+            <div id="price"><input type="tel" class="amountInput" placeholder="请输入投资金额" maxlength="12" value="10000"></div>
+        </section>
+        <section class="profit">
+            <div class="productProfit">本产品预期收益(元):<span class="itemNum">32.99</span></div>
+            <div class="bankProfit">投资期限:<span class=""><%=TimeLimit%></span></div>
+            <div class="bankProfit">该产品投资金额(元):<span class=""><%=StartBuyPrice%>-<%=TotalShares%></span></div>
+        </section>
+        <section class="declaration line-33">预计收益计算仅供参考,以实际收益为准</section>
+    </article>
+</div>
+<!-- 收益计算器 E -->

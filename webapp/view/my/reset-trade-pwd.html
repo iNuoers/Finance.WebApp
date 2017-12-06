@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>修改交易密码</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+    <header id="header">
+        <div id="m-header-nav" class="bg-338fff c-ffffff overflow-hide">
+            <a id="F_back" class="goback arrow-left " href="javascript:;" data-href="his"></a>
+            <h1>修改交易密码</h1>
+        </div>
+    </header>
+    <div class="app-main bg-fff app-header">
+        <div class="change-transact">
+            <div class="old-pwd"><span>原密码</span><input id="troldpwd" type="password" name="" value="" autocomplete="off" placeholder="请输入原交易密码"> </div>
+            <div class="new-pwd"><span> 新密码</span> <input  id="trnewpwd" type="password" name="" value="" autocomplete="off" placeholder="请输入6位数字"> </div>
+            <div class="confirm-pwd"><span>确认密码</span><input id="trconfimpwd" type="password" name="" value="" autocomplete="off" placeholder="请再次输入新交易密码"> </div>
+        </div>
+        <i class="forget"><a href='javascript:;' data-href='/my/forget-pwd.html?type=trade'>忘记密码？</a></i>
+        <p class="errow"> <span></span> </p>
+        <a href="javascript:;" class="sure-btn"> 确定</a>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>房金网</title>
+  <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+
+  <!-- header -->
+  <header id="header">
+    <div id="m-header-nav" class="bg-338fff c-ffffff overflow-hide">
+      <a id="F_back" class="goback arrow-left " href="javascript:;" data-href="his"></a>
+      <h1>推荐有礼 <a href="javascript:void(0)" data-href="invite-record.html">邀请记录</a></h1>
+    </div>
+  </header>
+  <!-- header end -->
+  <div class="app-header app-main bg-fff">
+    <div class="recommend">
+      <header class="banner">
+        <img src=<%=require( "../../image/bg_tuijianyouli.jpg")%> alt="推荐有礼">
+      </header>
+      <section class="activity-text">
+        <span class="fa fa-quote-left"></span>
+        <div class="content">
+        </div>
+
+        <span class="fa fa-quote-right"></span>
+      </section>
+      <p class="title">
+        <span>
+                分享给好友
+              </span>
+      </p>
+      <section class="share-btn">
+        <a href="javascript:void(0)" class="sh-click">分享给微信好友</a>
+        <a href="javascript:void(0)" class="tc">复制邀请链接</a>
+      </section>
+    </div>
+  </div>
+  <section class="sh-friends">
+    <img src=<%=require( "../../image/sh-friends.png")%> alt="">
+    <p> <b>点击右上角 分享给好友</b> </p>
+  </section>
+  <%= require('html-loader!../../layout/footer.html')%>
+    <script src="https://clipboardjs.com/dist/clipboard.min.js"></script>
+</body>
+
+</html>

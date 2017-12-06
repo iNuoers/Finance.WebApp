@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <div id="m-header-nav" class="c-338fff overflow-hide">
+            <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="his"></a>
+            <!-- tab -->
+            <div class="tabs">
+                <span class="active" type="0">全部</span>
+                <span type="1">成功</span>
+                <span type="2">已邀请</span>
+            </div>
+
+        </div>
+    </header>
+    <!-- header end -->
+
+    <div class="app-main app-header bg-fff">
+        <!-- 内容 -->
+        <p class="fa fa-user-o user">我的邀请人 : <span class="my"></span> </p>
+        <div class="tab-container"> 
+            <div class="tab-item tabs1">
+                <ul class="all">
+                    <!-- 全部邀请 -->
+                </ul>
+            </div>
+            <div class="tab-item tabs2">
+                <ul class="success">
+                    <!-- 邀请成功 -->
+                </ul>
+            </div>
+            <div class="tab-item tabs3">
+                <ul class="had-wrap">
+                    <!-- 已邀请 -->
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

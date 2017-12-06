@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <title>房金网</title>
@@ -6,35 +6,79 @@
 </head>
 <body>
     <%= require('html-loader!../../layout/loading.html')%>
-    <div class="app-main">
-        <div class="p-mian">
-            <div class="p-mian-title">该项目还款由于资金在途，到期后次日到账</div>
-            <div class="p-mian-id"><span id="val"></span></div>
-            <div class="p-mian-item">
-                <ul class="p-item-returned">
-                   <li>预期年转化率<span id="rate"></span></li>
-                   <li>项目期限<span id="limit"></span></li>
-                   <li>回款方式<span id="way"></span></li>
-                </ul>
+    <div class="app-main bg-f1f1f1">
+        <div class="invest-wrapper">
+            <div class="overview-box">
+                <span class="comm-cell-ft"></span>
             </div>
-            <div class="p-mian-id">当前项目剩余可投<span class="surpluss"></span>元</div>
-            <div class="p-mian-item">
-                <ul class="p-item-balance">
-                    <li class="border-b"><i class="fa fa-cny"></i><input id="balanceInput" type="tel" placeholder="100元起投"><span class="surplusBtn">余额全部买入</span></li>
-                    <li>余额<span class="mySurpluss"></span><span class="myRecharge">充值</span> </li>
-                </ul>
-            </div>
-            <div class="p-mian-item mt15">
-                <div class="kajuan">选择卡劵<span><i class="juanVal"></i><i class="fa fa-angle-right fa-fw"></i></span></div>
-                <div class="itemList">
-                    <ul>
-
-                    </ul>
+            <div class="proinfo-box">
+                <div class="comm-cells comm-cells-access mt10">
+                    <div class="comm-cell">
+                        <div class="comm-cell-hd comm-cell-primary">预期年转化率</div>
+                        <span class="comm-cell-ft">--</span>
+                    </div>
+                    <div class="comm-cell">
+                        <div class="comm-cell-hd comm-cell-primary">项目期限</div>
+                        <span class="comm-cell-ft">--</span>
+                    </div>
+                    <div class="comm-cell">
+                        <div class="comm-cell-hd comm-cell-primary">回款方式</div>
+                        <span class="comm-cell-ft">--</span>
+                    </div>
                 </div>
             </div>
-            <div class="p-mian-item mt15 passWord">交易密码：<input id="passWord" type="password" value="" autocomplete="off"/></div>
-            <div class="p-mian-btn">提交</div>
-            <div class="p-mian-tishi">点击提交即视为您同意<a href="">《房金网投资相关协议》</a></div>
+            <div class="pd15 remain-info-bar">
+                当前项目剩余可投<span class="hl" name="remainAmount"> 0 </span>元
+            </div>
+            <div class="comm-cells comm-cells-access mt10 mb10 f-hide">
+                <a class="comm-cell selected" href="javascript:;" id="couponSelector">
+                    <div class="comm-cell-hd comm-cell-primary">
+                        <p>选择卡券</p>
+                    </div>
+                    <div class="comm-cell-ft pr5" id="couponInfo" data-canuseticketnum="没有适用于此项目的卡券">没有适用于此项目的卡券</div>
+                    <i class="fa fa-angle-right comm-cell-ft"></i>
+                </a>
+            </div>
+            <div class="pay-box">
+                <div class="setvalue">
+                    <a href="javascript:;" id="all" class="link fr">最大金额</a>
+                    <em class="sb-rmb">¥</em>
+                    <input class="input-txt" type="number" id="investAmount" placeholder="请输入投资金额" value="">
+                </div>
+                <div id="paymentWayPlugin">
+                    <div class="comm-cells">
+                        <div href="javascript:;" class="comm-cell">
+                            <div class="comm-cell-bd comm-cell-primary">
+                                <p>预期到期收益：<em class="sb-rmb">¥0.00</em></p>
+                            </div>
+                            <a class="comm-cell-ft link" href="javascript:;" data-title="收益计算">收益计算</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btm-btn-bar fixed-bottom">
+                <div class="btns" id="investBtnWrap">
+                    <a class="btn btn-normal btn-with-info" href="javascript:;" id="investBtn">
+                        立即投资
+                    </a>
+                </div>
+            </div>
+            <!-- 收益计算器 S -->
+            <div class="mask">
+                <article class="calc-box">
+                    <header class="calc-tit">收益计算器<div class="close"></div></header>
+                    <section class="list calculator">
+                        <div id="price"><input type="tel" class="amountInput" placeholder="请输入投资金额" maxlength="12" value="10000"></div>
+                    </section>
+                    <section class="profit">
+                        <div class="productProfit">本产品预期收益(元):<span class="itemNum"></span></div>
+                        <div class="bankProfit">投资期限:<span name="limit"></span></div>
+                        <div class="bankProfit">该产品投资金额(元):<span class=""></span></div>
+                    </section>
+                    <section class="declaration line-33">预计收益计算仅供参考,以实际收益为准</section>
+                </article>
+            </div>
+            <!-- 收益计算器 E -->
         </div>
     </div>
     <%= require('html-loader!../../layout/footer.html')%>

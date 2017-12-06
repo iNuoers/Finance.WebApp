@@ -1,37 +1,25 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-
+<!doctype html>
+<html lang="zh-CN">
 <head>
     <title>房金网</title>
     <%= require('html-loader!../../layout/head.html')%>
 </head>
-
 <body>
-    <!-- header -->
-    <header id="header">
-        <div class="spacer"></div>
-        <div id="m-header-nav" class="bg-fff c-000000 overflow-hide">
-            <h1>我的</h1>
-        </div>
-    </header>
-    <!-- header end -->
-
-    <div class="app-header app-main f-cb bg">
+    <div class=" app-main f-cb bg">
         <div class="about-box">
             <section class="banner">
-                <img  alt="" src=<%= require('../../image/about_banner.png')%> >
+                <img  alt="" src=<%=require('../../image/about_banner.png')%> >
             </section>
             <section class="about-content">
                 <ul class="about-ul">
-                    <li><a href="javascript:;" data-href='./chairman.html'>创始人</a> <span>Founder</span></li>
-                    <li><a href="javascript:;" data-href='./event.html'>大事记</a> <span>Memorabilia</span></li>
-                    <li><a href="javascript:;" data-href='./honour.html'>公司荣誉</a> <span>Company Honor</span></li>
-                    <li><a href="javascript:;" data-href='./aboutus.html'> 关于房金网</a> <span>About US</span> </li>
+                    <li><a href="javascript:;" data-href='/about/chairman.html'>创始人</a><span>Founder</span></li>
+                    <li><a href="javascript:;" data-href='/about/event.html'>大事记</a><span>Memorabilia</span></li>
+                    <li><a href="javascript:;" data-href='/about/honour.html'>公司荣誉</a><span>Company Honor</span></li>
+                    <li><a href="javascript:;" data-href='/about/aboutus.html'> 关于房金网</a><span>About US</span></li>
                 </ul>
             </section>
         </div>
     </div>
     <%= require('html-loader!../../layout/footer.html')%>
 </body>
-
 </html>

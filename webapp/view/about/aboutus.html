@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html>
+<html lang="zh-CN">
 
 <head>
     <title>房金网</title>
     <%= require('html-loader!../../layout/head.html')%>
         <style>
             
-            .intro{padding:0 1rem;}
-            .title-box{padding-top:10px}
-            .about-title{position:relative;text-align:center;width:50%;margin-left:25%}
-            .about-title:before{position:absolute;top:18px;z-index:0;width:100%;height:1px;background-color:#5b89ff;content:' ';display:block;overflow:hidden}
-            .about-title h2{position:relative;z-index:1;font-size:21px;line-height:1.8;background-color:#fff;padding:0 16px;text-align:center;display:inline-block;color:#5b89ff}
-            .intro h3{font-size:16px;color:#5b89ff;text-align:left;margin-top:12px;margin-bottom:5px}
-            .intro h3.honor{margin-bottom:-10px;}
-            .intro p{ line-height: 2rem;}
         </style>
 </head>
 
@@ -21,15 +13,16 @@
     <!-- header -->
     <header id="header">
         <div class="spacer"></div>
-        <div id="m-header-nav" class="bg-fff c-000000 overflow-hide">
+        <div id="m-header-nav" class="bg-338fff c-ffffff overflow-hide">
+            <a id="F_back" class="goback arrow-left " href="javascript:;" data-href="his"></a>
             <h1>关于房金网</h1>
         </div>
     </header>
     <!-- header end -->
 
-    <div class="app-main f-cb bg-fff">
+    <div class="app-main app-header f-cb bg-fff">
         <div class="bg-fff about">
-            <div class="intro">
+            <div class="aboutus-intro">
                 <div class="title-box">
                     <div class="about-title"><h2>房金网</h2></div>
                 </div>

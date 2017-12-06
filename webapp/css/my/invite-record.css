@@ -1,0 +1,21 @@
+#m-header-nav{text-align: center}
+
+.tabs{display: inline-block;border:0.8px solid #338fff;border-radius: 3px; line-height: 1.2;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%)}
+.tabs span{width: 3.4rem; padding:5px 2px;float: left;color: #338fff}
+.tabs span:nth-child(2){border-left:0.8px solid #338fff;border-right:0.8px solid #338fff }
+.tabs .active{background-color: #338fff;color: #fff!important}
+.tab-container{position: relative;padding-top:46px;overflow: hidden;}
+.tab-container .tab-item{display: none}
+.tab-container .tabs1{display: block}
+.tab-container .fl{float: left}
+.tab-container .fr{position: absolute;right: 20px; top: 50%;transform: translateY(-50%)}
+.tab-container ul li{padding:16px 10px;}
+.tab-container ul li i{display: block;font-size: 0.8rem;padding: 0 1px; padding-top: 8px;color: #AAAAAA;font-weight: normal}
+.tab-container ul li:after{clear: both;content: ""; visibility: visible;display: block;}
+.user:before{padding-right: 8px}
+.user{width:100%; padding: 16px 6px;margin:0;position: fixed;top: 50px;z-index: 1;background-color: #fff; display: block!important;border-bottom: 0.5px solid #F2F2F2;}
+.my{font-size: 0.9rem;color: #AAAAAA}
+#m-header-nav .arrow-left:before{
+    border: 2px solid #338fff;
+    border-width: 0 0 2px 2px;
+}

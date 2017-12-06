@@ -1,37 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <title>个人中心</title>
+    <title>房金网</title>
     <%= require('html-loader!../../layout/head.html')%>
 </head>
 <body>
     <!-- header -->
     <header id="header">
         <div class="spacer"></div>
-        <div id="m-header-nav" class="bg-fff c-000000 overflow-hide">
+        <div id="m-header-nav" class="bg-338fff c-ffffff overflow-hide">
+            <a id="F_back" class="goback arrow-left " href="javascript:;" data-href="his"></a>
             <h1>个人中心</h1>
         </div>
     </header>
     <!-- header end -->
-  
-    <div class="app-main bg-fff app-header">
-        <div class="personal">
-            <ul class="per-portrait">
-                <li class="portrait-head">头像<div class="portrait"><img id="headImg" src=<%= require('../../image/personal_pic.png') %>></div> </li>
-                <li><a href="javascript:;" data-href='./address.html' data-needlogin='true'>我的地址</a><b class="fa fa-angle-right"></b></li>
-            </ul>
-            <ul class="per-bill">
-                <li>
-                    <a href="javascript:;" data-href="../user/pwd-manager.html" data-needlogin="true">账户安全</a>
-                    <span class="safe"></span><b class="fa fa-angle-right"></b>
-                </li>
-                <li>
-                    <a href="javascript:;" data-href='./bindcard.html' data-needlogin='true'>实名认证</a>
-                    <span class="authen"></span><b class="fa fa-angle-right"></b>
-                </li>
-            </ul>
+
+    <div class="app-main app-header">
+        <div class="comm-cells comm-cells-access">
+            <div class="comm-cell">
+                <div class="comm-cell-hd comm-cell-primary">我的地址</div>
+                <img id="headImg" alt="" src=<%= require('../../image/personal_pic.png')%>>
+            </div>
         </div>
-        <div class="personal-button">安全退出</div>
+
+        <div class="comm-cells comm-cells-access mt10">
+            <a class="comm-cell" href="javascript:;" data-href="/my/address.html" data-title="我的地址">
+                <div class="comm-cell-hd comm-cell-primary">我的地址</div><i class="fa fa-angle-right comm-cell-ft"></i>
+            </a>
+            <a class="comm-cell" href="javascript:;" data-href="/my/pwd-manager.html" data-title="密码管理">
+                <div class="comm-cell-hd comm-cell-primary">密码管理</div><i class="fa fa-angle-right comm-cell-ft"></i>
+            </a>
+            <a class="comm-cell service" href="javascript:;" data-href='/my/bindcard.html' data-title="实名认证">
+                <div class="comm-cell-hd comm-cell-primary">实名认证</div><i class="fa fa-angle-right comm-cell-ft"></i>
+            </a>
+        </div>
+        <div class="logout">
+            <a id="logout" class="btn">退出登录</a>
+        </div>
     </div>
     <%= require('html-loader!../../layout/footer.html')%>
 </body>

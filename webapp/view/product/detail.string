@@ -16,15 +16,17 @@
     if(progress==0){ 
         progress = 0;
     }
-    if(progress>0&&progress<=1){
+    if(progress>0 && progress<=1){
         progress = 1;
     } 
     progress = Math.floor(progress);
 
     var btnCls = 'btn-normal', btnText = '立即投资';
     if(IsBuy == 1 && ProductTypeId == 9){
-        btnCls = 'btn-default disabled';
+        btnCls = 'btn-default btn-with-info disabled';
         btnText = NotBuyText;
+    }else if(CountDown > 0){
+        btnCls = 'btn-default btn-with-info disabled';
     }
 
     if(RemainingShares <= 0 ){
@@ -32,137 +34,154 @@
         btnText = '已售罄';
     }
 %>
-<div class="salary-base">
-    <div class="salary-base-rate">
-        <div class="percent rate"><%= IncomeRate.toFixed(2) %><sub>%</sub></div>
-        <div class="salary-base-rate_title">预期年化收益率</div>
-    </div>
-</div>
-<div class="com-progress-mod bg-338fff" id="J_progressBar" data-progress="<%= progress %>">
-    <div class="progress-bar">
-        <span class="progress-on"></span>
-        <!--说明: 设计进度为progress-on的宽度值 -->
-    </div>
-    <div class="progress-val c-ffffff f12px">已售<em><%= progress %></em>%</div>
-</div>
-<div class="salary-base-props bg-338fff">
-    <dl class="props-item">
-        <dt>剩余份额</dt>
-        <dd><%= RemainingShares %></dd>
-        <input type="hidden" value="<%= TotalShares %>" id="maxBuyPrice">
-        <input type="hidden" id="startBuyPrice" value="<%= StartBuyPrice %>">
-        <input type="hidden" id="remainingShares" value="<%= RemainingShares %>">
+<div class="pt50 header-overview">
+    <!-- 头部概况 S -->
+    <dl class="overview-count">
+        <dd class="value"><%= IncomeRate.toFixed(2) %></dd>
+        <dd class="label">预期年化收益(%)</dd>
+        <dd class="tags">
+            <%if(IsCash == 1){%>
+            <span class="hl-tag">现金券</span>
+            <%}%>
+            <%if(IsPlusInCome == 1){%>
+            <span class="hl-tag">加息券</span>
+            <%}%>
+        </dd>
     </dl>
-    <dl class="props-item">
-        <dt>产品期限</dt>
-        <dd><%= TimeLimit %></dd>
-    </dl>
-    <dl class="props-item">
-        <div data-href="./record.html?pid=<%= ProductTypeParentId %>&tid=<%= ProductTypeId %>&id=<%= Id %>">
-            <dt>已成功投资</dt>
-            <dd><%= BuyCountText %></dd>
+    <div class="com-progress-mod" id="J_progressBar" data-progress="<%= progress %>">
+        <div class="progress-bar">
+            <span class="progress-on" style="width:<%= progress %>%"></span>
         </div>
-    </dl>
+        <div class="progress-val" style="left:<%= progress %>%">已售<em><%= progress %></em>%</div>
+    </div>
+    <div class="pd-hl-ft">
+        <dl class="ft-item">
+            <dt>剩余份额</dt><dd><%= RemainingShares %>元</dd>
+            <input type="hidden" value="<%= TotalShares %>" id="maxBuyPrice">
+            <input type="hidden" id="startBuyPrice" value="<%= StartBuyPrice %>">
+            <input type="hidden" id="remainingShares" value="<%= RemainingShares %>">
+        </dl>
+        <dl class="ft-item">
+            <dt>项目期限</dt><dd><%= TimeLimit %></dd>
+        </dl>
+        <dl class="ft-item">
+            <div data-href="/product/record.html?pid=<%= ProductTypeParentId %>&tid=<%= ProductTypeId %>&id=<%= Id %>"><dt>已成功投资</dt><dd><%= BuyCountText %></dd></div>
+        </dl>
+    </div>
 </div>
-
-<%if(IsPlusInCome == 1 && IsCash == 1){%>
-    <div class="page-block">
-        <a class="item other-card">
-            使用卡券
-            <span class="item_content item-card">您有可用卡券</span>
-            <i class="fa fa-angle-right fa-fw"></i>
-        </a>
-        <div class="itemList">
-            <ul>
-
-            </ul>
+<%if(IsPlusInCome == 1 || IsCash == 1){%>
+<div class="comm-cells comm-cells-access mt10 mb10 f-hide">
+    <a class="comm-cell selected" href="javascript:;" id="couponSelector">
+        <div class="comm-cell-hd comm-cell-primary other-card">
+            <p>选择卡券</p>
         </div>
-    </div>
-<%}%>
-
-<div class="page-block">
-    <div class="item">
-        购买
-        <input type="tel" class="amountInput" maxlength="12" autocomplete="off" placeholder="最低购买金额<%= StartBuyPrice %>元">
-        <span class="item_content tag max-money">最大金额</span>
-    </div>
-    <div class="line"></div>
-    <div class="item">
-        <span class="c-999999">预期到期收益 <em class="c-333333" id="expectedProfit">0.00元</em></span>
-        <span class="item_content tag calculator">收益计算</span>
-    </div>
-</div>
-
-<div class="list-block page-block">
-    <span class="item">收益方式<em class="f-fr"><%= IncomeDescript %></em></span>
-</div>
-<div class="line"></div>
-
-<%if(ProductTypeParentId == 2){%>
-    <div class="project-progress">
-        <ul class="project-progress_timeline">
-            <li><%= currentdate %><span>起息日</span></li>
-            <li><%= TimeLimit %><span>剩余收益天数</span></li>
-            <li><%= DueDateText %><span>到期日期</span></li>
-        </ul>
-    </div>
-<%}else if(ProductTypeParentId == 1){%>
-    <div class="list-block page-block mt0">
-        <span class="item">开始计息<em class="f-fr"><%= currentdate%></em></span>
-    </div>
-<%}%>
-
-<div class="project-desc page-block bg-white">
-    <div class="project-desc_title">购买规则</div>
-    <div class="project-desc_con pr20">
-        <p>(活期)的理财产品当天申购成功，当天产生收益，次日7:00前发放所产生收益</p>
-        <p>(定期)的理财产品在到期当日8:00前本息全部到账。</p>
-        <p>房金网金额只显示小数点后两位，所有金额计算按小数点后6位计算！</p>
-    </div>
-</div>
-
-<div class="list-block -arrow page-block mb10">
-    <a href="javascript:;" data-href="./record.html?pid=<%= ProductTypeParentId %>&tid=<%= ProductTypeId %>&id=<%= Id %>" class="item">
-        投资记录
-        <span class="c-338fff">(<%= BuyCountText %>)</span>
-        <i class="fa fa-angle-right fa-fw"></i>
+        <div class="comm-cell-ft item-card pr5" id="couponInfo">您有可用卡券</div>
+        <i class="fa fa-angle-right comm-cell-ft"></i>
     </a>
-    <div class="line"></div>
-    <a href="javascript:;" data-href="./info.html?pid=<%= ProductTypeParentId %>&tid=<%= ProductTypeId %>&id=<%= Id %>" class="item"><i class="fa fa-angle-right fa-fw"></i>项目描述</a>
-    <div class="line"></div>
-    <a href="javascript:;" data-href="./capital.html?pid=<%= ProductTypeParentId %>&tid=<%= ProductTypeId %>&id=<%= Id %>" class="item"><i class="fa fa-angle-right fa-fw"></i>资金保障</a>
-    <div class="line"></div>
-    <a href="javascript:;" data-href="./protocol_<%= ProductTypeParentId==1 ? "hq" : "dq" %>.html?pid=<%= ProductTypeId %>&tid=0&id=<%= Id %>" class="item"><i class="fa fa-angle-right fa-fw"></i>购买协议</a>
+    <div class="itemList"><ul></ul></div>
 </div>
-<div class="m-service c-338fff">
-    <a class="service-btn">咨询客服</a>
+<%}%>
+<div class="pay-mod f-hide">
+    <div class="setvalue">
+        <a href="javascript:;" id="all" class="link max-money fr">最大金额</a>
+        <em class="sb-rmb">¥</em>
+        <input class="input-txt amountInput" type="number" id="investAmount" maxlength="12" autocomplete="off" placeholder="最低购买金额<%= StartBuyPrice %>元" value="">
+    </div>
+    <div id="paymentWayPlugin">
+        <div class="comm-cells">
+            <div href="javascript:;" class="comm-cell">
+                <div class="comm-cell-bd comm-cell-primary">
+                    <p>预期到期收益：<em class="sb-rmb" id="expectedProfit">0.00元</em></p>
+                </div>
+                <a class="comm-cell-ft link calculator" href="javascript:;">收益计算</a>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="block-simple-tip">理财非存款，投资需谨慎</div>
-
-<div class="m-btnBar">
-    <a class="btn F-buyBtn <%= btnCls %>" style="opacity:1" title="<%= btnText %>" timer="<%= CountDown %>">
-        <%if(CountDown > 0){%>
-            距离产品发售剩余
-            <i class="product-timer">
-                <i class="hour">00</i>:<i class="minute">00</i>:<i class="second">00</i>
-            </i>
-        <%}else{%>
-            <%= btnText %>
+<div class="mod-box-comm mod-notice-box">
+    <div class="comm-cells comm-cells-access mt10">
+        <div class="comm-cell">
+            <div class="comm-cell-hd comm-cell-primary">收益方式</div>
+            <div class="comm-cell-ft pr5"><%= IncomeDescript %></div>
+        </div>
+        <%if(ProductTypeParentId == 1){%>
+        <div class="comm-cell">
+            <div class="comm-cell-hd comm-cell-primary">计息时间</div>
+            <div class="comm-cell-ft pr5"><%= currentdate%></div>
+        </div>
         <%}%>
-    </a>    
+    </div>
+    <%if(ProductTypeParentId == 2){%>
+    <div class="bd">
+        <ul class="status-line">
+            <li><strong><%= currentdate %></strong><span>起息日期</span></li>
+            <li><strong><%= RemainDays %>天</strong><span>剩余收益天数</span></li>
+            <li><strong><%= DueDateText %></strong><span class="nowrap">到期日期</span></li>
+        </ul>
+        <!-- 这里可以放活动内容 -->
+        <div class="nm-remark f-hide">
+            <p>活动简介</p>
+        </div>
+    </div>
+    <%}%>
 </div>
+<div class="mod-box-comm mt10">
+    <div class="hd"><span class="hl-b">购买规则</span></div>
+    <div class="bd nm-txt">
+        <ol>
+            <li>(活期)的理财产品当天申购成功，当天产生收益，次日7:00前发放所产生收益</li>
+            <li>(定期)的理财产品在到期当日8:00前本息全部到账。</li>
+            <li>房金网金额只显示小数点后两位，所有金额计算按小数点后6位计算！</li>
+        </ol>
+    </div>
+</div>
+<div class="comm-cells comm-cells-access mt10">
+    <a class="comm-cell" data-href="/product/record.html?pid=<%= ProductTypeParentId %>&tid=<%= ProductTypeId %>&id=<%= Id %>">
+        <div class="comm-cell-hd comm-cell-primary">投资记录<span class="c-338fff">(<%= BuyCountText %>)</span></div><i class="fa fa-angle-right comm-cell-ft"></i>
+    </a>
+    <a class="comm-cell" data-href="/product/info.html?pid=<%= ProductTypeParentId %>&tid=<%= ProductTypeId %>&id=<%= Id %>">
+        <div class="comm-cell-hd comm-cell-primary">项目描述</div><i class="fa fa-angle-right comm-cell-ft"></i>
+    </a>
+    <a class="comm-cell" data-href="/product/capital.html?pid=<%= ProductTypeParentId %>&tid=<%= ProductTypeId %>&id=<%= Id %>">
+        <div class="comm-cell-hd comm-cell-primary">资金保障</div><i class="fa fa-angle-right comm-cell-ft"></i>
+    </a>
+    <a class="comm-cell" data-href="/product/protocol_<%= ProductTypeParentId==1 ? "hq" : "dq" %>.html?pid=<%= ProductTypeId %>&tid=0&id=<%= Id %>">
+        <div class="comm-cell-hd comm-cell-primary">购买协议</div><i class="fa fa-angle-right comm-cell-ft"></i>
+    </a>
+</div>
+<a class="btn-seek" data-href=""><i></i>投资咨询</a>
+<div class="warning-box-risk"><span>投资有风险 交易须谨慎</span></div>
+<!-- 底部操作栏 S -->
+<div class="btm-btn-bar fixed-bottom">
+    <div class="btns" id="investBtnWrap">
+        <div class="calculator"></div>
+        <a class="btn <%= btnCls %> F-buyBtn" href="javascript:;" data-href="" data-needlogin="1" data-preventdefault="0" id="investBtn" title="<%= btnText %>" timer="<%= CountDown %>">
+            <strong><%= btnText %></strong>
+            <%if(CountDown > 0){%>
+                <span>距离产品发售剩余
+                    <i class="product-timer" data-conutdown="<%= CountDown %>">
+                        <i class="hour">00</i>:<i class="minute">00</i>:<i class="second">00</i>
+                    </i>
+                </span>
+            <%}%>
+        </a>
+    </div>
+</div>
+<!-- 底部操作栏 E -->
 
+<!-- 收益计算器 S -->
 <div class="mask">
-    <article class="pay">
-        <header>收益计算器<div class="close"></div></header>
+    <article class="calc-box">
+        <header class="calc-tit">收益计算器<div class="close"></div></header>
         <section class="list calculator">
-            <div id="price"><input type="tel" placeholder="请输入投资金额" maxlength="7" value="10000"></div>
+            <div id="price"><input type="tel" class="amountInput" placeholder="请输入投资金额" maxlength="12" value="10000"></div>
         </section>
         <section class="profit">
-            <div class="productProfit">本产品预期收益(元):<span class="">32.99</span></div>
-            <div class="bankProfit">投资期限:<span class="">30天</span></div>
-            <div class="bankProfit">该产品投资金额(元):<span class="">10-50000</span></div>
+            <div class="productProfit">本产品预期收益(元):<span class="itemNum">32.99</span></div>
+            <div class="bankProfit">投资期限:<span class=""><%=TimeLimit%></span></div>
+            <div class="bankProfit">该产品投资金额(元):<span class=""><%=MultiplePrice%>-<%=MaxBuyPrice%></span></div>
         </section>
         <section class="declaration line-33">预计收益计算仅供参考,以实际收益为准</section>
     </article>
 </div>
+<!-- 收益计算器 E -->

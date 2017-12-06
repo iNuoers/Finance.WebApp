@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <title>房金网</title>
+    <%= require('html-loader!../../layout/head.html')%>
+</head>
+<body>
+    <%= require('html-loader!../../layout/loading.html')%>
+    <div class="app-main bg-f1f1f1">
+        <div class="wallet-wrapper">
+            <div class="wallet-top pt20">
+                <div class="wallet-total ml20" id="totalAccount">总资产（元）<span></span></div>
+                <div class="wallet-vote ml50" id="yesterdayIncome">昨日收益（元）<span></span></div>
+                <div class="wallet-total ml20 wallet-normal" id="investProductPrice">在投金额（元）<span></span></div>
+                <div class="wallet-vote ml50 wallet-normal" id="totalIncome">累计收益（元）<span></span></div>
+            </div>
+            
+            <div class="wallet-cont">
+                <!-- 充值提现 -->
+                <div class="wallet-container mb15">
+                    <div class="f-fl ml15 wallet-account-balance f12px" id="accountBalance">账户余额：<span></span>元</div>
+                    <div class="f-fr mr15 wallet-account-recharge f12px"><a href="javascript:;" data-href="/wallet/withdrawal.html" data-needlogin="true">提现</a></div>
+                    <div class="f-fr mr30 wallet-account-recharge f12px"><a href="javascript:;" data-href="/wallet/recharge.html" data-needlogin="true">充值</a></div>
+                </div>
+
+                <div class="m-wallet bg-fff mb50">
+                    <div class="col-head bdr-bottom">我的理财</div>                 
+                    <div class="financial-list bdr-bottom">
+                        <div class="financial-item" id="js-myInvest">
+                            <div class="f-fl">
+                                <img class="left-item-icon" src=<%=require('../../image/icon_invest.jpg')%>>
+                                <div class="left-item-title">我的投资</div>                        
+                            </div>
+                            <div class="f-fr">
+                                <div class="right-item">
+                                    <div class="title">活期</div>
+                                    <div class="asset number-hide"  id="anyTimeShare" data-value="--">--</div>
+                                </div>
+                                <div class="right-item">
+                                    <div class="title">定期</div>
+                                    <div class="asset">
+                                        <div class="inner">
+                                            <div class="profit number-hide" id="fixedTimeShare" data-value="--">--</div>
+                                        </div>
+                                    </div>                                  
+                                </div>
+                            </div>
+                            <i class="fa fa-angle-right fa-fw f20px"></i>
+                        </div>
+                    </div>
+                    <div class="financial-list bdr-bottom" data-href="/wallet/cards.html">
+                        <div class="financial-item">
+                            <div class="f-fl">                           
+                                <img class="left-item-icon" src=<%=require('../../image/icon_card.jpg')%>>
+                                <div class="left-item-title">我的卡券</div>                        
+                            </div>
+                            <div class="f-fr">
+                                <div class="right-item">
+                                    <div class="title">现金券</div>
+                                    <div class="asset number-hide" id="cashCouponCount" data-value="--">--</div>
+                                </div>
+                                <div class="right-item">
+                                    <div class="title">加息券</div>
+                                    <div class="asset">
+                                        <div class="inner">
+                                            <div class="profit  number-hide" id="rateCounponCount" data-value="--">--</div>
+                                        </div>
+                                    </div>                                  
+                                </div>
+                            </div>
+                            <i class="fa fa-angle-right fa-fw f20px"></i>
+                        </div>
+                    </div>
+                    <div class="financial-list" data-href="/wallet/bills.html?id=0">
+                        <div class="financial-item">
+                            <div class="f-fl">                           
+                                <img class="left-item-icon" src=<%=require('../../image/icon_bill.jpg')%>>
+                                <div class="left-item-title">我的账单</div>                        
+                            </div>
+                            <div class="f-fr">
+                                <div class="right-item">
+                                    <div class="title">本月充值</div>
+                                    <div class="asset number-hide" id="rechargeAmount" data-value="--">--</div>
+                                </div>
+                                <div class="right-item">
+                                    <div class="title">本月提现</div>
+                                    <div class="asset">
+                                        <div class="inner">
+                                            <div class="profit number-hide" id="withdrawAmount" data-value="--">--</div>
+                                        </div>
+                                    </div>                                  
+                                </div>
+                            </div>
+                            <i class="fa fa-angle-right fa-fw f20px"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%= require('html-loader!../../layout/menu.html')%>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
+</body>
+
+</html>

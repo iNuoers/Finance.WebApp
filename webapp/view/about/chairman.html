@@ -1,27 +1,17 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html>
+<html lang="zh-CN">
 
 <head>
     <title>房金网</title>
     <%= require('html-loader!../../layout/head.html')%>
-    <style>
-        /* .app-main{background: url(<%= require('../../image/chairman_bg.png') %>) center top no-repeat;background-size: 100% 100%;} */
-        .founding{padding:0 1rem}
-        .p-info{margin-top:2.6rem}
-        .founding-img img{width:38%;height:38%;display:block;margin:0 auto}
-        .founding-info{padding:0 10px;height:3rem;line-height:3rem;background-color:#e6e6e6;-moz-border-radius:1.5px;-webkit-border-radius:1.5px;border-radius:1.5px;display:inline-block;color:#555}
-        .founding-info .name{font-weight:700;font-size:18px}
-        .founding-info .position{font-size:15px;margin-left:5px}
-        .founding-txt p{padding-bottom:5px;margin-left:13px;position:relative;line-height:2rem}
-        .founding-txt p:before{content:'';position:absolute;left:-13px;top:10px;width:6px;height:6px;background-color:#666;display:inline-block;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px}
-    </style>
 </head>
 
-<body>
+<body class="bg-fff">
     <!-- header -->
     <header id="header">
         <div class="spacer"></div>
-        <div id="m-header-nav" class="bg-fff c-000000 overflow-hide">
+        <div id="m-header-nav" class="bg-338fff c-ffffff overflow-hide" >
+            <a id="F_back" class="goback arrow-left " href="javascript:;" data-href="his"></a>
             <h1>创始人</h1>
         </div>
     </header>
@@ -31,7 +21,7 @@
         <div class="founding">
             <div class="p-info">
                 <div class="text-center mb10">
-                    <p class="founding-img">
+                    <p class="founding-img mb10">
                         <img  alt="" src=<%= require('../../image/chairman.png') %>>
                     </p>
                     <p class="founding-info">

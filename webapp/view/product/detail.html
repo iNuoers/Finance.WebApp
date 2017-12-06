@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-cn">
+<html lang="zh-CN">
 
 <head>
     <title>房金网</title>
@@ -8,87 +8,119 @@
 
 <body>
     <%= require('html-loader!../../layout/loading.html')%>
-        <!-- header -->
-        <header id="header">
-            <div id="m-header-nav" class="overflow-hide bg-338fff c-ffffff">
-                <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="his"></a>
-                <h1></h1>
-            </div>
-        </header>
-        <!-- header end -->
-
-        <div class="app-header app-main pb20 f-cb loadeffects-tran-page loadeffects-show loadeffects-beIn" style="overflow: hidden;">
-            <div class="salary-base">
-                <div class="salary-base-rate">
-                    <div class="percent" data-incomeRate='0'>0.00<sub>%</sub></div>
-                    <div class="salary-base-rate_title">预期年化收益率</div>
-                </div>
-            </div>
-            <div class="com-progress-mod bg-338fff" id="J_progressBar" data-progress="0">
+    <!-- header -->
+    <header id="header">
+        <div id="m-header-nav" class="overflow-hide bg-338fff c-ffffff">
+            <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="his"></a>
+            <h1></h1>
+        </div>
+    </header>
+    <!-- header end --> 
+    
+    <div class="app-main has-bottom-btn loadeffects-tran-page loadeffects-show loadeffects-beIn">
+        <div class="pt50 header-overview">
+            <dl class="overview-count">
+                <dd class="value">8.00</dd>
+                <dd class="label">预期年化收益(%)</dd>
+                <dd class="tags">
+                    <span class="hl-tag">现金券</span>
+                    <span class="hl-tag">加息券</span>
+                </dd>
+            </dl>
+            <div class="com-progress-mod" id="J_progressBar" data-progress="0">
                 <div class="progress-bar">
-                    <span class="progress-on"></span>
-                    <!--说明: 设计进度为progress-on的宽度值 -->
+                    <span class="progress-on" style="width:0%"></span>
                 </div>
+                <div class="progress-val" style="left:0%">已售<em>0.00</em>%</div>
             </div>
-            <div class="salary-base-props bg-338fff">
-                <dl class="props-item">
-                    <dt>剩余份额</dt>
-                    <dd>--</dd>
+            <div class="pd-hl-ft">
+                <dl class="ft-item">
+                    <dt>剩余份额</dt><dd>0</dd>
                 </dl>
-                <dl class="props-item">
-                    <dt>产品期限</dt>
-                    <dd>--</dd>
+                <dl class="ft-item">
+                    <dt>项目期限</dt><dd>--天</dd>
                 </dl>
-                <dl class="props-item">
-                    <dt>已成功投资</dt>
-                    <dd>--</dd>
+                <dl class="ft-item">
+                    <div href=""><dt>已成功投资</dt><dd>--笔</dd></div>                    
                 </dl>
             </div>
-
-            <div class="page-block">
-                <div class="item">
-                    购买
-                    <input type="text" autocomplete="off" placeholder="--">
-                    <span class="item_content tag">最大金额</span>
+        </div>
+        <div class="comm-cells comm-cells-access mt10 mb10">
+            <a class="comm-cell selected" href="javascript:void(0);" id="couponSelector">
+                <div class="comm-cell-hd comm-cell-primary">
+                    <p>选择卡券</p>
                 </div>
-                <div class="line"></div>
-                <div class="item">
-                    <span class="c-999999">预期到期收益 <em class="c-333333">0.00元</em></span>
-                    <span class="item_content tag calculator">收益计算</span>
-                </div>
+                <div class="comm-cell-ft pr5" id="couponInfo" data-canuseticketnum="没有适用于此项目的卡券">没有适用于此项目的卡券</div>
+                <i class="fa fa-angle-right comm-cell-ft"></i>
+            </a>
+        </div>
+        <div class="pay-mod">
+            <div class="setvalue">
+                <a href="javascript:void(0);" id="all" class="link fr" data-reportid="415">最大金额</a>
+                <em class="sb-rmb">¥</em>
+                <input class="input-txt" type="number" id="investAmount" placeholder="剩余可投本金小于200元，须投满" value="">
             </div>
-
-            <div class="list-block page-block">
-                <span class="item">收益方式<em class="f-fr">--</em></span>
-            </div>
-            <div class="line"></div>
-
-            <div class="project-desc page-block bg-white">
-                <div class="project-desc_title">购买规则</div>
-                <div class="project-desc_con pr20">--</div>
-            </div>
-
-            <div class="list-block -arrow page-block mb10">
-                <a href="" class="item">
-                    投资记录
-                    <span class="c-338fff">(0)</span>
-                    <i class="fa fa-angle-right fa-fw"></i>
-                </a>
-                <div class="line"></div>
-                <a href="" class="item"><i class="fa fa-angle-right fa-fw"></i>项目描述</a>
-                <div class="line"></div>
-                <a href="javascript:;" class="item"><i class="fa fa-angle-right fa-fw"></i>资金保障</a>
-                <div class="line"></div>
-                <a href="javascript:;" class="item"><i class="fa fa-angle-right fa-fw"></i>购买协议</a>
-            </div>
-
-            <div class="m-btnBar">
-                <div class="btns">
-                    <a class="btn btn-normal F-buyBtn">立即抢购</a>
+            <div id="paymentWayPlugin">
+                <div class="comm-cells">
+                    <div href="javascript:void(0);" class="comm-cell">
+                        <div class="comm-cell-bd comm-cell-primary">
+                            <p>预期到期收益：<em class="sb-rmb">¥0.00</em></p>
+                        </div>
+                        <a class="comm-cell-ft link" href="javascript:;" data-title="收益计算">收益计算</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <%= require('html-loader!../../layout/footer.html')%>
+        <div class="mod-box-comm mod-notice-box">
+            <div class="bd">
+                <ul class="status-line">
+                    <li><strong>--</strong><span>起息日</span></li>
+                    <li><strong>--天</strong><span>剩余收益天数</span></li>
+                    <li><strong>--</strong><span class="nowrap">到期日期</span></li>
+                </ul>
+                <div class="nm-remark">
+                    <p><strong>活期：</strong>的理财产品当天申购成功，当天产生收益，次日7:00前发放所产生收益</p>
+                    <p><strong>定期：</strong>的理财产品在到期当日8:00前本息全部到账。</p>
+                    <p>房金网金额只显示小数点后两位，所有金额计算按小数点后6位计算！</p>
+                </div>
+            </div>
+        </div>
+        <div class="mod-box-comm mt10">
+            <div class="hd"><span class="hl-b">购买规则</span></div>
+            <div class="bd nm-txt">
+                <ol>
+                    <li>(活期)的理财产品当天申购成功，当天产生收益，次日7:00前发放所产生收益</li>
+                    <li>(定期)的理财产品在到期当日8:00前本息全部到账。</li>
+                    <li>房金网金额只显示小数点后两位，所有金额计算按小数点后6位计算！</li>
+                </ol>
+            </div>
+        </div>
+        <div class="comm-cells comm-cells-access mt10">
+            <a class="comm-cell" data-title="投资记录">
+                <div class="comm-cell-hd comm-cell-primary">投资记录<span class="c-338fff">(--笔)</span></div><i class="fa fa-angle-right comm-cell-ft"></i>
+            </a>
+            <a class="comm-cell" data-title="项目描述">
+                <div class="comm-cell-hd comm-cell-primary">项目描述</div><i class="fa fa-angle-right comm-cell-ft"></i>
+            </a>
+            <a class="comm-cell" data-title="资金保障">
+                <div class="comm-cell-hd comm-cell-primary">资金保障</div><i class="fa fa-angle-right comm-cell-ft"></i>
+            </a>
+            <a class="comm-cell" data-title="购买协议">
+                <div class="comm-cell-hd comm-cell-primary">购买协议</div><i class="fa fa-angle-right comm-cell-ft"></i>
+            </a>
+        </div>
+        <a class="btn-seek" data-href=""><i></i>投资咨询</a>
+        <div class="warning-box-risk"><span>投资有风险 交易须谨慎</span></div>
+        <div class="btm-btn-bar fixed-bottom">
+            <div class="btns" id="investBtnWrap">
+                <a class="btn btn-normal btn-with-info" href="javascript:void(0);" data-href="" data-needlogin="1" data-preventdefault="0" id="investBtn">
+                    <strong>立即投资</strong>
+                    <span>剩余可投：<i id="remainAmount">0.00</i>元</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!../../layout/footer.html')%>
 </body>
 
 </html>

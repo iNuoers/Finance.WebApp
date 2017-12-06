@@ -1,8 +1,8 @@
 /*
 * @Author: mr.ben(66623978) https://github.com/iNuoers/
 * @Date:   2017-09-12 14:35:42
-* @Last Modified by:   mr.ben(66623978) 
-* @Last Modified time: 2017-09-12 14:35:42
+ * @Last Modified by: mr.ben
+ * @Last Modified time: 2017-11-02 15:30:08
 */
 'use strict';
 // require('plugins/vconsole.min.js')
@@ -28,10 +28,10 @@ var core = {
         needLogin: ['address', 'message']
     },
     init: function () {
-        this.initLink()
-        this.scrollTop()
-        this.initDownBar()
-        this.initUserInfo()
+        //this.initLink()
+        //this.scrollTop()
+        //this.initDownBar()
+        //this.initUserInfo()
     },
     onLoad: function () {
         var _this = this
@@ -48,7 +48,7 @@ var core = {
     initUserInfo: function () {
         var _this = this, user = null;
 
-        if (_core.storage.getItem($.base64.btoa('f.token'))) {
+        if (_core.storage.getItem('f.token')) {
             _user.getUserInfo(JSON.stringify({
                 M: _api.method.getMemberInfo,
             }), function (json) {

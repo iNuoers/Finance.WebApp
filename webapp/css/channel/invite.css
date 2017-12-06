@@ -1,4 +1,4 @@
-.invite {width: 100%;height:100%;position: relative;background-image: url("../../image/invite_1.png");background-size:100%  100%;background-repeat:no-repeat;}
+.invite {width: 100%;height:100%;position: absolute;background-image: url("../../image/invite_1.png");background-size:100%  100%;background-repeat:no-repeat;}
 .invite form{position: absolute;width: 100%;height: 50%;bottom:2.2rem}
 .invite ul{ margin: auto;width: 64%;}
 .invite .invi-active{width: 100%;padding: 1.8rem 0 1.5rem 0;text-align: center;font-size: 1.9rem;font-weight: bold;color: #fe5001}
@@ -14,3 +14,4 @@
 .invite .invi-phone  input:-ms-input-placeholder{ font-size: 1.1rem;font-weight: bold; text-align: center;color: #ccc }
 .invite .invi-btn {width: 100%;text-align: center;height: 3.5rem;margin-top: 10%;background-color: #ffdd33;    box-shadow: 0 1px 1px 1px #e8b427;border-radius:3px}
 .invite .invi-btn a{display: inline-block; padding: 1.3rem 0;font-size: 1.3rem;font-weight: bold;color: #fe5001}
+

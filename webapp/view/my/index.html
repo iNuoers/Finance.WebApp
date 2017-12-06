@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!doctype html>
+<html lang="zh-CN">
 
 <head>
     <title>房金网</title>
@@ -10,10 +10,11 @@
     <!-- header -->
     <header id="header" class="show-hd">
         <div class="spacer"></div>
-        <div id="m-header-nav" class="bg-fff c-000000 overflow-hide">
+        <div id="m-header-nav" class="bg-338fff c-ffffff overflow-hide">
             <h1>
+                <a id="F_back" class="goback arrow-left " href="javascript:;" data-href="his"></a>
                 <span>我的</span>
-                <div data-href="./message.html" data-needlogin="true">
+                <div data-href="/my/message.html" data-needlogin="true">
                     <i class="fa fa-envelope-o message"><span class="weui-badge weui-badge_dot msgbadge" style="position:absolute;top:-5px;right:-10px;"></span></i>
                 </div>
             </h1>
@@ -22,28 +23,35 @@
     <!-- header end -->
 
     <div class="app-header app-main f-cb bg-fafafa">
-        <div class="list-block -arrow page-block">
-            <a href="javascript:;" data-href='personal.html' data-needlogin='true' class="item avatar">
-                <i class="fa fa-angle-right fa-fw"></i>
-                <div class="avatar-box avatar-s">
-                    <img id="headImg" alt="" src=<%= require('../../image/personal_pic.png')%>>
+
+        <div class="comm-cells comm-cells-access">
+            <a class="comm-cell" href="javascript:;" data-href="/my/personal.html" data-title="安全保障">
+                <div class="comm-cell-hd comm-cell-primary">
+                    <div class="avatar-box avatar-s">
+                        <img id="headImg" alt="" src=<%= require('../../image/personal_pic.png')%>>
+                    </div>
+                    <span class="avatar-phone" id="user_phone">未登录</span>
                 </div>
-                <div class="avatar-phone">
-                    <span id="user_phone">未登录</span>
-                </div>
+                <i class="fa fa-angle-right comm-cell-ft"></i>
             </a>
         </div>
 
-        <div class="list-block -arrow page-block">
-            <a href="javascript:;" data-href="../help/index.html" class="item"><i class="fa fa-angle-right fa-fw"></i>常见问题</a>
-            <div class="line"></div>
-            <a href="javascript:;" data-href="../about/security.html" class="item"><i class="fa fa-angle-right fa-fw"></i>安全保障</a>
+        <div class="comm-cells comm-cells-access mt10">
+            <a class="comm-cell" href="javascript:;" data-href="/help/index.html" data-title="常见问题">
+                <div class="comm-cell-hd comm-cell-primary">常见问题</div><i class="fa fa-angle-right comm-cell-ft"></i>
+            </a>
+            <a class="comm-cell" href="javascript:;" data-href="/about/security.html" data-title="安全保障">
+                <div class="comm-cell-hd comm-cell-primary">安全保障</div><i class="fa fa-angle-right comm-cell-ft"></i>
+            </a>
         </div>
-
-        <div class="list-block -arrow page-block">
-            <a href="javascript:;" class="item"><i class="fa fa-angle-right fa-fw"></i>联系客服</a>
-            <div class="line"></div>
-            <a href="../about/index.html" class="item">关于我们<i class="fa fa-angle-right fa-fw"></i></a>
+        
+        <div class="comm-cells comm-cells-access mt10">
+            <a class="comm-cell service" href="javascript:;" data-title="联系客服">
+                <div class="comm-cell-hd comm-cell-primary">联系客服</div><i class="fa fa-angle-right comm-cell-ft"></i>
+            </a>
+            <a class="comm-cell" href="javascript:;" data-href="/about/index.html" data-title="关于我们">
+                <div class="comm-cell-hd comm-cell-primary">关于我们</div><i class="fa fa-angle-right comm-cell-ft"></i>
+            </a>
         </div>
 
         <%= require('html-loader!../../layout/menu.html')%>

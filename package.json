@@ -1,7 +1,7 @@
 {
   "name": "webapp",
   "version": "1.0.0",
-  "description": "房微官网项目",
+  "description": "房金网微官网项目",
   "main": "app.js",
   "scripts": {
     "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --colors --progress --watch --display-error-details --port 3002 --hot --host 192.168.1.53",
