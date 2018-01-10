@@ -1,18 +1,16 @@
 <!doctype html>
 <html lang="zh-CN">
-
 <head>
     <title>房金网</title>
     <%= require('html-loader!../../layout/head.html')%>
 </head>
-
 <body>
     <!-- header -->
     <header id="header" class="show-hd">
         <div class="spacer"></div>
         <div id="m-header-nav" class="bg-338fff c-ffffff overflow-hide">
             <h1>
-                <a id="F_back" class="goback arrow-left " href="javascript:;" data-href="his"></a>
+                <a id="F_back" class="goback arrow-left" href="javascript:;" data-href="his"></a>
                 <span>我的</span>
                 <div data-href="/my/message.html" data-needlogin="true">
                     <i class="fa fa-envelope-o message"><span class="weui-badge weui-badge_dot msgbadge" style="position:absolute;top:-5px;right:-10px;"></span></i>
@@ -23,9 +21,8 @@
     <!-- header end -->
 
     <div class="app-header app-main f-cb bg-fafafa">
-
         <div class="comm-cells comm-cells-access">
-            <a class="comm-cell" href="javascript:;" data-href="/my/personal.html" data-title="安全保障">
+            <a class="comm-cell" href="javascript:;" data-href="/my/personal.html" data-needlogin="true" data-title="个人中心">
                 <div class="comm-cell-hd comm-cell-primary">
                     <div class="avatar-box avatar-s">
                         <img id="headImg" alt="" src=<%= require('../../image/personal_pic.png')%>>

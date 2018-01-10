@@ -4,7 +4,7 @@
  * @Github：https://github.com/iNuoers/ 
  * @Create time: 2017-09-11 20:12:27
  * @Last Modified by: mr.ben
- * @Last Modified time: 2017-11-07 15:58:39
+ * @Last Modified time: 2017-12-29 20:00:35
  */
 
 'use strict'
@@ -80,7 +80,7 @@ fjw.webapp.my_address = {
                 D: JSON.stringify(param)
             }), function () {
                 layer.open({
-                    content: '操作成功'
+                    content: '保存成功'
                     , skin: 'msg'
                     , time: 2
                 });

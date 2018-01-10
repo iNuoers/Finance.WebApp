@@ -5,7 +5,7 @@
 .m-message-menu .m-menu-item .notice{border-radius:0 3px 3px 0;border-left:none}
 .m-message-menu .m-menu-item .active{background-color:#338fff}
 .m-message-menu .m-menu-item .active a{color:#fff}
-.message-list{padding:15px 5px 5px;overflow:hidden}
+.message-list{padding:15px 15px 5px;overflow:hidden}
 .message-list ul li{position:relative;font-size:0;margin-bottom:20px;padding-left:60px;min-height:68px}
 .message-item-text,.message-item-user{display:inline-block;vertical-align:top;font-size:14px}
 .message-item-user{position:absolute;left:3px}

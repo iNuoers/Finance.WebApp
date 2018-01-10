@@ -1,11 +1,9 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <title>修改登录密码</title>
     <%= require('html-loader!../../layout/head.html')%>
 </head>
-
 <body>
     <header id="header">
         <div id="m-header-nav" class="bg-338fff c-ffffff overflow-hide">
@@ -13,22 +11,41 @@
             <h1>修改登录密码</h1>
         </div>
     </header>
-
-    <div class="app-main bg-fff app-header">
-        <div class="change-loginpwd pl20 pr20">
-            <div class="change-loginpwd">
-                <div class="old-pwd"><span>原密码</span><input id="oldpwd" type="password" name="" value="" autocomplete="off" placeholder="请输入原密码" /> </div>
-                <div class="new-pwd"><span> 新密码</span> <input id="newpwd" type="password" name="" value="" autocomplete="off" placeholder="6-16位字母和数字" maxlength="16" /> </div>
-                <div class="confirm-pwd"><span>确认密码</span><input type="password" id="confirmpwd" name="" value="" autocomplete="off" placeholder="请再次输入新密码" /> </div>
+    <div class="app-header app-main bg-fafafa">
+        <form class="form-reset-log-pwd">
+            <div class="comm-cells comm-cells-form">
+                <label class="comm-cell">
+                    <div class="comm-cell-hd">
+                        <span class="comm-label">原密码</span>
+                    </div>
+                    <div class="comm-cell-bd comm-cell-primary">
+                        <input class="comm-input" type="password" placeholder="请输入原密码" id="oldPassword" value="">
+                    </div>
+                </label>
+                <label class="comm-cell">
+                    <div class="comm-cell-hd">
+                        <span class="comm-label">新密码</span>
+                    </div>
+                    <div class="comm-cell-bd comm-cell-primary">
+                        <input class="comm-input" type="password" placeholder="6-16位字母和数字组合" id="newPassword" value="">
+                    </div>
+                </label>
+                <label class="comm-cell">
+                    <div class="comm-cell-hd">
+                        <span class="comm-label">确认密码</span>
+                    </div>
+                    <div class="comm-cell-bd comm-cell-primary">
+                        <input class="comm-input" type="password" placeholder="请再次输入新密码" id="confirmPassword" value="">
+                    </div>
+                </label>
             </div>
-            <p class="errow"> <span></span> </p>
-            <a id="loginbtn" class="btn btn-normal mt50">
-                <i class="fa fa-spinner fa-spin f-hide"></i>
-                <span>确定</span>
-            </a>
+        </form>
+        <div class="m-btnBar">
+            <div class="btns">
+                <a class="btn btn-normal disabled submit">提交</a>
+            </div>
         </div>
     </div>
     <%= require('html-loader!../../layout/footer.html')%>
 </body>
-
 </html>

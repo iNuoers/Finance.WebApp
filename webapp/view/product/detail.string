@@ -70,7 +70,7 @@
     </div>
 </div>
 <%if(IsPlusInCome == 1 || IsCash == 1){%>
-<div class="comm-cells comm-cells-access mt10 mb10 f-hide">
+<div class="comm-cells comm-cells-access mt10 mb10">
     <a class="comm-cell selected" href="javascript:;" id="couponSelector">
         <div class="comm-cell-hd comm-cell-primary other-card">
             <p>选择卡券</p>
@@ -81,7 +81,7 @@
     <div class="itemList"><ul></ul></div>
 </div>
 <%}%>
-<div class="pay-mod f-hide">
+<div class="pay-mod">
     <div class="setvalue">
         <a href="javascript:;" id="all" class="link max-money fr">最大金额</a>
         <em class="sb-rmb">¥</em>
@@ -154,7 +154,6 @@
 <!-- 底部操作栏 S -->
 <div class="btm-btn-bar fixed-bottom">
     <div class="btns" id="investBtnWrap">
-        <div class="calculator"></div>
         <a class="btn <%= btnCls %> F-buyBtn" href="javascript:;" data-href="" data-needlogin="1" data-preventdefault="0" id="investBtn" title="<%= btnText %>" timer="<%= CountDown %>">
             <strong><%= btnText %></strong>
             <%if(CountDown > 0){%>

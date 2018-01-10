@@ -4,7 +4,7 @@
  * @Github：https://github.com/iNuoers/ 
  * @Create time: 2017-11-03 16:21:33 
  * @Last Modified by: mr.ben
- * @Last Modified time: 2017-12-06 10:43:58
+ * @Last Modified time: 2017-11-09 14:24:15
  */
 'use strict'
 require('css_path/product/detail.css');
@@ -18,12 +18,15 @@ var doT = require('plugins/template/template.js')
 
 fjw.webapp.pro_detail = {
     cache: {
-        pro_detail: null,
-        member: null
+        pro_detail: null
     },
     query: {
-        id: core.String.getQuery('id')
+        id: core.String.getQuery('id'),
+        firstBuy: true,
+        detail: null
     },
+    //当前在用卡劵内容
+    option: [],
     init: function () {
         this.onPageLoad()
         this.listenEvent()
@@ -32,14 +35,14 @@ fjw.webapp.pro_detail = {
         var me = this;
 
         core.User.isLogin()
-        if (window.user.isLogin) {
-            core.User.getInfo()
-        }
 
         if (Number(me.query.id) > 0) {
             me.method.getDetail()
+
+            //得到当前已在用卡劵内容
+            // me.getCardParam();
         } else {
-            window.location.href = core.Env.domain + core.Env.wwwRoot + '/product/index.html';
+            window.location.href = core.Env.domain + core.Env.wwwRoot + '/product/list.html';
         }
     },
     getCardParam: function () {
@@ -90,7 +93,7 @@ fjw.webapp.pro_detail = {
 
             me.checkAmount();
             me.initIncome();
-
+            
         });
         $('.calculator').click(function () {
             me.calculator();
@@ -111,7 +114,6 @@ fjw.webapp.pro_detail = {
 
 
         $('.F-buyBtn').click(function () {
-            window.location.href = core.Env.domain + core.Env.wwwRoot + '/product/confirm.html?id=' + me.query.id;
             /**
              *  1.安全校验
              *  2.验证输入框金额是否符合规范
@@ -262,9 +264,9 @@ fjw.webapp.pro_detail = {
         });
     },
     calculator: function () {
-        $(".app-main").addClass("open-mask")
-        $(".mask").show()
-        $("#price > input").trigger("input")
+        $(".app-main").addClass("open-mask"),
+            $(".mask").show(),
+            $("#price > input").trigger("input")
     },
     initDetail: function () {
         var me = this;

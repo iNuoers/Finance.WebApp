@@ -19,7 +19,7 @@ window.user = {
 
 var FJW = FJW || {};
 var FJW = {};
-FJW.debug = false;
+FJW.debug = true;
 FJW.Namespace = function () {
     var e, t, n, r = arguments, i = null;
     for (e = 0; e < r.length; e++) {

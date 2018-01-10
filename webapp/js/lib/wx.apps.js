@@ -38,6 +38,7 @@ core.Config.init = function () {
 
     $(".app-main,#header").delegate("a[data-href],div[data-href]", "click", function (e) {
         if ($(this).data("href") && !$(this).data("preventdefault")) {
+            debugger
             e.stopPropagation();
             var url = $(this).data("href");
             url = (url.indexOf('http://') >= 0 || url.indexOf('https://') >= 0) ? url : core.Env.domain + core.Env.wwwRoot + url;

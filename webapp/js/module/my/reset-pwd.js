@@ -4,7 +4,7 @@
  * @Github：https://github.com/iNuoers/ 
  * @Create time: 2017-09-18 15:12:27
  * @Last Modified by: mr.ben
- * @Last Modified time: 2017-11-07 17:43:00
+ * @Last Modified time: 2018-01-01 13:06:31
  */
 
 'use strict'
@@ -26,6 +26,37 @@ fjw.webapp.resetpwd = {
     listenEvent: function () {
         var me = this
         $('#loginbtn').on('click', function () {
+
+            var oldpwd = $("#oldPassword").val();
+            var newspwd1 = $("#newPassword").val();
+            var newspwd2 = $("#confirmPassword").val();
+            var newpassword = $("#txtNewPassword").val().replace(/[ ]/g, "");
+            var pat = new RegExp("^.{6,16}$", "i");
+
+            if (oldpwd == '') {
+                $("#oldpasswordError").html("原登录密码必须填写");
+                return;
+            }
+            if (newspwd1 == '') {
+                $("#txtNewPasswordError").html("新登录密码必须填写");
+                return;
+            }
+            if (!(/^.*?[\d]+.*$/.test(newspwd1) && /^.*?[A-Za-z].*$/.test(newspwd1) && /^.{6,16}$/.test(newspwd1))) {
+                $("#txtNewPasswordError").html("格式错误，6-16个字符（必须含有字母+数字)");
+                return;
+            }
+            if (newpassword != newspwd1) {
+                $("#txtNewPasswordError").html("密码不能含有空格");
+                return;
+            }
+            if (newspwd2 == '') {
+                $("#txtNewPassword1Eeeor").html("确认登录密码必须填写");
+                return;
+            }
+            if (newspwd2 != newspwd1) {
+                $("#txtNewPassword1Eeeor").html("两次登录密码不一致");
+                return;
+            }
 
             if (!window.user.isLogin) {
                 window.location.href = core.Env.domain + core.Env.wwwRoot + '/login.html?refPaht=' + location.href;
@@ -159,6 +190,15 @@ fjw.webapp.resetpwd = {
                     });
                 }
             });
+        },
+        chkBtn: function () {
+            if(!$("#oldPassword").val()||!$("#newPassword").val() || !$("#confirmPassword").val()){
+                $("#submit").removeClass('disabled')
+                return true
+            }else{
+                $("#submit").addClass('disabled')
+                return false
+            }
         }
     }
 }

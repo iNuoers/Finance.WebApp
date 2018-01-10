@@ -1,3 +1,10 @@
-.input-box{background-color:#fff;border-bottom:1px solid #dfdfdf;height:44px;position:relative}
+.input-box{background-color:#fff;height:44px;position:relative}
+.input-box:before{position:absolute;top:0;right:0;left:0;z-index:9;display:block;border-top:1px solid #ededed;color:#ededed;content:' '}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5){
+    .input-box:before{-webkit-transform:scaleY(.7);transform:scaleY(.7);-webkit-transform-origin:left top}
+}
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .input-box:before{-webkit-transform:scaleY(.5);transform:scaleY(.5)}
+}
 .input-box .label{width:65px;margin-left:12px;font-size:14px;height:44px;line-height:44px;position:absolute}
-.input-box .input-num{margin-left:85px;width:220px;border:0;font-size:14px;height:43px;line-height:16px}
+.input-box .input-num{margin-left:85px;width:73%;border:0;font-size:14px;height:43px;line-height:16px}

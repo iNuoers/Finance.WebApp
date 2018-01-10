@@ -1,6 +1,6 @@
-const debug             = false;
+const debug             = true;
 const webpack           = require('webpack');
-const url               = debug ? 'http://192.168.1.53:8010' : 'https://www.fangjinnet.com';
+const url               = debug ? 'http://192.168.1.53:3002' : 'https://m.fangjinnet.com';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -12,7 +12,7 @@ const getHtmlConfig = function (name,title) {
     return {
         template    : './webapp/view/' + name + '.html',
         filename    : 'view/' + name + '.html',
-        //favicon     : './favicon.ico',
+        favicon     : './favicon.ico',
         title       : title,
         inject      : true,
         hash        : true,
@@ -88,8 +88,8 @@ const config = {
     },
     output: {
         path        : __dirname + '/dist/',
-        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : 'http://m.fangjinnet.com/dist/',
-        filename    : 'js/[name]-build.min.js',
+        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : url + '/dist/',
+        filename    : 'js/[name].[hash:8].min.js',
         chunkFilename: 'js/[id].chunk.js'
     },
     externals: {
@@ -216,7 +216,7 @@ const config = {
     ]
 };
 if ('dev' === WEBPACK_ENV) {
-    config.entry.common.push('webpack-dev-server/client?http//192.168.1.53:3002/');
+    config.entry.common.push('webpack-dev-server/client?' + url);
 }
 
 module.exports = config;

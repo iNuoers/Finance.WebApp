@@ -80,7 +80,7 @@ $(document).ready(function () {
 
     var clipboard = new Clipboard('.tc', {
         text: function () {
-            return 'http://192.168.1.53:3002/dist/view/channel/invite.html';
+            return 'http://192.168.31.243:3002/dist/view/channel/invite.html';
         }
     });
     clipboard.on('success', function () {
